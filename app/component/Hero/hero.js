@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea1a758cd6ffec6e764cb6d0f4cc8ff976edf068a824e1acfc3eb7e22386f7e4
-size 715
+"use client";
+import React from "react";
+import HeroStatic from "./HeroStatic/HeroStatic";
+import { Home, About, Team } from "@/app/data/data";
+import { usePathname } from "next/navigation";
+
+const Hero = () => {
+  const pathname = usePathname();
+
+  return pathname === "/" ? (
+    <HeroStatic
+      company={Home.company}
+      title={Home.title}
+      desc={Home.desc}
+      tag={Home.tag}
+    />
+  ) : pathname === "/About" ? (
+    <HeroStatic
+      company={About.company}
+      title={About.title}
+      desc={About.desc}
+      tag={About.tag}
+    />
+  ) : (
+    <HeroStatic
+      company={Team.company}
+      title={Team.title}
+      desc={Team.desc}
+      tag={Team.tag}
+    />
+  );
+};
+
+export default Hero;

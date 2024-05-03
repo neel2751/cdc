@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e9977293910943044b4be36f4dc74b854a3083ac0272762f0555c34359f65f3
-size 989
+import PageCountModel from "@/models/countPageModel";
+import { connect } from "@/dbConfig/dbConfig";
+import { NextResponse } from "next/server";
+
+export async function POST(request) {
+  const check = await request.json();
+  const { path } = check;
+  if (path) {
+    try {
+      await connect();
+      const findPath = await PageCountModel.findOne({
+        pageName: path,
+      });
+      if (findPath) {
+        findPath.visits += 1;
+        findPath.save();
+        return NextResponse.json({
+          status: 201,
+          success: true,
+          data: findPath,
+        });
+      } else {
+        const addNewPage = new PageCountModel({ pageName: path, visits: 1 });
+        const visitorPage = await addNewPage.save();
+        return NextResponse.json({
+          status: 200,
+          success: true,
+          data: visitorPage,
+        });
+      }
+    } catch (error) {
+      return NextResponse.json({
+        status: 500,
+        message: error.message,
+      });
+    }
+  }
+}

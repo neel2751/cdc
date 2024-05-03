@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc42d960407603b2a3199872bbfa139499c3bd72620c3ecf949e799d9571cb25
-size 978
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: [true, "Please provide a username"],
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: [true, "Please provide a email"],
+      unique: true,
+    },
+    password: {
+      type: String,
+      trim: true,
+      required: [true, "Please provide a password"],
+    },
+    isVerfied: {
+      type: Boolean,
+      default: false,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
+    filepath: {
+      type: String,
+      required: false,
+    },
+    refreshToken: {
+      type: String,
+    },
+    isBlock: {
+      type: Boolean,
+      default: false,
+    },
+    forgotPasswordToken: String,
+    forgotPasswordTokenExpiry: Date,
+    verifyToken: String,
+    verifyTokenExpiry: Date,
+  },
+  { timestamps: true }
+);
+const User = mongoose.models.User || mongoose.model("User", userSchema);
+
+export default User;

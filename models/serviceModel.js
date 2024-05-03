@@ -1,3 +1,79 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7df4d52c2d5dfdb5070e35aa118f8e5cf80959e8c463148a6ed2030094ae011
-size 1313
+import mongoose from "mongoose";
+
+// Define the main image schema
+const mainImageSchema = new mongoose.Schema({
+  asset_id: {
+    type: String,
+    required: true,
+  },
+  public_id: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  mainImageUrl: {
+    type: String,
+    required: true,
+  },
+});
+const iconSchema = new mongoose.Schema({
+  asset_id: {
+    type: String,
+    required: true,
+  },
+  public_id: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  mainImageUrl: {
+    type: String,
+    required: true,
+  },
+});
+
+const serviceSchema = new mongoose.Schema(
+  {
+    serviceName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    slug: {
+      type: String,
+      required: true,
+    },
+    mianImage: {
+      type: mainImageSchema,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    editor: {
+      type: String,
+      required: true,
+    },
+    icon: {
+      type: iconSchema,
+      required: true,
+    },
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
+);
+
+const ServiceSection =
+  mongoose.models.NewService || mongoose.model("NewService", serviceSchema);
+
+export default ServiceSection;

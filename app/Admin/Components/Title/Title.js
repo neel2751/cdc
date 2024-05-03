@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c457a63e4cc41aee32279a51babf13df00da19d5dac9e5bae1ccf374527e3e55
-size 308
+import React from "react";
+
+const Title = ({ title, desc }) => {
+  return (
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+        {title}
+      </h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
+    </div>
+  );
+};
+
+export default Title;

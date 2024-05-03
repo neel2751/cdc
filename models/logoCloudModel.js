@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87c165a457f71c5bee78e0e08a9595fdce0b4c05b2470f61310f8a07832d8a79
-size 630
+import mongoose from "mongoose";
+
+const LogoCloudSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: false,
+    },
+    asset_id: {
+      type: String,
+      required: true,
+    },
+    public_id: {
+      type: String,
+      required: true,
+    },
+    url: {
+      type: String,
+      required: true,
+    },
+    mainImageUrl: {
+      type: String,
+      required: true,
+    },
+    active: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  { timestamps: true }
+);
+const LogoCloudModel =
+  mongoose.models.LogoCloud || mongoose.model("LogoCloud", LogoCloudSchema);
+export default LogoCloudModel;

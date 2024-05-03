@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c692265190d00081920bd9487cd1f7e04a74fb2d9103061c410afe802e4a2cc1
-size 792
+{
+  "name": "cdc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.2.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@next/third-parties": "^14.2.3",
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.1",
+    "framer-motion": "^10.16.16",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "next": "^14.2.3",
+    "next-auth": "^4.24.5",
+    "nodemailer": "^6.9.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-froala-wysiwyg": "^4.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

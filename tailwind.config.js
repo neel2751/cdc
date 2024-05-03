@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b86338f204d747ab0f3c423782ecf7eb4f77a275251afe9d33a3b22a18ec228e
-size 468
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+
+      animation: {
+        truemarque: "truemarque 15s linear infinite",
+        marque: "marque 15s linear infinite",
+        project: "project 30s linear infinite",
+      },
+
+      keyframes: {
+        truemarque: {
+          "0%": {
+            transform: "translateZ(0)",
+          },
+          "100%": {
+            transform: "translate3d(100%,0,0)",
+          },
+        },
+        project: {
+          "0%": {
+            transform: "translateZ(0)",
+          },
+          "100%": {
+            transform: "translate3d(-100%,0,0)",
+          },
+        },
+        marque: {
+          "0%": {
+            transform: "translateZ(0)",
+          },
+          "100%": {
+            transform: "translate3d(-100%,0,0)",
+          },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

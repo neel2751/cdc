@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0340fa2e8c96180a9941225cfa746f570df6a6c573d290e074fd59073b842ac1
-size 467
+// models/Image.js
+import mongoose from "mongoose";
+
+const tagSchema = new mongoose.Schema({
+  tags: {
+    type: [
+      {
+        tagName: { type: String, required: true },
+        isActive: { type: Boolean, default: true },
+        createdAt: { type: Date, default: Date.now() },
+      },
+    ],
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
+});
+const TagSection = mongoose.models.Tag || mongoose.model("Tag", tagSchema);
+
+export default TagSection;

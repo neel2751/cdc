@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e145e9130c10c2079c4dbe2fef9fc38b7c72f7a79cf5c261195f79a2a00342a1
-size 514
+import { Suspense } from "react";
+import { NavigationEvents } from "../Helper/navigationHelper";
+import Footer from "../component/Footer/Footer";
+import Navbar from "../component/Header/navbar";
+import { SubMenu } from "../component/Header/submenu";
+import Hero from "../component/Hero/hero";
+import Team from "./Team";
+export default function Home() {
+  return (
+    <>
+      <Suspense fallback={null}>
+        <NavigationEvents>
+          <SubMenu>
+            <Navbar />
+          </SubMenu>
+          <Hero />
+          <Team />
+          <Footer />
+        </NavigationEvents>
+      </Suspense>
+    </>
+  );
+}

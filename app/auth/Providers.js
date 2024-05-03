@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63a4378a265431795e60331776360c09ba78670f17326cd35c72601c627d789b
-size 213
+"use client";
+import { SessionProvider } from "next-auth/react";
+import React from "react";
+
+function Providers({ children }) {
+  return <SessionProvider>{children}</SessionProvider>;
+}
+
+export default Providers;

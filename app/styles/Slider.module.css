@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1fc09ba043da586d976d151efa06cafc96af5ecbd0999d6798080d0d21aef45
-size 469
+/* styles/Slider.module.css */
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.controlButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.active {
+  transform: translateX(0);
+}

@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c46ac20a06f6d05e47178729abd6d132c55d7facab241fe3ddd744353bd10363
-size 1887
+import Image from "next/image";
+import Link from "next/link";
+import { SUB_MENU } from "@/app/data/data";
+
+const BlogCard = ({ image, name, description, link }) => {
+  return (
+    <Link
+      className="group transition ease-in-out delay-150 hover:scale-105 shadow"
+      href={`/Services/Service/${link}`}
+    >
+      <div className="flex flex-col lg:flex-row gap-8 rounded-md bg-gray-100 dark:bg-white shadow-lg shadow-gray-200/60 ">
+        <div className="w-full lg:w-3/6 lg:h-full xl:h-60">
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src={image}
+            alt="post cover"
+            width={1300}
+            height={800}
+            // priority
+            loading="lazy"
+            className="rounded-lg rounded-r-none aspect-video lg:aspect-auto lg:h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex-1 flex justify-center flex-col space-y-6 p-3">
+          <h2
+            className={`cursor-pointer transition-all duration-300 group-hover:bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text group-hover:text-transparent mb-2 text-xl font-semibold tracking-tight text-[#242A3D]`}
+          >
+            {name}
+          </h2>
+          <p className="mb-3 font-normal text-[#242A3D] opacity-70">
+            {description}
+          </p>
+          {/* <div className="text-xl font-semibold tracking-tight text-[#242A3D]">
+            {name}
+          </div>
+          <p className="text-[#242A3D] opacity-80 text-sm">{description}</p> */}
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+const SecondServices = () => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {SUB_MENU.filter((order) => order.tag === "N").map((ser) => (
+        <BlogCard key={ser.id} {...ser} />
+      ))}
+    </div>
+  );
+};
+export default SecondServices;

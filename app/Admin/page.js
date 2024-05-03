@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60a7d56529a3b3236cf76973bf806ab826b41a573526bda7d2b1d57a8d08a6c7
-size 1109
+// import { cookies } from "next/headers";
+// import Login from "./(authPage)/Login/page";
+// import Dashboard from "../Admin/Dashboard/page";
+// // import DashNew from "./Dashboard/DashNew";
+// import DashHome from "./Dashboard/DashHome/DashHome";
+// import Providers from "../auth/Providers";
+// import { useSession } from "next-auth/react";
+// import LoginButton from "./(authPage)/Chcek/button";
+
+// export default function Home() {
+//   const cookieStore = cookies();
+//   const check = cookieStore.get("token");
+//   return (
+//     <>
+//       <Providers>
+//         <DashHome />
+//         <LoginButton />
+//       </Providers>
+//     </>
+//   );
+// }
+"use client";
+
+import { useSession } from "next-auth/react";
+import Chcek from "./(authPage)/Chcek/page";
+import Dashboard from "./Dashboard/page";
+import Dash from "./Dashboard/Dash";
+export default function Home() {
+  // console.log(useSession);
+  const { data: session, status } = useSession();
+  console.log(status);
+  console.log(JSON.stringify(session));
+  if (status === "authenticated") {
+    return <Dashboard />;
+  }
+  return <Chcek />;
+}

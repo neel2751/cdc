@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b8b4d18c6e04049829f2f271c4ed20082134fdee43d79ac917b3da9377c62bf6
-size 550
+import React from "react";
+
+const Video = () => {
+  return (
+    <video
+      className="rounded-2xl"
+      autobuffer="autobuffer"
+      autoPlay={true}
+      muted
+      loop
+      playsInline={true}
+      preload="auto"
+    >
+      <source src="/images/video/home.mp4" type="video/mp4" />
+      {/* <source
+        src="https://res.cloudinary.com/doahepgtc/video/upload/v1705315023/cdc/Section/NewHome_vzgega.mp4"
+        type="video/mp4"
+      /> */}
+      Your browser does not support the video tag.
+    </video>
+  );
+};
+
+export default Video;

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc9daaa40572d1fa7fffeb540dc97226c496e0fb50690ebedc3b57c4ad78e63a
-size 249
+// middleware/session.js
+import session from "next-session";
+
+export default session({
+  secret: process.env.JWT_SECRET_KEY,
+  resave: false,
+  saveUninitialized: true,
+  rolling: true,
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000, // 1 day
+  },
+});

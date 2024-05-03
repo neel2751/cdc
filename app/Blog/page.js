@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe5f0a5babdcd38680eccc41349f5fd36bf52c4673304adb1e4781e5941594b2
-size 330
+import Footer from "../component/Footer/Footer";
+import Navbar from "../component/Header/navbar";
+import { SubMenu } from "../component/Header/submenu";
+import Blog from "./Blog";
+export default function Home() {
+  return (
+    <>
+      <SubMenu>
+        <Navbar />
+      </SubMenu>
+      <Blog />
+      <Footer />
+    </>
+  );
+}

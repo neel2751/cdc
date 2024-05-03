@@ -1,3 +1,92 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:38eff0f6a68c05404f4def3cef50f8fa64d5e329e8857a823045353e703cb53b
-size 764
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap'); */
+
+:root {
+  /* --background-color: #EAF3F5 */
+  --background-color: #ffe4a6;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: "liga" on, "clig" on, "dlig" off;
+  text-rendering: optimizeSpeed;
+  touch-action: manipulation;
+  background: var(--background-color);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.test {
+  animation: contact 15s infinite linear reverse;
+}
+
+@keyframes contact {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.test:hover {
+  animation-play-state: paused;
+}
+.containerTest {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: white;
+}
+
+.line {
+  height: 1px;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.line svg {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: -100px;
+}
+
+.line svg path {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.line .box {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+
+.line .box:hover {
+  height: 200px;
+  top: -80px;
+}

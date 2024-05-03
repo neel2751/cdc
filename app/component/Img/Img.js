@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f5234b2231dcb0b78ed39602272b7a1e3cde8d6272d031ab1fece2f0a488f2a6
-size 341
+import Image from "next/image";
+import React from "react";
+
+const Img = ({ image, alt, cls }) => {
+  return (
+    <Image
+      src={image}
+      alt={alt}
+      className={cls}
+      sizes="100vw"
+      style={{
+        width: "auto",
+        height: "auto",
+      }}
+      width={500}
+      height={300}
+    />
+  );
+};
+
+export default Img;
