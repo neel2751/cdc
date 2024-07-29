@@ -13,7 +13,7 @@ const Leagecy = () => {
           </h2>
           <p className="text-[#242A3D] text-base font-medium opacity-70">
             CDC is a leading commercial office building contractor, established
-            in 2021 and committed to quality and innovation. We specialize in
+            in 2018 and committed to quality and innovation. We specialize in
             building high-performance, energy-efficient, and sustainable office
             buildings that meet the needs of our clients and the communities we
             serve.
@@ -27,7 +27,7 @@ const Leagecy = () => {
               {/* <!-- Stats --> */}
               <div className="lg:pe-6 xl:pe-12">
                 <p className="text-6xl font-bold leading-10 text-blue-600">
-                  <AnimatedElement endValue={105} duration={10} />
+                  <AnimatedElement endValue={105} duration={3} />
                   <span className="ms-1 inline-flex items-center gap-x-1 bg-gray-200 font-medium text-gray-800 text-xs leading-4 rounded-full py-0.5 px-2 dark:bg-gray-800 dark:text-gray-300">
                     <svg
                       className="flex-shrink-0 w-4 h-4"
@@ -55,7 +55,7 @@ const Leagecy = () => {
                 {/* <!-- Stats --> */}
                 <div>
                   <p className="text-3xl font-semibold text-blue-600">
-                    <AnimatedElement endValue={97} duration={10} delay={3} />%
+                    <AnimatedElement endValue={100} duration={3} delay={1} />%
                   </p>
                   <p className="mt-1 text-gray-600">in fulfilling projects</p>
                 </div>
@@ -64,16 +64,16 @@ const Leagecy = () => {
                 {/* <!-- Stats --> */}
                 <div>
                   <p className="text-3xl font-semibold text-blue-600">
-                    <AnimatedElement endValue={190} duration={10} delay={6} />+
+                    <AnimatedElement endValue={99} duration={3} delay={2} />%
                   </p>
-                  <p className="mt-1 text-gray-600">partner with Government</p>
+                  <p className="mt-1 text-gray-600">Client Satisfaction</p>
                 </div>
                 {/* <!-- End Stats --> */}
 
                 {/* <!-- Stats --> */}
                 <div>
                   <p className="text-3xl font-semibold text-blue-600">30+</p>
-                  <p className="mt-1 text-gray-600">year of experience</p>
+                  <p className="mt-1 text-gray-600">year industry experience</p>
                 </div>
                 {/* <!-- End Stats --> */}
               </div>

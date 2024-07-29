@@ -7,6 +7,18 @@ module.exports = {
   images: {
     remotePatterns: [
       {
+        protocol: "https", // https
+        hostname: "cdcdevelopment.co.uk",
+      },
+      {
+        protocol: "https",
+        hostname: "astro-agency02.vercel.app",
+      },
+      {
+        protocol: "https", // https
+        hostname: "cdcgrouplimited.com",
+      },
+      {
         protocol: "https",
         hostname: "images.pexels.com",
         port: "",

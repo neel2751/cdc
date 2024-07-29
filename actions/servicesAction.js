@@ -213,10 +213,9 @@ export const getAllServices = async () => {
   try {
     const { signal } = new AbortController();
     const response = await axios.get(
-      `${process.env.WEBSITE_URI}/api/Admin/Dashboard/Services`,
-      { signal }
+      `${process.env.WEBSITE_URI}/api/Admin/Dashboard/Services`
     );
-    revalidatePath("/");
+    // revalidatePath("/");
     return response.data;
 
     // return response;
@@ -234,7 +233,7 @@ export const serviceStatus = async (id) => {
         id,
       }
     );
-    revalidatePath("/");
+    // revalidatePath("/");
     return response.data;
   } catch (error) {
     console.log("Service Status Error : ", error);

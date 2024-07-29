@@ -12,6 +12,7 @@ import {
   Youtube,
 } from "../../../public/images/social/icons";
 import Img from "../Img/Img";
+import { usePathname } from "next/navigation"; // import useRouter
 
 const Navbar = () => {
   //active link change text colour
@@ -45,6 +46,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isProject, setIsProject] = useState(false);
   const [navIsOpened, setNavIsOpened] = useState(false);
+  // we have to import router to active link
+  const pathname = usePathname(); // import useRouter
 
   const handleMail = () => {
     // You can add additional logic here if needed
@@ -65,9 +68,6 @@ const Navbar = () => {
       setIsOpen(true);
     }
   };
-  const closeNavbar = () => {
-    setNavIsOpened(false);
-  };
   const toggleNavbar = () => {
     setNavIsOpened((navIsOpened) => !navIsOpened);
   };
@@ -82,66 +82,69 @@ const Navbar = () => {
           navIsOpened ? "lg:hidden" : "hidden lg:hidden"
         }`}
       /> */}
-      <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
-        <div className="w-full flex justify-between h-14 items-center">
-          <div className="h-full flex items-center gap-x-4 text-[#242A3D]">
-            <a
-              target="_top"
-              href="tel:02080043327"
-              aria-label="020 8004 3327"
-              className="flex gap-1 text-sm"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z" />
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <span className="hidden sm:flex">020 8004 3327</span>
-            </a>
-            <Link
-              onClick={handleMail}
-              data-address="info@bushcraftlondon.co.uk"
-              aria-label="info@cdc.construction"
-              href="mailto:info@cdc.construction"
-              className=" cursor-pointer flex gap-1 items-center"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="hidden sm:flex">info@cdc.construction</span>
-            </Link>
-          </div>
-          <div className="flex items-center gap-x-2.5 -mx-2 text-[#242A3D] children:p-2 children:border children:border-x-gray-200 dark:children:border-gray-800 children:bg-gray-100 dark:children:bg-gray-900 children:rounded-md">
-            {/* Socail Medai Link */}
-            {SocialLinks.map((links) => (
+      <div className="border-b border-gray-200">
+        <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
+          <div className="w-full flex justify-between h-14 items-center">
+            <div className="h-full flex items-center gap-x-4 text-[#004cb1] group">
               <a
-                key={links.id}
-                aria-label={`CDC ${links.name}`}
-                target="_blank"
-                rel="noreferer"
-                href={links.link}
-                className="h-6 w-6 transition ease-linear text-[#242A3D] hover:text-pink-700"
+                target="_top"
+                href="tel:02080043327"
+                aria-label="020 8004 3327"
+                className="flex gap-1 text-sm group-hover:text-[#012f6a]"
               >
-                {links.icon}
-                {/* <
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z" />
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span className="hidden sm:flex text-sm font-medium">
+                  020-8004-3327
+                </span>
+              </a>
+              <Link
+                onClick={handleMail}
+                data-address="info@bushcraftlondon.co.uk"
+                aria-label="info@cdc.construction"
+                href="mailto:info@cdc.construction"
+                className=" cursor-pointer flex gap-1 items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="hidden sm:flex">info@cdc.construction</span>
+              </Link>
+            </div>
+            <div className="flex items-center gap-x-2.5 -mx-2 text-[#242A3D] children:p-2 children:border children:border-x-gray-200 dark:children:border-gray-800 children:bg-gray-100 dark:children:bg-gray-900 children:rounded-md">
+              {/* Socail Medai Link */}
+              {SocialLinks.map((links) => (
+                <a
+                  key={links.id}
+                  aria-label={`CDC ${links.name}`}
+                  target="_blank"
+                  rel="noreferer"
+                  href={links.link}
+                  className="h-6 w-6 transition ease-linear text-[#004cb1] hover:text-pink-700"
+                >
+                  {links.icon}
+                  {/* <
                   className={"transition ease-linear hover:text-pink-700"}
                 /> */}
-              </a>
-            ))}
-            {/* <a
+                </a>
+              ))}
+              {/* <a
               aria-label="CDC Instagram "
               target="_blank"
               rel="noreferer"
@@ -152,11 +155,12 @@ const Navbar = () => {
                 className={"transition ease-linear hover:text-pink-700"}
               />
             </a> */}
+            </div>
           </div>
         </div>
       </div>
 
-      <header className="sticky left-0 top-0 w-full flex items-center h-20 z-40 bg-[#9ED0E0]">
+      <header className="sticky left-0 top-0 w-full flex items-center h-20 z-40 border-b border-gray-200 bg-white">
         <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
           <div className="flex items-center min-w-max">
             <Link
@@ -168,18 +172,20 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`absolute top-full left-0 bg-[#9ED0E0] borde border-t-2 border-y-cyan-950 lg:bg-transparent border-b border-gray-200 dark:border-gray-800 py-8 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0 lg:border-none w-full lg:top-0 lg:relative lg:flex lg:justify-between duration-300 ease-linear${
+            className={`absolute bg-white top-full left-0 borde border-t-2 border-y-gray-200 lg:bg-transparent border-b border-gray-200 dark:border-gray-800 py-8 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0 lg:border-none w-full lg:top-0 lg:relative lg:flex lg:justify-between duration-300 ease-linear${
               navIsOpened
                 ? "translate-y-0 opacity-100 visible overflow-y-auto max-h-screen mt-4"
                 : "translate-y-10 opacity-0 invisible lg:visible lg:translate-y-0 lg:opacity-100"
             }`}
           >
-            <ul className="flex flex-col lg:flex-row gap-6 lg:items-center text-gray-700 dark:text-gray-300 lg:w-full lg:justify-center">
+            <ul className="flex flex-col lg:flex-row gap-6 lg:items-center text-gray-700 lg:w-full lg:justify-center items-center">
               {/* Your menu items go here */}
               <li>
                 <Link
                   href="/"
-                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                  className={`${
+                    pathname === "/" ? "text-[#007dff]" : "text-[#27272a]"
+                  } relative py-2.5 text-base duration-300 font-semibold ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff]`}
                 >
                   Home
                 </Link>
@@ -187,7 +193,9 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/About"
-                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                  className={`${
+                    pathname === "/About" ? "text-[#007dff]" : "text-[#27272a]"
+                  } relative py-2.5 text-base duration-300 font-semibold ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff]`}
                 >
                   About
                 </Link>
@@ -200,11 +208,18 @@ const Navbar = () => {
                 <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] md:py-8">
                   <button
                     // href="/Services"
-                    className={`flex items-center relative text-base duration-300 ease-linear font-semibold text-[#222222] hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white ${
+                    // pathname.split("/")[1] === "Services" ? "text-[#007dff]" : "text-[#27272a]""
+                    className={`flex items-center relative py-2.5 text-base duration-300 font-semibold ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff] ${
                       isOpen
                         ? "after:absolute after:w-full after:bg-white after:scale-100"
                         : ""
-                    }`}
+                    }
+                    ${
+                      pathname.split("/")[1] === "Services"
+                        ? "text-[#007dff]"
+                        : "text-[#27272a]"
+                    }
+                    `}
                   >
                     Services
                     <svg
@@ -276,7 +291,13 @@ const Navbar = () => {
                 <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] md:py-8">
                   <button
                     type="button"
-                    className="flex items-center text-base w-full relative duration-300 ease-linear font-semibold text-[#222222] hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                    className={`
+                    ${
+                      pathname.split("/")[1] === "Projects"
+                        ? "text-[#007dff]"
+                        : "text-[#27272a]"
+                    }
+                    flex items-center relative py-2.5 text-base duration-300 font-semibold  ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff]`}
                   >
                     Portfolio
                     <svg
@@ -303,7 +324,7 @@ const Navbar = () => {
                       isProject
                         ? "block transition delay-150 duration-300 ease-in-out"
                         : "hidden"
-                    } xl:-mt-1 xl:absolute lg:absolute z-10 bg-white md:shadow-2xl rounded-lg py-2 md:p-2 dark:bg-gray-800 dark:divide-gray-700 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5`}
+                    } xl:-mt-1 xl:absolute lg:absolute z-10 bg-white md:shadow-2xl rounded-lg py-2 md:p-2  before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5`}
                   >
                     <Projects />
                     {/* <div className="my-2 border-t border-gray-100 dark:border-gray-800"></div> */}
@@ -313,7 +334,9 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/Team"
-                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                  className={`${
+                    pathname === "/Team" ? "text-[#007dff]" : "text-[#27272a]"
+                  } relative py-2.5 text-base duration-300 font-semibold ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff]`}
                 >
                   Team
                 </Link>
@@ -321,7 +344,11 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/ContactUs"
-                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                  className={`${
+                    pathname === "/ContactUs"
+                      ? "text-[#007dff]"
+                      : "text-[#27272a]"
+                  } relative py-2.5 text-base duration-300 font-semibold ease-linear hover:text-[#007dff] after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-[#007dff]`}
                 >
                   Contact Us
                 </Link>
@@ -329,10 +356,15 @@ const Navbar = () => {
             </ul>
             <div className="flex sm:items-center lg:min-w-max mt-10 lg:mt-0">
               <Link
-                href="tel:07515058788"
-                className="px-6 items-center h-12 rounded-3xl text-sm font-semibold text-white bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto"
+                href="/ContactUs"
+                className="px-6 items-center h-12 rounded-3xl text-sm font-semibold text-white bg-gradient-to-tr from-[#0063ff] via-[#004cb1] to-[#871518] duration-300 ease-linear flex justify-center w-full sm:w-auto"
               >
-                Book a call
+                {/* Marquee */}
+                <div className="text inline-flex overflow-hidden whitespace-nowrap">
+                  <span className="inline-block font-semibold text-sm leading-none">
+                    Request a Quote
+                  </span>
+                </div>
               </Link>
             </div>
           </div>

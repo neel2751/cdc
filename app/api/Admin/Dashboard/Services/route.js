@@ -53,7 +53,7 @@
 import { connect } from "@/dbConfig/dbConfig";
 import ServiceSection from "@/models/serviceModel";
 import { NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
+// import { revalidatePath } from "next/cache";
 
 // export const config = {
 //   api: {
@@ -134,7 +134,7 @@ export async function GET() {
     if (data) {
       return NextResponse.json({
         status: 200,
-        data: data,
+        data,
         success: true,
       });
     } else {
@@ -179,7 +179,7 @@ export async function PATCH(request) {
         { _id: id },
         { $set: { isActive: updatedStatus } }
       );
-      revalidatePath(path.pathname);
+      // revalidatePath(path.pathname);
       return NextResponse.json({
         // revalidated: true,
         status: 200,

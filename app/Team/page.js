@@ -8,16 +8,16 @@ import Team from "./Team";
 export default function Home() {
   return (
     <>
-      <Suspense fallback={null}>
-        <NavigationEvents>
-          <SubMenu>
-            <Navbar />
-          </SubMenu>
-          <Hero />
-          <Team />
-          <Footer />
-        </NavigationEvents>
-      </Suspense>
+      {/* <Suspense fallback={null}> */}
+      {/* <NavigationEvents> */}
+      <SubMenu>
+        <Navbar />
+      </SubMenu>
+      <Hero />
+      <Team />
+      <Footer />
+      {/* </NavigationEvents> */}
+      {/* </Suspense> */}
     </>
   );
 }

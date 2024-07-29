@@ -1,3 +1,4 @@
+"use client";
 import { getAllServices, serviceStatus } from "@/actions/servicesAction";
 // import CustomFroalaEditorView from "@/components/edtor-view";
 import React, { Suspense, memo, useEffect, useState } from "react";
@@ -20,7 +21,7 @@ const ServiceItems = memo(({ data, onUpdate }) => {
     setImgPreview(true);
     setName(data.serviceName);
     setImg(data?.icon?.mainImageUrl);
-    setEditorData(data.editor);
+    setEditorData(data?.editor);
   };
   const closeEditorData = () => {
     setImgPreview(false);
@@ -42,14 +43,14 @@ const ServiceItems = memo(({ data, onUpdate }) => {
   return (
     <>
       {imgPreview && (
-        <Suspense fallback={<BigSpinner />}>
-          <ImageViewer
-            editorData={editorData}
-            name={name}
-            img={img}
-            onClick={closeEditorData}
-          />
-        </Suspense>
+        // <Suspense fallback={<BigSpinner />}>
+        <ImageViewer
+          editorData={editorData}
+          name={name}
+          img={img}
+          onClick={closeEditorData}
+        />
+        // </Suspense>
       )}
       <tr>
         <td className="h-px w-auto whitespace-nowrap">
@@ -193,7 +194,7 @@ const AllService = () => {
   const getServices = async () => {
     try {
       const reponse = await getAllServices();
-      setData(reponse.data);
+      setData(reponse?.data);
     } catch (e) {
       console.log("Error: ", e);
     } finally {
@@ -332,20 +333,20 @@ const AllService = () => {
                     </tr>
                   </thead>
 
-                  {Loading ? (
+                  {/* {Loading ? (
                     <BigSpinner />
-                  ) : (
-                    <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                      {newdata &&
-                        newdata.map((ser) => (
-                          <ServiceItems
-                            key={ser._id}
-                            data={ser}
-                            onUpdate={getServices}
-                          />
-                        ))}
-                    </tbody>
-                  )}
+                  ) : ( */}
+                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                    {newdata &&
+                      newdata.map((ser) => (
+                        <ServiceItems
+                          key={ser._id}
+                          data={ser}
+                          onUpdate={getServices}
+                        />
+                      ))}
+                  </tbody>
+                  {/* )} */}
                 </table>
                 {/* <!-- End Table --> */}
 
@@ -354,7 +355,7 @@ const AllService = () => {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       <span className="font-semibold text-gray-800">
-                        {newdata.length}
+                        {newdata?.length}
                       </span>{" "}
                       results
                     </p>
@@ -419,9 +420,9 @@ const AllService = () => {
 
 export default AllService;
 
-function BigSpinner() {
-  return <div>🌀 Loading...</div>;
-}
+// function BigSpinner() {
+//   return <tbody>🌀 Loading...</tbody>;
+// }
 
 function ImageViewer({ editorData, img, name, onClick }) {
   return (

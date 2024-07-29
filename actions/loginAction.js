@@ -1,3 +1,4 @@
+"use server";
 import axios from "axios";
 import User from "@/models/adminModel";
 import { connect } from "@/dbConfig/dbConfig";
@@ -9,7 +10,7 @@ export const AuthLogin = async (email, password) => {
     // Check email or username exists in the database or not
     // Check user exists in the database or not
     let userExist = await User.findOne({ email });
-    if (!userExist) return { status: 400, error: "User Doesn't exist" };
+    if (!userExist) return { status: 404, error: "User Doesn't exist" };
     const isMatch = await bcrypt.compare(password, userExist.password);
     if (!isMatch)
       return {

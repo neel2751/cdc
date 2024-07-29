@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Line from "../Helper/lineHelper";
+import Link from "next/link";
 
 // import { useDebounce } from "../Helper/debounceHelper";
 
@@ -514,25 +515,24 @@ const CallBack = () => {
                         <div className="ms-3">
                           <label htmlFor="remember-me" className="text-sm">
                             I accept the{" "}
-                            <a
+                            <Link
                               className="text-sky-600 decoration-2 hover:underline font-medium"
-                              href="#"
+                              href="/Terms"
                             >
                               Terms and Conditions
-                            </a>
+                            </Link>
                           </label>
                         </div>
                       </div>
                       <span className="text-sm text-gray-400 font-medium group">
                         We respect your{" "}
-                        <a
-                          href="#"
+                        <Link
+                          href="/privacy-policy"
                           className="text-sky-600 group-hover:cursor-pointer group-hover:text-sky-900"
                         >
-                          privacy
-                        </a>
-                        . Your information will not be shared with any third
-                        parties
+                          Privacy
+                        </Link>
+                        . Your information will not be shared with any one
                       </span>
                     </div>
                     {/* Check Box End */}

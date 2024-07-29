@@ -11,7 +11,12 @@ const Video = () => {
       playsInline={true}
       preload="auto"
     >
-      <source src="/images/video/home.mp4" type="video/mp4" />
+      {/* <source src="/images/video/home.mp4" type="video/mp4" /> */}
+      {/* <source src="/images/video/home.webm" type="video/webm" /> */}
+      <source
+        src="https://cdcdevelopment.co.uk/images/CDC.mp4"
+        type="video/mp4"
+      />
       {/* <source
         src="https://res.cloudinary.com/doahepgtc/video/upload/v1705315023/cdc/Section/NewHome_vzgega.mp4"
         type="video/mp4"

@@ -69,7 +69,7 @@ const PaginationHelper = ({ items, pageSize, currentPage, onPageChange }) => {
                 className={`relative z-10 inline-flex items-center hover:cursor-pointer
                 ${
                   page === currentPage
-                    ? "bg-indigo-600 focus-visible:outline-indigo-600 text-white"
+                    ? "bg-[#007dff] focus-visible:outline-[#007dff] text-white"
                     : "text-black"
                 }
                   px-4 py-2 text-sm font-semibold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 `}

@@ -74,8 +74,12 @@ const Home = () => {
   }, [logoImages]);
 
   const getLogo = useCallback(async () => {
-    const getLogoResult = await handleGetImagesIntoDB();
-    setLogoImages(getLogoResult.data);
+    try {
+      const getLogoResult = await handleGetImagesIntoDB();
+      setLogoImages(getLogoResult?.data);
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   useEffect(() => {

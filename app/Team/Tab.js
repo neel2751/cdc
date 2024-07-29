@@ -1,8 +1,8 @@
 // components/TabbedCategories.js
 "use client";
 import React, { useState } from "react";
-import NewsSection from "./TeamSection";
 import { motion } from "framer-motion";
+import TeamSection from "./TeamSection";
 
 const Tab = ({ teamdata }) => {
   const [activeCategory, setActiveCategory] = useState("");
@@ -93,7 +93,7 @@ const Tab = ({ teamdata }) => {
           </div>
         </div>
       </div>
-      <NewsSection category={activeCategory} teamdata={teamdata} />
+      <TeamSection category={activeCategory} teamdata={teamdata} />
     </div>
   );
 };

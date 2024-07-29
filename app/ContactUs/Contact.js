@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ContactUsImage } from "../About/AboutImage";
 import Link from "next/link";
 import { ContactUs } from "../data/data";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 const Contact = () => {
   const initialFormData = {
@@ -95,34 +96,32 @@ const Contact = () => {
         <div className="w-full flex items-center relative">
           <div className="absolute top-1/4 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5]" />
           <div className="min-h-max relative mx-auto pt-20 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10">
-            <div className="flex items-center text-[#EAF3F5] mx-auto w-max px-2  py-1 rounded-full bg-[#242A3D] border border-gray-300">
+            {/* <div className="flex items-center text-[#EAF3F5] mx-auto w-max px-2  py-1 rounded-full bg-[#242A3D] border border-gray-300">
               {ContactUs.company}
-            </div>
+            </div> */}
             <h1 className="text-[#242A3D] mx-auto max-w-5xl font-semibold text-4xl/tight sm:text-5xl/tight lg:text-5xl/tight after:content-[url('/images/team/TeamLine.svg')] xl:lg:after:flex after:-my-12 after:mx-36 after:justify-end after:hidden items-center ">
               {ContactUs.title}
             </h1>
             {/* This is bug after check using mx-auto and provide some margin top to get better change */}
-            <p
-              className={`text-[#242A3D] max-w-2xl opacity-60 mx-auto m-[0px]`}
-            >
+            <p className={`text-[#242A3D] max-w-2xl font-base mx-auto m-[0px]`}>
               {ContactUs.desc}
             </p>
-            <div className="mx-auto max-w-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 ">
+            {/* <div className="mx-auto max-w-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 ">
               <ContactUsImage />
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <!-- Contact Us --> */}
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="max-w-2xl lg:max-w-7xl mx-auto">
-            <div className="text-center">
+            {/* <div className="text-center">
               <h1 className="text-3xl font-bold text-[#242A3D] sm:text-4xl">
                 Contact us
               </h1>
               <p className="mt-1 text-gray-600">
                 We'd love to talk about how we can help you.
               </p>
-            </div>
+            </div> */}
 
             <div className="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">
               {/* <!-- Card --> */}
@@ -150,7 +149,7 @@ const Contact = () => {
                           id="hs-firstname-contacts-1"
                           value={data.firstName}
                           onChange={handleChange}
-                          className="py-3 px-4 block w-full border-gray-800 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
+                          className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
                           placeholder="First Name"
                           required
                         />
@@ -174,7 +173,7 @@ const Contact = () => {
                           id="hs-lastname-contacts-1"
                           value={data.lastName}
                           onChange={handleChange}
-                          className="py-3 px-4 block w-full border-gray-800 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
+                          className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
                           placeholder="Last Name"
                           required
                         />
@@ -193,7 +192,7 @@ const Contact = () => {
                         value={data.email}
                         onChange={handleChange}
                         autoComplete="email"
-                        className="py-3 px-4 block w-full border-gray-800 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
+                        className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
                         placeholder="Email"
                         required
                       />
@@ -214,7 +213,7 @@ const Contact = () => {
                         id="hs-phone-number-1"
                         value={data.phone}
                         onChange={handleChange}
-                        className="py-3 px-4 block w-full border-gray-800 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
+                        className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
                         placeholder="Phone Number"
                         maxLength={10}
                         minLength={10}
@@ -238,7 +237,7 @@ const Contact = () => {
                         value={data.message}
                         onChange={handleChange}
                         rows="4"
-                        className="py-3 px-4 block w-full border-gray-800 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
+                        className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-gray-800"
                         placeholder="What can we do for your write it here..."
                       ></textarea>
                     </div>
@@ -312,12 +311,12 @@ const Contact = () => {
                   <div className="mt-3 text-center">
                     <p className="text-sm text-gray-600 font-medium">
                       Can't Speak Right Now?.
-                      <a
+                      <Link
                         href="/CallBack"
                         className="font-medium underline text-gray-900 hover:text-blue-600"
                       >
                         Request Call Back
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </form>
@@ -493,7 +492,7 @@ const Contact = () => {
         {/* <!-- End Contact Us --> */}
         <iframe
           className="mx-auto w-full h-96 p-2 sm:p-6 lg:px-8 rounded-xl"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4959.288052815907!2d0.064312!3d51.574759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7cd2cbb166d%3A0xfa83bba109fff6ff!2sSaffron%20Street!5e0!3m2!1sen!2sus!4v1702300480743!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3850.524228814834!2d0.06901300195263127!3d51.57722264197568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dcb7228a39a247%3A0x33e592d499e9b793!2sCreative%20Design%20%26%20Construction%20Ltd.!5e0!3m2!1sen!2suk!4v1719829274379!5m2!1sen!2suk"
           style={{ borderRadius: "30px" }}
           allowFullScreen=""
           loading="lazy"

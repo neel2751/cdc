@@ -1,28 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TEAMDATA } from "../data/data";
 
 import Tab from "./Tab";
 
 const TempTeam = () => {
-  const [teamData, setTeamdata] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await fetch("/api/TeamApi");
-  //       const result = await res.json();
-  //       setTeamdata(result.data.users);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-  // }, []);
   return (
     <div className={`${loading ? "flex justify-center pb-10" : ""}`}>
       {loading ? (

@@ -98,7 +98,7 @@ const Projects = () => {
       {PROJECT.map((item) => (
         <a
           key={item.id}
-          className="inline-flex gap-x-5 w-full p-4 text-gray-600 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+          className="inline-flex gap-x-5 w-full p-4 text-gray-600 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
           href={item.link}
         >
           <svg
@@ -119,7 +119,7 @@ const Projects = () => {
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
           <div className="grow">
-            <span className="block font-semibold mb-1 text-gray-800 dark:text-gray-200">
+            <span className="block font-semibold mb-1 text-gray-800">
               {item.name}
               {item.category ? (
                 <span className="inline ms-1 text-xs bg-blue-600 text-white py-1 px-2 rounded-full">

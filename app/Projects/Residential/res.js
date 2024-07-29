@@ -1,26 +1,29 @@
 "use client";
 import PaginationHelper from "@/app/Helper/paginationHelper";
 import { PORTFOLIO } from "@/app/data/data";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation"; // usePathname, useSearchParams, useRouter
 
 const res = () => {
+  const searchParams = useSearchParams();
   const [open, setOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(searchParams.get("page") || 1); // set the page number in localstorage
   const [proData, setProData] = useState("");
+  const router = useRouter();
 
   const onPageChange = (page) => {
-    console.log(page);
-    setCurrentPage(page);
+    setCurrentPage(page); // set the page number in localstorage
+    router.push(`/Projects/Residential?page=${page}`, { scroll: false }); // redirect to the same page with the new page number
   };
-
   // if open one data to show to user
   const handleModel = (project) => {
     setOpen(!open);
     setProData(project);
   };
 
-  const pageSize = PORTFOLIO.length / 2;
+  const pageSize = 9;
 
   const lastPage = Math.ceil(PORTFOLIO.length / pageSize);
 
@@ -36,41 +39,55 @@ const res = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* <!-- Card --> */}
         {currentData.map((data) => (
-          <div
+          <Link
+            href={`/Projects/${data.link}`}
             key={data.id}
-            className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]"
+            className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:border-gray-700 dark:shadow-slate-700/[.7] hover:shadow-lg hover:border-[#007dff]"
           >
-            <img
+            <Image
+              width={800}
+              height={400}
               //   src="/images/portfolio/Res/21Res.jpg"
-              src={data.image}
+              src={
+                "https://cdcgrouplimited.com/nodejs/uploads/projects/" +
+                data.images_link +
+                "/" +
+                data.image
+              }
               className="h-52 flex flex-col object-cover justify-center items-center bg-blue-600 rounded-t-xl"
             />
             <div className="p-4 md:p-6">
-              <span className="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
+              <span className="block mb-1 text-xs font-semibold uppercase text-blue-600 group-hover:text-neutral-800">
                 {data.project}
               </span>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+              <h3 className="text-lg font-semibold tracking-tight text-gray-800 group-hover:text-[#0053e3]">
                 {/* 21 Gaysham Avenue, Ilford */}
                 {data.title}
               </h3>
-              <p className="mt-3 text-gray-500">{data.description}</p>
+              {/* <p className="mt-3 text-gray-500">{data.description}</p> */}
             </div>
-            <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-              <Link
+            {/* <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700"> */}
+            {/* <Link
+                className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none "
+                href={`/Projects/${data.link}`}
+              >
+                View Deatils
+              </Link> */}
+            {/* <Link
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href={`/Projects/${data.link}`}
               >
                 View Deatils
-              </Link>
-              <button
+              </Link> */}
+            {/* <button
                 onClick={() => handleModel(data)}
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
                 Quick View
-              </button>
-              {open && <QuickView proData={proData} setOpen={setOpen} />}
-            </div>
-          </div>
+              </button> */}
+            {/* {open && <QuickView proData={proData} setOpen={setOpen} />} */}
+            {/* </div> */}
+          </Link>
         ))}
         {/* <!-- End Card --> */}
       </div>

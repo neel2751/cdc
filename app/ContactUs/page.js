@@ -6,14 +6,16 @@ import { SubMenu } from "../component/Header/submenu";
 import Contact from "./Contact";
 export default function Home() {
   return (
-    <Suspense fallback={null}>
-      <NavigationEvents>
-        <SubMenu>
-          <Navbar />
-        </SubMenu>
-        <Contact />
-        <Footer />
-      </NavigationEvents>
-    </Suspense>
+    // <Suspense fallback={null}>
+    // <NavigationEvents>
+    <>
+      <SubMenu>
+        <Navbar />
+      </SubMenu>
+      <Contact />
+      <Footer />
+    </>
+    // </NavigationEvents>
+    // </Suspense>
   );
 }

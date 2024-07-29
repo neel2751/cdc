@@ -18,21 +18,21 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Arch.webp",
       },
       {
         id: 2,
@@ -40,21 +40,21 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Build.webp",
       },
       {
         id: 3,
@@ -62,27 +62,27 @@ export const SUB_MENU = [
         icon: "sync",
         description:
           "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/3d.jpg",
       },
     ],
   },
   {
     id: 2,
-    name: "Build and Design",
+    name: "Design and Build",
     description: "We offer Design service to customize your new property",
     // image: "/images/services/icon/first.svg",
     image: "/images/services/Build.webp",
@@ -99,7 +99,7 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "Site Survey: Our site survey is arranged to accommodate your schedule, and we're happy to arrange a visit at a time that's convenient for you. During this stage, our architect, who is qualified by RIBA, will assess the property and gather an initial brief from you about your goals for the project. This visit is designed to be flexible to ensure that it fits in with your availability.Design: Our team of designers will commence work on your preliminary draft designs, incorporating both current and proposed floor plans and elevations. The design phase may take up to 7 business days, during which you have the freedom to make as many adjustments and modifications to the designs as you desire until you are fully satisfied. Additionally, we can supply you with 3D visual representations to help you envision the final outcome.Planning application: We will handle the preparation and submission of your planning application for either permission or permitted development and manage all interactions with the council during the 8-week decision period.",
-        image: "/images/services/Build.png",
+        image: "/images/services/Build.webp",
       },
       {
         id: 2,
@@ -108,7 +108,7 @@ export const SUB_MENU = [
         description:
           "Quote: One of our estimators will generate a quotation using a schedule of works that is based on the design specifications you have requested. You will have the opportunity to review and discuss any items in the quote in order to achieve your desired budget.Party Wall: We recommend that you arrange for this task to be completed promptly upon receiving planning permission. Since an unbiased surveyor is required, we can only suggest surveyors we frequently collaborate with. It may be worthwhile to speak with your neighbours prior to beginning the design process to determine their response to the proposed construction.Programme: After you have approved the quotation, we can commence the creation of a building schedule that will incorporate a timeline for the entire project, along with crucial delivery dates for significant items such as the kitchen and glazing.Contract and Deposit: Prior to the commencement of the project, we will draft a contract that adheres to industry standards and contains provisions to safeguard both you as the client and us as the contractor. In conjunction with the contract, we will request a 5% deposit to confirm a start date for our construction team.",
 
-        image: "/images/services/Build.png",
+        image: "/images/services/pre.jpg",
       },
       {
         id: 3,
@@ -116,7 +116,7 @@ export const SUB_MENU = [
         icon: "sync",
         description:
           "Pre start meeting: At this point, you will have the opportunity to meet our project manager and construction manager, who will review the project's final details with you and address any inquiries you may have.The build: During the project, our management team will conduct frequent inspections to guarantee that the work maintains the highest level of quality. We have a team of over 20 individuals who are directly employed by us to ensure that everything is completed promptly and to the best possible standard.Project Management: Our project manager is available to meet with you on-site as often as you desire to provide reassurance. Furthermore, we will produce a report every two weeks that includes all developments and any confirmed information (whether written or verbal).",
-        image: "/images/services/Build.png",
+        image: "/images/services/Arch.webp",
       },
     ],
   },
@@ -127,75 +127,77 @@ export const SUB_MENU = [
     // image: "/images/services/icon/first.svg",
     image: "/images/services/Loft.webp",
     icon: "/images/services/icon/Loft.svg",
+    longDesc:
+      "A loft conversion is a home improvement project in the UK that involves converting an empty attic space into a usable room, such as an additional bedroom or a home office. It is a popular option for homeowners looking to add value to their property and gain extra space without the cost and time required for an extension. We aid in people’s comprehension. Loft conversions in the UK typically require planning permission from the local council.",
     category: "A",
     tag: "Y",
     link: "loft-conversions",
     features: [
       {
         id: 1,
-        title: "PRIOR TO STARTING THE PROJECT:",
+        title: "Increased Space",
         icon: "cross",
         description:
-          "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "A loft conversion is a fantastic way to unlock the hidden potential of your home. By transforming an often-unused attic into a functional living space, you can dramatically increase your property's square footage. This extra room can be customized to suit your specific needs, whether it's a new bedroom for a growing family, a quiet home office, or a relaxing lounge area.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Loft.webp",
       },
       {
         id: 2,
-        title: "CONCEPT DESIGN DRAWINGS:",
+        title: "Property Value",
         icon: "cross",
         description:
-          "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Investing in a loft conversion is not just about improving your lifestyle; it's also a sound financial decision. A well-executed loft conversion can significantly boost your property's value. Potential buyers are often drawn to homes with additional living space, making your property more desirable and likely to sell faster.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Arch.webp",
       },
       {
         id: 3,
-        title: "ARCHITECTURAL 3D MODE",
+        title: "Improved Lifestyle",
         icon: "sync",
         description:
-          "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Beyond the practical benefits, a loft conversion can enhance your overall quality of life. By creating a new space within your home, you'll enjoy greater comfort, privacy, and flexibility. Whether you're looking to escape the hustle and bustle of family life or simply create a more harmonious living environment, a loft conversion can transform your home into a true sanctuary.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Extension.webp",
       },
     ],
   },
@@ -206,75 +208,77 @@ export const SUB_MENU = [
     // image: "/images/services/Arch.png",
     image: "/images/services/Reno.webp",
     icon: "/images/services/icon/Reno.svg",
+    longDesc:
+      "At CDC(Creative Design & Construction), we believe your home renovation should be a seamless journey, reflecting your unique style and lifestyle. As home renovation specialists, we offer an unparalleled, personalized experience from concept to completion.",
     category: "A",
     tag: "Y",
     link: "renovations",
     features: [
       {
         id: 1,
-        title: "PRIOR TO STARTING THE PROJECT:",
+        title: "Customized Design",
         icon: "cross",
         description:
-          "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Immerse yourself in a world of endless possibilities as our design experts collaborate with you to create a space that perfectly mirrors your unique vision. From selecting the perfect color palette to choosing the ideal materials, we'll guide you through every step, ensuring your home reflects your personal style and enhances your lifestyle.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Build.webp",
       },
       {
         id: 2,
-        title: "CONCEPT DESIGN DRAWINGS:",
+        title: "Expert Project Management:",
         icon: "cross",
         description:
-          "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Relax as our experienced team takes the reins, managing every facet of your renovation with precision and care. From meticulous planning to seamless coordination, we'll handle the complexities, allowing you to focus on the excitement of your new space. Our commitment to open communication and transparent processes ensures a stress-free journey.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Reno.webp",
       },
       {
         id: 3,
-        title: "ARCHITECTURAL 3D MODE",
+        title: "Premium Craftsmanship:",
         icon: "sync",
         description:
-          "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Experience the artistry of skilled tradespeople who transform your house into a home. Our dedication to quality shines through in every detail, from the precision of our craftsmanship to the selection of premium materials. We believe that a truly exceptional renovation is built on a foundation of excellence.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Arch.webp",
       },
     ],
   },
@@ -285,75 +289,77 @@ export const SUB_MENU = [
     // image: "/images/services/icon/first.svg",
     image: "/images/services/Basement.webp",
     icon: "/images/services/icon/Base.svg",
+    longDesc:
+      "Discover the transformative power of a basement conversion with CDC(Creative Design and Construction). We specialize in creating stunning and functional living spaces that maximize the value of your property. Whether you envision a cosy home office, a stylish entertainment area, or an extra bedroom, our expert team is dedicated to bringing your vision to life.",
     category: "B",
     tag: "Y",
     link: "basements",
     features: [
       {
         id: 1,
-        title: "PRIOR TO STARTING THE PROJECT:",
+        title: "Create a Stunning Basement Living Space",
         icon: "cross",
         description:
-          "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Imagine transforming your underutilized basement into a versatile space that seamlessly blends with your home's aesthetic. Our design process begins with a thorough understanding of your needs and preferences, ensuring that the final result perfectly reflects your lifestyle. From concept to completion, we handle every aspect of the project, including planning, design, construction, and finishing touches.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Basement.webp",
       },
       {
         id: 2,
-        title: "CONCEPT DESIGN DRAWINGS:",
+        title: "Sustainable and Stylish Basements",
         icon: "cross",
         description:
-          "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Our skilled craftsmen employ only the highest quality materials and cutting-edge techniques to deliver exceptional results. We prioritize energy efficiency and sustainability, incorporating eco-friendly solutions whenever possible. With a focus on attention to detail and meticulous workmanship, we create basements that are not only beautiful but also durable and comfortable.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/imp.jpg",
       },
       {
         id: 3,
-        title: "ARCHITECTURAL 3D MODE",
+        title: "Optimized Design for Your Lifestyle",
         icon: "sync",
         description:
-          "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+          "Beyond aesthetics, we understand the importance of functionality. Our designs optimize space utilization, incorporating clever storage solutions and efficient layouts. We also prioritize natural light and ventilation to create a welcoming and inviting atmosphere. Whether you're looking to increase your property value, accommodate growing family needs, or simply enhance your everyday living, a basement conversion is an excellent investment.",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Arch.webp",
       },
     ],
   },
@@ -364,6 +370,8 @@ export const SUB_MENU = [
     // image: "/images/services/icon/first.svg",
     image: "/images/services/NewBuild.webp",
     icon: "/images/services/icon/NewBuild.svg",
+    longDesc:
+      "Our in-house team of experts handles every aspect of your project, from design to construction. Enjoy the convenience of a single point of contact and streamlined communication. With Design and Build, you benefit from efficient planning, seamless execution, and a high-quality finish. Let us transform your vision into a reality without the hassle.",
     category: "B",
     tag: "Y",
     link: "new-build",
@@ -374,21 +382,21 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/NewBuild.webp",
       },
       {
         id: 2,
@@ -396,21 +404,8 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+
+        image: "/images/services/Arch.webp",
       },
       {
         id: 3,
@@ -418,21 +413,21 @@ export const SUB_MENU = [
         icon: "sync",
         description:
           "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
-        image: "/images/services/Build.png",
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
+        image: "/images/services/Build.webp",
       },
     ],
   },
@@ -453,20 +448,20 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
       {
@@ -475,20 +470,20 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
       {
@@ -497,20 +492,20 @@ export const SUB_MENU = [
         icon: "sync",
         description:
           "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
     ],
@@ -533,20 +528,20 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "We recommend booking a site survey and feasibility study to assess the property's measurements and viability before commencing any work on your home. Our in-house architectural design team will visit the site, discuss your ideas, and provide expert guidance on the optimal design options for your property.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
       {
@@ -555,20 +550,20 @@ export const SUB_MENU = [
         icon: "cross",
         description:
           "The concept/initial design considers various factors, including space, function, context, layout, and economic constraints, and is developed through discussions between the client and architect. In essence, it helps to ensure that both the client and architect have a shared understanding of the project's goals and requirements before proceeding with more precise designs as part of the architectural design service.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
       {
@@ -577,24 +572,34 @@ export const SUB_MENU = [
         icon: "sync",
         description:
           "Our architectural services include 3D modelling, which enables the architect to showcase their work to clients in a vivid and memorable manner that resonates with them. Compared to a 2D CAD or paper version, a 3D view provides a more straightforward approach for clients to comprehend the construction project. Additionally, 3D virtual walkthroughs can incorporate movement, which adds to the interactive and immersive experience for the clients.",
-        advantages: [
-          {
-            id: 1,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 2,
-            text: "Advantage of this feature",
-          },
-          {
-            id: 3,
-            text: "Advantage of this feature",
-          },
-        ],
+        // advantages: [
+        //   {
+        //     id: 1,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 2,
+        //     text: "Advantage of this feature",
+        //   },
+        //   {
+        //     id: 3,
+        //     text: "Advantage of this feature",
+        //   },
+        // ],
         image: "/images/services/Build.png",
       },
     ],
   },
+];
+
+export const NAVBAR = [
+  { id: 1, title: "Home", link: "/" }, // 1
+  { id: 2, title: "About us", link: "/About" }, // 2
+  // { id: 3, title: "Services", link: "/Services" }, // 3
+  { id: 4, title: "Projects", link: "/Projects/Residential" }, // 4
+  { id: 5, title: "Team", link: "/Team" }, // 5
+  { id: 6, title: "Contact", link: "/ContactUs" }, // 6
+  { id: 7, title: "Sitemap", link: "/sitemap.xml" }, // 7
 ];
 
 export const PROJECT = [
@@ -678,6 +683,51 @@ export const WHYUS = [
   },
 ];
 
+export const SERVICES_FEATURES = [
+  {
+    id: 1,
+    title: "Quality Craftsmanship",
+    description:
+      "We take pride in our work and strive to deliver high-quality results that exceed our clients' expectations.",
+    icon: "/images/services/icon/1.svg",
+  },
+  {
+    id: 2,
+    title: "Reliable Service",
+    description:
+      "We are committed to providing reliable service and ensuring that our clients' needs are met on time and within budget.",
+    icon: "/images/services/icon/2.svg",
+  },
+  {
+    id: 3,
+    title: "Transparent Communication",
+    description:
+      "We believe in transparent communication with our clients, keeping them informed and involved throughout the project.",
+    icon: "/images/services/icon/3.svg",
+  },
+  {
+    id: 4,
+    title: "Competitive Pricing",
+    description:
+      "We offer competitive pricing and value for money, ensuring that our clients receive the best possible service at a fair price.",
+    icon: "/images/services/icon/4.svg",
+  },
+  {
+    id: 5,
+    title: "Sustainable Practices",
+    description:
+      "We are committed to strive to minimize our environmental impact through the use of eco-friendly materials and techniques.",
+    icon: "/images/services/icon/5.svg",
+  },
+  {
+    id: 6,
+    title: "Safety First",
+    description:
+      "We prioritize safety and take all necessary precautions to ensure the safety of our workers, clients, and the public.",
+    icon: "/images/services/icon/6.svg",
+  },
+];
+
 export const SERVICES = [
   {
     id: 1,
@@ -724,6 +774,77 @@ export const SERVICES = [
 ];
 
 export const FEATURES = [
+  {
+    id: 1,
+    title: "Construction Professionals",
+    description:
+      "Our team comprises experienced and qualified professionals with a proven track record of success in the construction industry.",
+    icon: "/images/features/1.svg",
+  },
+  {
+    id: 2,
+    title: "Site Engineer Supervision",
+    description:
+      "Dedicated site engineers oversee every aspect of your project, providing expert guidance and ensuring to the highest construction standards.",
+    icon: "/images/features/2.svg",
+  },
+  {
+    id: 3,
+    title: "Attention to Detail",
+    description:
+      "We are meticulous in our approach, paying close attention to every detail to deliver a flawless final product.",
+    icon: "/images/features/3.svg",
+  },
+  {
+    id: 4,
+    title: "On-Time Finish",
+    description:
+      "We understand the importance of deadlines. We utilize efficient project management techniques to ensure project is completed on time.",
+    icon: "/images/features/4.svg",
+  },
+  {
+    id: 5,
+    title: "Up to £10 Million Insurance",
+    description:
+      "We are fully insured for your peace of mind. Our comprehensive insurance coverage protects you from any unforeseen liabilities.",
+    icon: "/images/features/5.svg",
+  },
+  {
+    id: 6,
+    title: "HSA Compliance",
+    description:
+      "We adhere to all relevant building codes and regulations, ensuring your project meets the highest safety and quality standards.",
+    icon: "/images/features/6.svg",
+  },
+  {
+    id: 7,
+    title: "10-Year Structural Warranty",
+    description:
+      "We stand behind the quality of our work. Our 10-year structural warranty provides you with long-term peace of mind.",
+    icon: "/images/features/7.svg",
+  },
+  {
+    id: 8,
+    title: "Unwavering After Care",
+    description:
+      "We offer comprehensive after-care services to ensure a smooth transition into your new space and provide ongoing support.",
+    icon: "/images/features/8.svg",
+  },
+  // If any quesion to contact us
+  {
+    id: 9,
+    title: "Confidence Starts Here",
+    link: "/ContactUs",
+    description:
+      "If you have any questions or concerns, please don't hesitate to contact us. We're here to help.",
+    // "Ready to build with confidence? Contact us to discuss your project.",
+    // "Ready to build with confidence? Contact us today to discuss your project. We look forward to working with you!",
+    icon: "/images/features/9.svg",
+    button: true, // if true, it will show contact us button
+  },
+];
+
+export const OLDFEATURES = [
   {
     id: 1,
     title: "Professionalism",
@@ -813,6 +934,299 @@ export const FEATURES = [
 // ];
 
 export const PORTFOLIO = [
+  //Commercial
+  // #1 Northampton Woodland House
+  {
+    id: 17,
+    title: "Woodland House, Northampton",
+    description:
+      "Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.",
+    project: "Commercial",
+    link: "northampton-woodland-house-",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/Woodland_house",
+    images: 10, // number of images Actual IMAGES 19
+    more: "Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.",
+  },
+  // #2 Bridge  House Stratford
+  {
+    id: 18,
+    title: "Bridge House, Startford",
+    description: "",
+    project: "Commercial",
+    link: "bridge-house-startford",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/Bridge_house",
+    images: 18, // number of images Actual IMAGES 36
+    more: "",
+  },
+  // #3 The Old School House
+  {
+    id: 19,
+    title: "Harbour Exchange Square 5th Floor Canary Wharf",
+    description: "",
+    project: "Commercial",
+    link: "harbour-exchange-square-5th-floor-canary-wharf",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/5HX",
+    images: 8, // number of images Actual IMAGES 8
+    more: "",
+  },
+  // #4 York House Birmingham
+  {
+    id: 20,
+    title: "York House, Birmingham",
+    description: "",
+    project: "Commercial",
+    link: "york-house-birmingham",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/York_house",
+    images: 8, // number of images Actual IMAGES 8
+    more: "",
+  },
+  // #5 Apsley House
+  {
+    id: 21,
+    title: "Apsley House, Birmingham",
+    description: "",
+    project: "Commercial",
+    link: "apsley-house-birmingham",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/Apsley_house",
+    images: 7, // number of images Actual IMAGES 7
+    more: "",
+  },
+  // #6 56 Tabard Street
+  {
+    id: 22,
+    title: "Tabard Street, Borough London",
+    description: "",
+    project: "Commercial",
+    link: "tabard-street-borough-london",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Comm/Tabard_street",
+    images: 10, // number of images Actual IMAGES 15
+    more: "",
+  },
+
+  // Residential
+  // #1 Glasworthy 23
+  {
+    id: 23,
+    title: "Galsworthy, Ilford",
+    description: "",
+    project: "Residential",
+    link: "galsworthy",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/Galsworthy_close",
+    images: 4, // number of images Actual IMAGES 4
+    more: "",
+  },
+  // #2 NorthHill Drive 24
+  {
+    id: 24,
+    title: "NorthHill Drive, Romford",
+    description: "",
+    project: "Residential",
+    link: "northHill-drive",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/North_hill_drive",
+    images: 9, // number of images Actual IMAGES 9
+    more: "",
+  },
+  // #3 Upton Lane 25 commerical
+  {
+    id: 25,
+    title: "Upton Lane, Forest Gate",
+    description: "",
+    project: "Commerical",
+    link: "upton-lane",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/Upton_lane",
+    images: 5, // number of images Actual IMAGES 5
+    more: "",
+  },
+  // #4 Gaysham Avenu 26
+  // {
+  //   id: 26,
+  //   title: "Gaysham Avenu, Gants Hill",
+  //   description: "",
+  //   project: "Residential",
+  //   link: "gaysham-avenu",
+  //   image: "1.jpg",
+  //   // image: "/images/projects/comm/Notre/1.webp",
+  //   alt: "notre-dame-house front image",
+  //   home: false,
+  //   images_link: "Res/Gaysham",
+  //   images: 1, // number of images Actual IMAGES 1
+  //   more: "",
+  // },
+  // #5 Roading Lane 27
+  {
+    id: 27,
+    title: "Roading Lane,Ilford",
+    description: "",
+    project: "Residential",
+    link: "roading-lane",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/Roading_lane",
+    images: 11, // number of images Actual IMAGES 11
+    more: "",
+  },
+  // #6 8 Brambly Cresecnt 28
+  {
+    id: 28,
+    title: "Brambly Cresecnt, Gants Hill",
+    description: "",
+    project: "Residential",
+    link: "brambly-cresecnt",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/Brambley",
+    images: 9, // number of images Actual IMAGES 9
+    more: "",
+  },
+  // #7 Dartford 29
+  {
+    id: 29,
+    title: "Norman Close, Dratford",
+    description: "",
+    project: "Residential",
+    link: "dratford",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/Dratford",
+    images: 9, // number of images Actual IMAGES 9
+    more: "",
+  },
+  // #8 East Ham 30
+  {
+    id: 30,
+    title: "East Ham",
+    description: "",
+    project: "Residential",
+    link: "east-ham",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: true,
+    images_link: "Res/East_ham",
+    images: 5, // number of images Actual IMAGES 5
+    more: "",
+  },
+  // #9 Simon Lane 31
+  {
+    id: 31,
+    title: "Simon Lane, Chingford",
+    description: "",
+    project: "Residential",
+    link: "simon-lane",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: false,
+    images_link: "Res/Simon_lane",
+    images: 5, // number of images Actual IMAGES 5
+    more: "",
+  },
+  // #10 9 Hainault Grove 32
+  {
+    id: 32,
+    title: "9 Hainault Grove,Hainault",
+    description: "",
+    project: "Residential",
+    link: "9-hainault-grove",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: false,
+    images_link: "Res/9Hainault",
+    images: 7, // number of images Actual IMAGES 7
+    more: "",
+  },
+  // #11 7 Hainault Grove 33
+  {
+    id: 33,
+    title: "7 Hainault Grove, Hainault",
+    description: "",
+    project: "Residential",
+    link: "7-hainault-grove",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: false,
+    images_link: "Res/7Hainault",
+    images: 7, // number of images Actual IMAGES 7
+    more: "",
+  },
+  // #12 154 Outhouse 34
+  {
+    id: 34,
+    title: "154 Eastern Avenue, Outhouse, Redbridge",
+    description: "",
+    project: "Residential",
+    link: "154-outhouse",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "notre-dame-house front image",
+    home: false,
+    images_link: "Res/154Outhouse",
+    images: 6, // number of images Actual IMAGES 6
+    more: "",
+  },
+  // #13 152 Outhouse 35
+  {
+    id: 35,
+    title: "152 Eastern Avenue, Outhouse,Redbridge",
+    description: "",
+    project: "Residential",
+    link: "152-outhouse",
+    // image: "1.jpg",
+    image: "1.jpg",
+    alt: "notre-dame-house front image",
+    home: false,
+    images_link: "Res/152Outhouse",
+    images: 10, // number of images Actual IMAGES 11
+    more: "",
+  },
+];
+
+const OLDPROJECTDATA = [
+  // #This Is OLD Project Data
   // 1.Notre Comm
   {
     id: 1,
@@ -1341,17 +1755,17 @@ export const FOOTERBLOCKS = [
       {
         id: 2,
         text: "Privacy",
-        link: "#",
+        link: "/privacy-policy", // "/Privacy",
       },
       {
         id: 3,
         text: "Terms",
-        link: "#",
+        link: "/Terms", // "/Terms",
       },
       {
         id: 4,
-        text: "FAQ",
-        link: "#",
+        text: "Cookies",
+        link: "/Cookies",
       },
     ],
   },
@@ -1407,24 +1821,12 @@ export const TEAMDATA = [
     id: 1,
     firstName: "Mohammad",
     lastName: "Bhuiyan",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Mr. Mohammad Bhuiyan serves as the Chief Executive Officer (CEO) of the Creative Design & Construction Limited (CDC) based in the UK, overseeing the overall strategic direction and management of the organization. In his role, he is responsible for setting goals, formulating policies, and ensuring the efficient operation of the company. Additionally, as the CDM (Construction Design and Management) Coordinator, Mr. Bhuiyan plays a crucial role in ensuring compliance with health and safety regulations throughout the construction projects. He works closely with design and construction teams to integrate safety considerations into the project planning and execution. Overall, Mr Mohammad Bhuiyan's dual role as CEO and CDM Coordinator reflects his commitment to both the business success and the safety of construction projects under his leadership.",
-    image: "/images/team/teams/MohammadBhuiyan.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Dullah.jpg",
     company: {
-      department: "CEO",
-      title: "CDM Co-ordinator",
+      department: "CEO  & CDM Co-ordinator", // Department
+      // title: "CDM Co-ordinator",
       teamCategories: "Leadership",
     },
   },
@@ -1432,24 +1834,12 @@ export const TEAMDATA = [
     id: 2,
     firstName: "Md Sadequl ",
     lastName: "Alam",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Md Sadequl Alam serves as the Director and Civil Engineer at Creative Design & Construction Limited, bringing a wealth of knowledge and extensive experience to the company's leadership. In his role as Director, he is responsible for shaping the strategic vision and overseeing the overall management of the company. As a Civil Engineer, Mr. Alam applies his expertise to ensure the successful planning and execution of construction projects. His profound knowledge of the construction industry and property business contributes to the company's competitiveness and success. Being a well-known and respected figure in the local community, Mr. Alam enhances the company's profile and fosters positive relationships within the community.",
-    image: "/images/team/teams/Sadequl.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Sadequl.jpg",
     company: {
       department: "Director",
-      title: "Civil Engineer",
+      // title: "Civil Engineer",
       teamCategories: "Leadership",
     },
   },
@@ -1457,24 +1847,12 @@ export const TEAMDATA = [
     id: 3,
     firstName: "Najia",
     lastName: "Nitu",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Najia Nitu plays a pivotal role as the Director and Consultant of Interior Design at Creative Design & Construction Limited. In her capacity as Director, she contributes to the overall strategic direction of the company, ensuring a seamless integration of interior design concepts into construction projects. As a Consultant of Interior Design, Najia Nitu brings her creative expertise to enhance the aesthetic appeal and functionality of spaces within the projects. Her innovative design solutions not only meet client expectations but also elevate the company's reputation in the competitive market. Ms. Nitu's leadership in interior design adds a unique dimension to Creative Design & Construction Limited's capabilities, making her a key contributor to the company's success.",
-    image: "/images/team/teams/neetu.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Nitu.jpg",
     company: {
       department: "Director",
-      title: "Consultant",
+      // title: "Consultant",
       teamCategories: "Leadership",
     },
   },
@@ -1483,24 +1861,12 @@ export const TEAMDATA = [
     id: 6,
     firstName: "Mobinur",
     lastName: "Rahman",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "As the Head of Design & BIM (Building Information Modeling) at Creative Design & Construction Limited, Mobinur Rahman assumes a crucial role in shaping the architectural vision of the company. Leveraging his extensive experience in architectural design and consultation, Mr. Rahman leads the design team in creating innovative and functional spaces for construction projects. His expertise extends to integrating BIM technology and enhancing efficiency in project planning and execution. As one of the key figures in the company, Mobinur Rahman actively contributes to maintaining high standards of design excellence, ensuring that projects align with client expectations and industry regulations. His leadership plays a vital role in positioning Creative Design & Construction Limited as a leader in architectural innovation and design efficiency.",
-    image: "/images/team/teams/Mobinur.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Mobin.jpg",
     company: {
       department: "Head of Design",
-      title: "Head of Design & BIM",
+      // title: "Head of Design & BIM",
       teamCategories: "Architectural",
     },
   },
@@ -1508,24 +1874,12 @@ export const TEAMDATA = [
     id: 4,
     firstName: "Andrew",
     lastName: "Modhu",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "As the Director of Operations at Creative Design & Construction Limited, Andrew Madhu oversees and manages all aspects of the company's day-to-day operational activities. Mr. Andrew plays a crucial role in ensuring the efficient execution of construction projects, overseeing timelines, and coordinating with various teams to meet project milestones. He is responsible for implementing and optimizing operational processes to enhance productivity, cost-effectiveness, and overall project delivery. Andrew Madhu collaborates closely with the executive team to develop and execute strategic plans that align with the company's goals and objectives. With a focus on quality control and client satisfaction, Andrew Madhu works to uphold the company's reputation for excellence in creative design and construction services.",
-    image: "/images/team/teams/AndrewModhu.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Andrew.jpg",
     company: {
-      department: "Director",
-      title: "Operations",
+      department: "Director Operation",
+      // title: "Operations",
       teamCategories: "Leadership",
     },
   },
@@ -1533,47 +1887,37 @@ export const TEAMDATA = [
     id: 5,
     firstName: "Akm ",
     lastName: "Boby",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "AKM Boby, as the Head of Finance with a qualification as a Fellow Chartered Certified Accountant (FCCA), plays a pivotal role in Creative Design & Construction Limited, overseeing the financial management and strategic planning of the company. His responsibilities include managing financial reporting, budgeting, and forecasting to ensure the company's financial health and compliance with industry regulations. AKM Boby collaborates closely with other departments, providing financial insights to support decision-making processes and optimize resource allocation. As a qualified FCCA professional, he brings a high level of financial expertise to the organization, implementing best practices in financial governance and risk management. AKM Boby also contributes to long-term financial strategies, working with the executive team to align financial goals with the overall business objectives of Creative Design & Construction Limited.",
-    image: "/images/team/teams/Bobby.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Boby.jpg",
+
     company: {
       department: "Head of Finance",
-      title: "( FCCA)",
+      // title: "( FCCA)",
       teamCategories: "Leadership",
     },
   },
   //Architectural Team
   {
+    id: 10,
+    firstName: "Masud",
+    lastName: "Karim",
+    description:
+      "Masud Karim, as Senior Project Manager at Creative Design & Construction Limited, oversees the end-to-end execution of design and construction projects. He leads a multidisciplinary team, ensuring seamless coordination between architects, designers, engineers, and contractors. Masud is responsible for project planning, budgeting, and resource allocation, ensuring timely completion within set parameters. He liaises with clients to understand their vision, providing expert guidance and ensuring project deliverables exceed expectations. With his strategic insight and leadership, Masud ensures that Creative Design & Construction Limited continues to deliver innovative and high-quality solutions to its clients.",
+    image: "https://cdcdevelopment.co.uk/images/team/Masud.jpg",
+    company: {
+      department: "Head of Quality Control",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+  {
     id: 7,
     firstName: "Areef",
     lastName: "Khan",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Areef Akhtar Khan, serving as an Architectural Designer at Creative Design & Construction Limited, is responsible for translating conceptual designs into detailed architectural plans and drawings, ensuring alignment with project specifications and client requirements. His role involves collaborating with clients, project managers, and other stakeholders to understand design preferences and incorporate innovative ideas into the architectural framework. Areef Akhtar Khan plays a crucial role in maintaining design integrity throughout the construction process, providing valuable input to address any challenges that may arise and ensuring the final output meets aesthetic and functional standards. He actively participates in design reviews, offering creative solutions and revisions as needed to enhance the overall quality and feasibility of architectural projects undertaken by the company. 	Areef Akhtar Khan contributes to the company's reputation for excellence in design by staying updated on industry trends, incorporating sustainable practices, and continuously refining his skills to deliver cutting-edge and aesthetically pleasing architectural solutions.",
-    image: "/images/team/teams/Aref.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Areef.jpg",
     company: {
       department: "Architectural Designer",
       // title: "Engineer",
@@ -1608,21 +1952,9 @@ export const TEAMDATA = [
     id: 9,
     firstName: "Mohammed",
     lastName: "Suhair",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Mohammed Suhair, serving as an Architectural Designer at Creative Design & Construction Limited, holds a specialized role in advancing the company's design initiatives. With expertise in both 3D design and interior design, Suhair brings a multifaceted skill set to the table. His primary responsibilities include crafting detailed and innovative 3D models that enhance project visualization and client communication. Additionally, Suhair is instrumental in integrating interior design seamlessly into architectural plans, ensuring a cohesive and aesthetically pleasing outcome. His nuanced understanding of spatial aesthetics and functionality adds a distinct touch to projects, contributing significantly to the overall success and uniqueness of the firm's architectural solutions.",
-    image: "/images/team/teams/Suhir.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Suhair.jpg",
     company: {
       department: "Architectural Designer",
       // title: "Civil Engineer",
@@ -1633,21 +1965,9 @@ export const TEAMDATA = [
     id: 29,
     firstName: "Snehal",
     lastName: "Mhokar",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
-    image: "",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Snehal.jpg",
     company: {
       department: "Architectural Designer",
       // title: "Civil Engineer",
@@ -1655,79 +1975,112 @@ export const TEAMDATA = [
     },
   },
   {
-    id: 32,
-    firstName: "Gayathri",
-    lastName: "Ramalingam",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
+    id: 60,
+    firstName: "Md Tareq",
+    lastName: "Hossain",
     description:
-      "Gayathri Ramalingam holds the dual role of Interior Designer and CAD Technician at Creative Design & Construction Limited, bringing a unique blend of artistic creativity and technical proficiency to the team. Her responsibilities encompass conceptualizing interior design concepts, creating detailed drawings, and producing 3D models using CAD software. Gayathri collaborates closely with clients and project stakeholders to translate design visions into tangible plans and visual representations. She ensures that designs meet aesthetic, functional, and regulatory requirements while also adhering to project timelines and budgets. Through her expertise in both interior design and CAD technology, Gayathri contributes to the successful execution of projects and the overall quality of design solutions at Creative Design & Construction Limited.",
-    image: "",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+      "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
+    image: "https://cdcdevelopment.co.uk/images/team/Tareq.jpg",
     company: {
-      department: "Interior Designer and CAD Technician",
+      department: "Interior Designer",
+      // title: "Civil Engineer",
+      teamCategories: "Architectural",
+    },
+  },
+  {
+    id: 41,
+    firstName: "Artenisa",
+    lastName: "Arifllari",
+    description:
+      "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
+    image: "https://cdcdevelopment.co.uk/images/team/Artenisa.jpg",
+    company: {
+      department: "Architectural Assistant",
+      // title: "Civil Engineer",
+      teamCategories: "Architectural",
+    },
+  },
+  {
+    id: 42,
+    firstName: "Sinem",
+    lastName: "Canli",
+    description:
+      "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
+    image: "https://cdcdevelopment.co.uk/images/team/Sinem.jpg",
+    company: {
+      department: "Architectural Assistant",
+      // title: "Civil Engineer",
+      teamCategories: "Architectural",
+    },
+  },
+  // Vidya
+  {
+    id: 26,
+    firstName: "Vidya",
+    lastName: "Vijayan",
+    description:
+      "Syed Qamber Ali serves as the Project Manager at Creative Design & Construction Limited, specializing in quality control management. He meticulously oversees every phase of project implementation, ensuring adherence to rigorous quality standards and regulations. Syed conducts thorough inspections and assessments to identify and rectify any discrepancies or deficiencies promptly. With his expertise, he develops and implements robust quality assurance protocols, fostering a culture of excellence and continuous improvement within the organization. Syed collaborates closely with project teams and stakeholders to uphold the company's reputation for delivering exceptional quality in every construction endeavour.",
+    image: "https://cdcdevelopment.co.uk/images/team/Vidya.jpg",
+
+    company: {
+      department: "Architectural Assistant",
       // title: "Civil Engineer",
       teamCategories: "Architectural",
     },
   },
 
+  // {
+  //   id: 44,
+  //   firstName: "Md Tareq",
+  //   lastName: "Hossain",
+  //   description:
+  //     "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
+  //   image: "https://cdcdevelopment.co.uk/images/team/Tareq.jpg",
+  //   company: {
+  //     department: "Interior Designer",
+  //     // title: "Civil Engineer",
+  //     teamCategories: "Architectural",
+  //   },
+  // },
+
+  // {
+  //   id: 32,
+  //   firstName: "Gayathri",
+  //   lastName: "Ramalingam",
+  //   email: "atuny0@sohu.com",
+  //   phone: "+63 791 675 8914",
+  //   username: "atuny0",
+  //   password: "9uQFF1Lh",
+  //   birthDate: "2000-12-25",
+  //   description:
+  //     "Gayathri Ramalingam holds the dual role of Interior Designer and CAD Technician at Creative Design & Construction Limited, bringing a unique blend of artistic creativity and technical proficiency to the team. Her responsibilities encompass conceptualizing interior design concepts, creating detailed drawings, and producing 3D models using CAD software. Gayathri collaborates closely with clients and project stakeholders to translate design visions into tangible plans and visual representations. She ensures that designs meet aesthetic, functional, and regulatory requirements while also adhering to project timelines and budgets. Through her expertise in both interior design and CAD technology, Gayathri contributes to the successful execution of projects and the overall quality of design solutions at Creative Design & Construction Limited.",
+  //   image: "",
+  //   social: {
+  //     facebook: "https://facebook.com",
+  //     instagram: "Washington",
+  //     twitter: "Twitter",
+  //     linkedin: "20020",
+  //     youtube: "CD",
+  //   },
+  //   company: {
+  //     department: "Interior Designer and CAD Technician",
+  //     // title: "Civil Engineer",
+  //     teamCategories: "Architectural",
+  //   },
+  // },
+
   //Project Management Team
-  {
-    id: 10,
-    firstName: "Masud",
-    lastName: "Karim",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "Masud Karim, as Senior Project Manager at Creative Design & Construction Limited, oversees the end-to-end execution of design and construction projects. He leads a multidisciplinary team, ensuring seamless coordination between architects, designers, engineers, and contractors. Masud is responsible for project planning, budgeting, and resource allocation, ensuring timely completion within set parameters. He liaises with clients to understand their vision, providing expert guidance and ensuring project deliverables exceed expectations. With his strategic insight and leadership, Masud ensures that Creative Design & Construction Limited continues to deliver innovative and high-quality solutions to its clients.",
-    image: "/images/team/teams/MursadKarim.webp",
-    social: {
-      facebook: "1745 T Street Southeast",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "DC",
-    },
-    company: {
-      department: "Senior Project Manager",
-      // title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
+
   {
     id: 11,
     firstName: "Venkatesh",
     lastName: "Chintalapudi",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Venkatesh Chintalapudi, a seasoned Project Manager at Creative Design & Construction Limited, specializes in commercial fit-out projects. With his extensive expertise in this domain, Venkatesh leads the planning, execution, and delivery of complex commercial interior projects with finesse. He adeptly manages all aspects of fit-out projects, from initial conceptualization to final handover, ensuring alignment with client specifications and industry standards. Venkatesh collaborates closely with architects, designers, and subcontractors to optimize space utilization and create functional yet visually captivating commercial environments. Leveraging his deep understanding of commercial design trends and regulations, he consistently delivers innovative and tailored solutions that exceed client expectations. Venkatesh's leadership and proficiency ensure the successful completion of commercial fit-out projects, driving Creative Design & Construction Limited's reputation as a trusted provider of exceptional interior solutions.",
-    image: "/images/team/teams/venkatesh.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Venketash.jpg",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
@@ -1735,24 +2088,12 @@ export const TEAMDATA = [
     id: 12,
     firstName: "Srinivasa",
     lastName: "Yerapatineni",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Srinivasa Yerapatineni assumes the pivotal role of Project Manager at Creative Design & Construction Limited, bringing forth extensive expertise in residential projects. Leading with precision and dedication, Srinivasa orchestrates the seamless execution of residential construction endeavours from inception to completion. His profound understanding of residential design principles and market trends enables him to craft bespoke living spaces that resonate with clients' lifestyles and aspirations. Srinivasa collaborates closely with architects, interior designers, and subcontractors to ensure that every aspect of the residential project aligns with quality standards and timelines. With a keen eye for detail and a commitment to excellence, he consistently delivers superior results, earning the trust and satisfaction of homeowners. Srinivasa's adept project management skills and residential project proficiency elevate Creative Design & Construction Limited's portfolio, solidifying its reputation as a premier provider of custom residential solutions.",
-    image: "/images/team/teams/Sairam.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
@@ -1760,24 +2101,40 @@ export const TEAMDATA = [
     id: 13,
     firstName: "Narendra",
     lastName: "Nath",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Narendra Nath, as a Project Manager at Creative Design & Construction Limited, holds a pivotal role in driving the successful execution of diverse construction projects. With his multifaceted skill set and strategic vision, Narendra oversees all phases of project development, from initial planning to final delivery. He adeptly manages project timelines, budgets, and resources, ensuring efficient and cost-effective project outcomes. Narendra fosters strong relationships with clients, subcontractors, and stakeholders, prioritizing effective communication and collaboration throughout the project lifecycle. Leveraging his comprehensive understanding of construction methodologies and industry best practices, Narendra consistently delivers projects of the highest quality, contributing to the continued success and growth of Creative Design & Construction Limited.",
-    image: "/images/team/teams/Nath.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Narendra.jpg",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+
+  {
+    id: 15,
+    firstName: "Shakil",
+    lastName: "Ahmed",
+    description:
+      "As a Project Manager at Creative Design & Construction Limited, Dewan Shakil Ahmed plays a pivotal role in orchestrating the seamless execution of construction projects. With a keen eye for detail and strong organizational skills, Dewan oversees project planning, scheduling, and resource allocation to ensure timely completion within budgetary constraints. He collaborates closely with cross-functional teams, including architects, engineers, and subcontractors, fostering effective communication and coordination throughout the project lifecycle. Dewan monitors project progress, conducts regular site inspections, and addresses any issues or challenges that arise to maintain project momentum and quality standards. Through his leadership and dedication, Dewan contributes to the company's reputation for delivering excellence in construction projects.",
+    image: "https://cdcdevelopment.co.uk/images/team/Shakil.jpg",
+    company: {
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+  {
+    id: 92,
+    firstName: "Syed Qamber",
+    lastName: "Ali",
+    description:
+      "Syed Qamber Ali serves as the Project Manager at Creative Design & Construction Limited, specializing in quality control management. He meticulously oversees every phase of project implementation, ensuring adherence to rigorous quality standards and regulations. Syed conducts thorough inspections and assessments to identify and rectify any discrepancies or deficiencies promptly. With his expertise, he develops and implements robust quality assurance protocols, fostering a culture of excellence and continuous improvement within the organization. Syed collaborates closely with project teams and stakeholders to uphold the company's reputation for delivering exceptional quality in every construction endeavour.",
+    image: "https://cdcdevelopment.co.uk/images/team/Ali.jpg",
+
+    company: {
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
@@ -1785,49 +2142,12 @@ export const TEAMDATA = [
     id: 14,
     firstName: "Anamul",
     lastName: "Haque",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Anamul Haque assumes the crucial role of Project Manager at Creative Design & Construction Limited, leveraging his profound knowledge of civil engineering to spearhead the successful execution of construction projects. With a strong foundation in civil engineering principles and practices, Anamul oversees project planning, design, and implementation with meticulous attention to detail. He collaborates closely with architects, structural engineers, and construction teams to ensure that projects are completed to the highest standards of quality and safety. Anamul's expertise allows him to effectively manage project resources, schedules, and budgets, optimizing efficiency and minimizing risks. Through his leadership and technical acumen, Anamul contributes to the continued success and reputation of Creative Design & Construction Limited as a premier provider of innovative construction solutions.",
-    image: "/images/team/teams/Anamul.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Anamul.jpg",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
-  {
-    id: 15,
-    firstName: "Shakil",
-    lastName: "Ahmed",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "As a Project Manager at Creative Design & Construction Limited, Dewan Shakil Ahmed plays a pivotal role in orchestrating the seamless execution of construction projects. With a keen eye for detail and strong organizational skills, Dewan oversees project planning, scheduling, and resource allocation to ensure timely completion within budgetary constraints. He collaborates closely with cross-functional teams, including architects, engineers, and subcontractors, fostering effective communication and coordination throughout the project lifecycle. Dewan monitors project progress, conducts regular site inspections, and addresses any issues or challenges that arise to maintain project momentum and quality standards. Through his leadership and dedication, Dewan contributes to the company's reputation for delivering excellence in construction projects.",
-    image: "/images/team/teams/Sakil.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Civil Enginner",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
@@ -1835,200 +2155,39 @@ export const TEAMDATA = [
     id: 27,
     firstName: "Parvathi",
     lastName: "Dadireddy",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "As a Project Manager at Creative Design & Construction Limited, Parvathi Dadireddy assumes a critical role in overseeing the successful implementation of construction projects. With exceptional leadership skills and a keen eye for detail, Parvathi collaborates with multidisciplinary teams to ensure projects are completed on time and within budget. She conducts thorough project assessments, identifies potential risks, and develops mitigation strategies to maintain project timelines and quality standards. Parvathi serves as a primary point of contact for clients, addressing inquiries, providing updates, and ensuring their satisfaction throughout the project lifecycle. Through her strategic planning and proactive approach, Parvathi contributes to the company's continued success and reputation as a trusted provider of construction services.",
-    image: "",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Parvathi.jpg",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Civil Engineer",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
   {
-    id: 26,
-    firstName: "Syed Qamber",
-    lastName: "Ali",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
+    id: 48,
+    firstName: "Faria",
+    lastName: "Hritu",
     description:
-      "Syed Qamber Ali serves as the Project Manager at Creative Design & Construction Limited, specializing in quality control management. He meticulously oversees every phase of project implementation, ensuring adherence to rigorous quality standards and regulations. Syed conducts thorough inspections and assessments to identify and rectify any discrepancies or deficiencies promptly. With his expertise, he develops and implements robust quality assurance protocols, fostering a culture of excellence and continuous improvement within the organization. Syed collaborates closely with project teams and stakeholders to uphold the company's reputation for delivering exceptional quality in every construction endeavour.",
-    image: "",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+      "As a Project Manager at Creative Design & Construction Limited, Parvathi Dadireddy assumes a critical role in overseeing the successful implementation of construction projects. With exceptional leadership skills and a keen eye for detail, Parvathi collaborates with multidisciplinary teams to ensure projects are completed on time and within budget. She conducts thorough project assessments, identifies potential risks, and develops mitigation strategies to maintain project timelines and quality standards. Parvathi serves as a primary point of contact for clients, addressing inquiries, providing updates, and ensuring their satisfaction throughout the project lifecycle. Through her strategic planning and proactive approach, Parvathi contributes to the company's continued success and reputation as a trusted provider of construction services.",
+    image: "https://cdcdevelopment.co.uk/images/team/Faria.jpg",
     company: {
-      department: "Project Manager",
-      title: "Civil Engineer",
+      department: "Site Engineer",
+      // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
   },
-  //Operation Team
-  {
-    id: 17,
-    firstName: "Azhar",
-    lastName: "Mohammad",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "Azhar Mohammad, serving as the Electrical Engineer at Creative Design & Construction Limited, leads the electrical team with his extensive experience and expertise. In his role, Azhar is responsible for overseeing all aspects of electrical design, installation, and maintenance across construction projects. He ensures compliance with electrical codes, standards, and regulations, while also integrating innovative and sustainable electrical solutions. Azhar collaborates closely with project managers, architects, and subcontractors to coordinate electrical systems with overall project requirements and timelines. Through his leadership and technical proficiency, Azhar plays a crucial role in delivering safe, efficient, and high-quality electrical solutions that meet the needs of clients and uphold the company's reputation for excellence.",
-    image: "/images/team/teams/Azhar.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Operations",
-    },
-  },
-  {
-    id: 30,
-    firstName: "Hossain",
-    lastName: "Mohammad",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "As an Electrical Engineer at Creative Design & Construction Limited, Hossain Mohammad brings a wealth of experience and expertise to the electric team. His role involves overseeing the design, installation, and maintenance of electrical systems in construction projects. With his extensive background, Hossain ensures that electrical solutions meet industry standards, regulations, and client requirements. He collaborates closely with other team members to optimize electrical designs for efficiency, safety, and cost-effectiveness. Hossain's leadership within the electric team contributes to the successful delivery of projects and upholds the company's commitment to quality and innovation.",
-    image: "/images/team/teams/HossainEmdad.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Operations",
-    },
-  },
-  {
-    id: 18,
-    firstName: "Ibrahim Sultan",
-    lastName: "KHAN",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "As an Electrical Engineer at Creative Design & Construction Limited, Ibrahim Sultan Khan brings a dynamic blend of youthfulness and experience to the electric team. Despite being one of the youngest members, Ibrahim's intelligence and aptitude contribute significantly to the team's success. His role involves actively participating in the design, implementation, and troubleshooting of electrical systems within construction projects. Ibrahim leverages his fresh perspective and innovative thinking to propose creative solutions and streamline project workflows. Through his dedication and willingness to learn, Ibrahim adds value to the electric team and plays a vital role in delivering high-quality electrical solutions that meet client expectations.",
-    image: "/images/team/teams/ibrahim.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Operations",
-    },
-  },
-  {
-    id: 19,
-    firstName: "Anowaarul Islam",
-    lastName: "Sultan",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "Anowarul Islam Sultan serves as an Electrical Engineer at Creative Design & Construction Limited, bringing with him a wealth of experience and intelligence to the electric team. With his extensive background in electrical engineering, Anowarul plays a pivotal role in designing, implementing, and maintaining electrical systems for various construction projects. He leverages his expertise to ensure that electrical solutions are efficient, reliable, and compliant with industry standards and regulations. Anowarul collaborates closely with colleagues and stakeholders to address complex technical challenges and optimize project outcomes. His leadership and problem-solving skills contribute to the successful execution of projects, upholding the company's reputation for excellence in electrical engineering.",
-    image: "/images/team/teams/Anowaarul.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Operations",
-    },
-  },
-  {
-    id: 16,
-    firstName: "Zahirul",
-    lastName: "Islam",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
-    description:
-      "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
-    image: "/images/team/teams/Zahirul.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Operations",
-    },
-  },
+
   //Office Admin
   {
     id: 20,
     firstName: "Shamsul",
     lastName: "Alam",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Shamsul Alam serves as the Office Administrator at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth and efficient operation of the office. His responsibilities include managing administrative tasks such as maintaining records, scheduling appointments, and coordinating office supplies and equipment. Shamsul acts as a point of contact for internal and external communications, handling inquiries and correspondence professionally and promptly. He assists in organizing meetings, preparing agendas, and recording minutes to facilitate effective communication among team members. With his organizational skills and attention to detail, Shamsul contributes to creating a productive and supportive work environment for all employees at Creative Design & Construction Limited.",
-    image: "/images/team/teams/Samsul.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Shamsul.jpg",
     company: {
-      department: "Office Admin",
+      department: "Director of Admin & Requirements",
       // title: "Engineer",
       teamCategories: "Office Admin",
     },
@@ -2037,21 +2196,10 @@ export const TEAMDATA = [
     id: 21,
     firstName: "Salma",
     lastName: "Begum",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Salma Begum serves as the Account Manager at Creative Design & Construction Limited, responsible for overseeing financial matters and client accounts. Her role involves managing client invoices, payments, and financial transactions with accuracy and efficiency. Salma works closely with clients to address any billing inquiries or concerns, ensuring timely resolution and maintaining positive relationships. Additionally, she collaborates with internal teams to monitor project budgets, track expenses, and provide financial reporting as needed. Through her diligent financial management and client-focused approach, Salma contributes to the company's financial health and client satisfaction at Creative Design & Construction Limited.",
-    image: "/images/team/teams/salam.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Salma.jpg",
+
     company: {
       department: "Account Manager",
       // title: "Engineer",
@@ -2062,21 +2210,9 @@ export const TEAMDATA = [
     id: 28,
     firstName: "Mahbubul Alam",
     lastName: "Bhuiyan",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Mahbubul Alam Bhuiyan holds the position of Senior Account Manager at Creative Design & Construction Limited, playing a pivotal role in overseeing the financial management and client accounts of the company. With extensive experience and expertise in accounting and finance, Mahbubul leads a team responsible for managing client invoices, payments, and financial transactions with precision and efficiency. He collaborates closely with key stakeholders to develop and implement strategic financial plans, ensuring alignment with organizational goals and objectives. Mahbubul also provides mentorship and guidance to junior staff, fostering their professional development and ensuring adherence to best practices in financial management. Through his leadership and strategic vision, Mahbubul contributes to the financial success and stability of Creative Design & Construction Limited.",
-    image: "",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Mahbub.jpg",
     company: {
       department: "Account Manager",
       // title: "Engineer",
@@ -2087,24 +2223,38 @@ export const TEAMDATA = [
     id: 24,
     firstName: "Mehedi",
     lastName: "Iqbal Evan",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Mehedi Iqbal Evan holds the position of Digital Marketing Specialist at Creative Design & Construction Limited, responsible for driving the company's online presence and marketing efforts. His role involves developing and implementing digital marketing strategies across various platforms to increase brand awareness and generate leads. Mehedi conducts market research and analyzes data to identify trends and opportunities for optimizing digital campaigns and maximizing ROI. He manages the company's website, social media channels, and email marketing campaigns, creating engaging content and monitoring performance metrics to ensure effectiveness. Through his expertise in digital marketing techniques and analytics, Mehedi contributes to enhancing the visibility and reputation of Creative Design & Construction Limited in the digital landscape.",
-    image: "/images/team/teams/Even.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Evan.jpg",
     company: {
-      department: "Digital Marketing",
-      title: "Marketing",
+      department: "Markting Administator",
+      // title: "Marketing",
+      teamCategories: "Business & Marketing",
+    },
+  },
+  {
+    id: 52,
+    firstName: "Moshuir",
+    lastName: "Rahman",
+    description:
+      "Mehedi Iqbal Evan holds the position of Digital Marketing Specialist at Creative Design & Construction Limited, responsible for driving the company's online presence and marketing efforts. His role involves developing and implementing digital marketing strategies across various platforms to increase brand awareness and generate leads. Mehedi conducts market research and analyzes data to identify trends and opportunities for optimizing digital campaigns and maximizing ROI. He manages the company's website, social media channels, and email marketing campaigns, creating engaging content and monitoring performance metrics to ensure effectiveness. Through his expertise in digital marketing techniques and analytics, Mehedi contributes to enhancing the visibility and reputation of Creative Design & Construction Limited in the digital landscape.",
+    image: "https://cdcdevelopment.co.uk/images/team/Moshuir.jpg",
+    company: {
+      department: "Marketing Manager",
+      // title: "Marketing",
+      teamCategories: "Business & Marketing",
+    },
+  },
+  {
+    id: 51,
+    firstName: "Shoeb",
+    lastName: "Sheikh",
+    description:
+      "Neel Patel serves as a member of the IT Department at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth operation of the company's technology infrastructure. His responsibilities include managing and maintaining the organization's hardware, software, and network systems to support daily operations effectively. Neel provides technical support to employees, troubleshooting IT issues, and resolving technical problems promptly to minimize downtime. Additionally, he assists in the implementation of new technologies and upgrades, ensuring they align with the company's goals and security requirements. Through his expertise and proactive approach, Neel helps to enhance efficiency, productivity, and innovation within Creative Design & Construction Limited's IT environment.",
+    image: "https://cdcdevelopment.co.uk/images/team/Shoeb.jpg",
+    company: {
+      department: "Marketing Executive",
+      // title: "Web Developer",
       teamCategories: "Business & Marketing",
     },
   },
@@ -2112,25 +2262,93 @@ export const TEAMDATA = [
     id: 25,
     firstName: "Neel",
     lastName: "Patel",
-    email: "atuny0@sohu.com",
-    phone: "+63 791 675 8914",
-    username: "atuny0",
-    password: "9uQFF1Lh",
-    birthDate: "2000-12-25",
     description:
       "Neel Patel serves as a member of the IT Department at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth operation of the company's technology infrastructure. His responsibilities include managing and maintaining the organization's hardware, software, and network systems to support daily operations effectively. Neel provides technical support to employees, troubleshooting IT issues, and resolving technical problems promptly to minimize downtime. Additionally, he assists in the implementation of new technologies and upgrades, ensuring they align with the company's goals and security requirements. Through his expertise and proactive approach, Neel helps to enhance efficiency, productivity, and innovation within Creative Design & Construction Limited's IT environment.",
-    image: "/images/team/teams/Neel.webp",
-    social: {
-      facebook: "https://facebook.com",
-      instagram: "Washington",
-      twitter: "Twitter",
-      linkedin: "20020",
-      youtube: "CD",
-    },
+    image: "https://cdcdevelopment.co.uk/images/team/Neel.jpg",
     company: {
-      department: "IT Department",
-      title: "Web Developer",
+      department: "Software Engineer",
+      // title: "Web Developer",
       teamCategories: "Business & Marketing",
+    },
+  },
+
+  //Operation Team
+  {
+    id: 17,
+    firstName: "Azhar",
+    lastName: "Mohammad",
+    description:
+      "Azhar Mohammad, serving as the Electrical Engineer at Creative Design & Construction Limited, leads the electrical team with his extensive experience and expertise. In his role, Azhar is responsible for overseeing all aspects of electrical design, installation, and maintenance across construction projects. He ensures compliance with electrical codes, standards, and regulations, while also integrating innovative and sustainable electrical solutions. Azhar collaborates closely with project managers, architects, and subcontractors to coordinate electrical systems with overall project requirements and timelines. Through his leadership and technical proficiency, Azhar plays a crucial role in delivering safe, efficient, and high-quality electrical solutions that meet the needs of clients and uphold the company's reputation for excellence.",
+    image: "https://cdcdevelopment.co.uk/images/team/Azhar.jpg",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
+    },
+  },
+  {
+    id: 30,
+    firstName: "Hossain",
+    lastName: "Mohammad",
+    description:
+      "As an Electrical Engineer at Creative Design & Construction Limited, Hossain Mohammad brings a wealth of experience and expertise to the electric team. His role involves overseeing the design, installation, and maintenance of electrical systems in construction projects. With his extensive background, Hossain ensures that electrical solutions meet industry standards, regulations, and client requirements. He collaborates closely with other team members to optimize electrical designs for efficiency, safety, and cost-effectiveness. Hossain's leadership within the electric team contributes to the successful delivery of projects and upholds the company's commitment to quality and innovation.",
+    image: "",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
+    },
+  },
+  {
+    id: 18,
+    firstName: "Ibrahim Sultan",
+    lastName: "KHAN",
+    description:
+      "As an Electrical Engineer at Creative Design & Construction Limited, Ibrahim Sultan Khan brings a dynamic blend of youthfulness and experience to the electric team. Despite being one of the youngest members, Ibrahim's intelligence and aptitude contribute significantly to the team's success. His role involves actively participating in the design, implementation, and troubleshooting of electrical systems within construction projects. Ibrahim leverages his fresh perspective and innovative thinking to propose creative solutions and streamline project workflows. Through his dedication and willingness to learn, Ibrahim adds value to the electric team and plays a vital role in delivering high-quality electrical solutions that meet client expectations.",
+    image: "",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
+    },
+  },
+  {
+    id: 19,
+    firstName: "Anowaarul Islam",
+    lastName: "Sultan",
+    description:
+      "Anowarul Islam Sultan serves as an Electrical Engineer at Creative Design & Construction Limited, bringing with him a wealth of experience and intelligence to the electric team. With his extensive background in electrical engineering, Anowarul plays a pivotal role in designing, implementing, and maintaining electrical systems for various construction projects. He leverages his expertise to ensure that electrical solutions are efficient, reliable, and compliant with industry standards and regulations. Anowarul collaborates closely with colleagues and stakeholders to address complex technical challenges and optimize project outcomes. His leadership and problem-solving skills contribute to the successful execution of projects, upholding the company's reputation for excellence in electrical engineering.",
+    image: "",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
+    },
+  },
+  {
+    id: 16,
+    firstName: "Zahirul",
+    lastName: "Islam",
+    description:
+      "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
+    image: "",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
+    },
+  },
+  {
+    id: 44,
+    firstName: "Tamim Ahmed",
+    lastName: "Aurpon ",
+    description:
+      "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
+    image: "https://cdcdevelopment.co.uk/images/team/Aurpon.jpg",
+    company: {
+      department: "Electrical Engineer",
+      // title: "Engineer",
+      teamCategories: "Electrical",
     },
   },
   //23 total

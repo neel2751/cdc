@@ -24,6 +24,61 @@ const Detail = ({ slug }) => {
           </div>
         </div>
       </section>
+      {/* <section class="md:my-36 my-24" id="feature4">
+        <div class="mx-auto max-w-6xl px-4 py-10">
+          <div class="flex flex-col gap-16 md:gap-24">
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                class="mx-auto rounded-2xl gap-8 grid lg:gap-20 md:gap-12 md:grid-cols-2"
+              >
+                <div
+                  class={`col-span-1 aos-init aos-animate place-content-center order-${
+                    item % 2 === 0 ? 1 : 2
+                  }`}
+                  data-aos="fade-up"
+                  data-aos-trigger=""
+                  style={{ opacity: 1, transform: "translateY(0px)" }}
+                >
+                  <div class="flex">
+                    <p class="text-lg leading-7 bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] bg-clip-text text-transparent">
+                      Important insights
+                    </p>
+                  </div>
+                  <h2 class="mt-6 h2 text-neutral-900 text-3xl leading- font-semibold tracking-tight">
+                    Real-time insights at your fingertips
+                  </h2>
+                  <p class="opacity-80 text-neutral-900 mt-4">
+                    Data syncs across your team instantly. Real-time access,
+                    with 99.9% uptime. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Ex nesciunt quia quibusdam, voluptatem
+                    aliquid autem, magnam, doloremque voluptatibus odio esse
+                    pariatur harum odit neque qui earum nam praesentium sint
+                    ullam!
+                  </p>
+                </div>
+                <div class="w-full mx-auto h-auto max-w-4xl mb-auto">
+                  <div
+                    class="relative h-full rounded-2xl from-blue-500 bg-gradient-to-br dark:to-base-600/60 after:absolute after:bg-base-100/30 after:inset-[1px] after:rounded-[calc(1rem-1px)] dark:after:bg-base-800/50 dark:via-base-600/60 to-base-300/70 via-base-300/70 aos-init aos-animate"
+                    data-aos="fade-left"
+                    style={{ opacity: 1, transform: "translateX(0px)" }}
+                  >
+                    <img
+                      alt="Real-time insights at your fingertips"
+                      class="w-full relative rounded-2xl border border-transparent object-cover p-1 z-10"
+                      decoding="async"
+                      height="600"
+                      loading="lazy"
+                      src={`https://cdcgrouplimited.com/nodejs/uploads/projects/Res/East_ham/${item}.jpg`}
+                      width="1000"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
     </>
   );
 };

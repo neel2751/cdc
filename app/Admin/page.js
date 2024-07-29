@@ -19,19 +19,34 @@
 //     </>
 //   );
 // }
-"use client";
 
-import { useSession } from "next-auth/react";
+"use client";
+import { SessionProvider, useSession } from "next-auth/react";
 import Chcek from "./(authPage)/Chcek/page";
 import Dashboard from "./Dashboard/page";
-import Dash from "./Dashboard/Dash";
+import { Suspense } from "react";
+
+// import Dashboard from "./Dashboard/page";
+
 export default function Home() {
-  // console.log(useSession);
-  const { data: session, status } = useSession();
-  console.log(status);
-  console.log(JSON.stringify(session));
-  if (status === "authenticated") {
-    return <Dashboard />;
+  return <Wrap />;
+}
+
+function Wrap() {
+  return (
+    <SessionProvider>
+      <Provide />
+    </SessionProvider>
+  );
+}
+
+function Provide() {
+  const { status } = useSession();
+  // if (status === "loading") {
+  //   return <div>Loading...</div>;
+  // }
+  if (status === "unauthenticated") {
+    return <Chcek />;
   }
-  return <Chcek />;
+  return <Dashboard />;
 }

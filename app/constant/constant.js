@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/navbar";
 import { SubMenu } from "../component/Header/submenu";
@@ -14,12 +14,6 @@ import Testimonials from "../component/Testimonials/testimonials";
 import Cta from "../component/CTA/Cta";
 import NewsletterPopup from "../component/NewsPopup/NewsletterPopup";
 import useScrollRestoration from "../Helper/useScrollRestoration";
-// pages/index.js
-import { Suspense } from "react";
-
-import IP from "../component/IP/IP";
-import Marquee from "../component/Marquee/Marquee";
-import Cursor from "../Helper/cursorHelper";
 
 // import useGeoLocation from "../Helper/useLocationData";
 
@@ -46,9 +40,9 @@ const constant = () => {
       {/* <Marquee ref={hoverRef} /> */}
       {/* <Cursor hoverRef={hoverRef} /> */}
       <Footer />
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <IP />
-      </Suspense>
+      </Suspense> */}
     </>
   );
 };

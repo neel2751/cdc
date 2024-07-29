@@ -90,3 +90,21 @@ body {
   height: 200px;
   top: -80px;
 }
+
+.bg-gradientdown {
+  background-image: radial-gradient(
+    140% 107.13% at 50% 10%,
+    transparent 37.41%,
+    #364ef580 69.27%,
+    #6698ff 100%
+  );
+}
+
+.bg-gradientdownRed {
+  background-image: radial-gradient(
+    140% 107.13% at 50% 10%,
+    transparent 37.41%,
+    #be123c80 69.27%,
+    #f43f5e 100%
+  );
+}

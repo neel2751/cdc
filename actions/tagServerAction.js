@@ -1,3 +1,4 @@
+"use server";
 import axios from "axios";
 
 export const handleTagDelete = async (id, onSuccess) => {

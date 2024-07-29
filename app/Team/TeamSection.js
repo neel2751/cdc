@@ -3,10 +3,15 @@ import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
-const NewsSection = ({ teamdata, category }) => {
+const TeamSection = ({ teamdata, category }) => {
   const filteredTeamData = teamdata.filter((article) =>
     article.company.teamCategories.includes(category)
   );
+
+  console.clear(); // clear console
+  filteredTeamData.map(({ company }) => {
+    console.log(company.teamCategories);
+  });
 
   const [modalOpen, setModalOpen] = useState(false);
   const [name, setName] = useState("");
@@ -66,7 +71,7 @@ const NewsSection = ({ teamdata, category }) => {
               layoutId={item.id}
               key={item.id}
               ref={trigger}
-              onClick={() => openModel(item)}
+              // onClick={() => openModel(item)}
               className="items-center bg-gray-50 rounded-lg hover:cursor-pointer shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
             >
               {item.image ? (
@@ -74,7 +79,7 @@ const NewsSection = ({ teamdata, category }) => {
                   <Image
                     width={600}
                     height={600}
-                    className="grayscale hover:grayscale-0 transition rounded-lg object-cover aspect-square sm:rounded-none sm:rounded-l-lg"
+                    className="hover:grayscale-0 transition rounded-lg object-cover aspect-square sm:rounded-none sm:rounded-l-lg"
                     src={item.image}
                     alt={`${item.name}'s picture.`}
                     // placeholder="blur"
@@ -121,7 +126,7 @@ const NewsSection = ({ teamdata, category }) => {
   );
 };
 
-export default NewsSection;
+export default TeamSection;
 
 // const Model = ({
 //   modalOpen,

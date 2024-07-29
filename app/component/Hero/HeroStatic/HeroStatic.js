@@ -29,9 +29,9 @@ const HeroStatic = ({ company, title, desc, tag, img }) => {
       <div className="w-full flex items-center relative">
         <div className="absolute top-1/4 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5]" />
         <div className="min-h-max relative mx-auto pt-20 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10">
-          <div className="flex items-center text-[#EAF3F5] mx-auto w-max px-2 font-medium text-sm py-1 rounded-full bg-[#242A3D] border border-gray-300">
+          {/* <div className="flex items-center text-[#EAF3F5] mx-auto w-max px-2 font-medium text-sm py-1 rounded-full bg-[#242A3D] border border-gray-300">
             {company}
-          </div>
+          </div> */}
           {/* <div
             className="flex cursor-pointer justify-center"
             onMouseEnter={() => {
@@ -61,6 +61,8 @@ const HeroStatic = ({ company, title, desc, tag, img }) => {
               {title.split(",")[1]}
             </p>
           </div> */}
+          {/* #242A3D this is the heading color */}
+          {/* {tag === "Home" && <Announcement />} */}
           <h1 className="text-[#242A3D] mx-auto max-w-5xl font-semibold  text-3xl/tight sm:text-5xl/tight lg:text-5xl/tight after:content-[url('/images/team/TeamLine.svg')] xl:lg:after:flex items-center after:-m-12 after:justify-end after:hidden">
             <motion.span
               ref={ref}
@@ -134,21 +136,32 @@ const HeroStatic = ({ company, title, desc, tag, img }) => {
             </div>
           </motion.button>
           <motion.div
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
             animate={{ y: 30 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            <div className="mx-auto max-w-full h-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 ">
-              {tag === "Home" ? (
-                <Video />
-              ) : tag === "About" ? (
+            {/* Old aspect aspect-[5/2.3] */}
+            {/* <div className="mx-auto max-w-full h-full rounded-2xl aspect-video overflow-hidden px-2 pt-2 "> */}
+            {tag === "Home" ? (
+              <div className="sm:mt-24 flow-root mt-16">
+                <div className="lg:p-4 lg:rounded-2xl lg:-m-4 ring-[#012f6a]/20 ring-inset ring-1 p-2 bg-[#012f6a]/20 rounded-xl -m-2">
+                  <Video />
+                </div>
+              </div>
+            ) : tag === "About" ? (
+              <div className="mx-auto max-w-full h-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 ">
                 <AboutImage />
-              ) : tag === "Careers" ? (
+              </div>
+            ) : tag === "Careers" ? (
+              <div className="mx-auto max-w-full h-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 ">
                 <CareersImage />
-              ) : (
-                <TeamImage />
-              )}
-            </div>
+              </div>
+            ) : (
+              <div className="mx-auto max-w-full h-full rounded-2xl aspect-[5/2.3] overflow-hidden px-2 pt-2 hidden ">
+                {/* <TeamImage /> */}
+              </div>
+            )}
+            {/* </div> */}
           </motion.div>
         </div>
       </div>
