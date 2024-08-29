@@ -54,14 +54,52 @@ import Constant from "./constant/constant";
 //   //  The possibilities are endless!
 // };
 
+// const jsonLd = {
+//   "@context": "https://schema.org",
+//   "@type": "WebSite",
+//   name: "Creative Design & Construction",
+//   image: "/images/Logo_New.svg",
+//   url: "https://cdc.construction/",
+//   description:
+//     "Construction Company to do service provide in Residintial and commercial",
+// };
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
+  "@type": "GeneralContractor",
   name: "Creative Design & Construction",
-  image: "/images/Logo_New.svg",
-  url: "https://cdc.construction/",
-  description:
-    "Construction Company to do service provide in Residintial and commercial",
+  image:
+    "https://www.cdc.construction/_next/static/media/Logo_New.64019ac1.svg",
+  "@id":
+    "https://www.cdc.construction/_next/static/media/Logo_New.64019ac1.svg",
+  url: "https://www.cdc.construction",
+  telephone: "020 8004 3327",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "595A Cranbrook Rd, Gants Hill",
+    addressLocality: "Ilford",
+    postalCode: "IG26JZ",
+    addressCountry: "GB",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "09:00",
+    closes: "17:00",
+  },
+  sameAs: [
+    "https://www.facebook.com/cdcconstructionltd",
+    "https://www.instagram.com/cdc.constructionuk/",
+    "https://www.youtube.com/channel/UCnHvmTVf2_iu4sXY9pzW7XA",
+    "https://www.linkedin.com/company/creative-design-and-construction-limited/",
+  ],
 };
 
 export default function Home() {

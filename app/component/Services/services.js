@@ -9,6 +9,7 @@ const ServiceCard = ({ image, name, description, link }) => {
     <motion.div
       whileHover={{ scale: [1, 1.05] }}
       transition={{ duration: 0.3, ease: [0.43, 0, 0.53, 1], type: "spring" }}
+      key={name}
 
       // transition={{ duration: 0.3, ease: "easeInOut" }}
     >
@@ -74,9 +75,9 @@ const Services = () => {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-10">
         <div className="text-center space-y-6 max-w-2xl mx-auto">
-          <h1 className="text-3xl font-semibold sm:text-3xl text-[#242A3D] capitalize">
+          <h2 className="text-3xl font-semibold sm:text-3xl text-[#242A3D] capitalize">
             Tailored Construction Solutions
-          </h1>
+          </h2>
           <p className="text-[#242A3D] text-base font-medium opacity-70">
             At CDC, we offer a comprehensive suite of construction services,
             meticulously tailored to match your unique project requirements,

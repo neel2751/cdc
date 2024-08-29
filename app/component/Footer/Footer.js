@@ -16,6 +16,7 @@ import Img from "../Img/Img";
 import { forwardRef, useState } from "react";
 import { newsLetterData } from "@/actions/ipAddressAction";
 import LogoCloudSection from "../LogoCloud/LogoCloud";
+import Social from "../Social/Social";
 
 const FooterItem = ({ text, link }) => {
   return (
@@ -100,8 +101,8 @@ const Footer = () => {
         <div className="mt-auto w-full max-w-7xl py-10 px-4 sm:px-6 lg:px-8 mx-auto">
           {/* <!-- Grid --> */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10 text-neutral-800">
-            <div className="col-span-full hidden lg:col-span-1 lg:block">
-              <a
+            <div className="col-span-full lg:col-span-1 lg:block">
+              <Link
                 className="flex-none text-xl font-semibold w-4/12"
                 href="#"
                 aria-label="Brand"
@@ -111,8 +112,8 @@ const Footer = () => {
                   alt={"CDC Logo"}
                   cls={"!w-20 h-auto py-2"}
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 className="group"
                 target="_blank"
                 rel="noopener"
@@ -125,7 +126,7 @@ const Footer = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="w-6 h-6 group-hover:text-black"
+                    className="w-6 h-6 group-hover:text-black sm:mr-0 mr-2"
                   >
                     <path
                       strokeLinecap="round"
@@ -142,71 +143,87 @@ const Footer = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="font-medium group-hover:text-black text-sm"
+                    className="font-medium group-hover:text-black text-sm block lg:hidden leading-6"
                   >
-                    595a Cranbrook Road, <br />
+                    595a Cranbrook Road, Ilford, IG2 6JZ,
+                    <br />
+                    United Kingdom
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="font-medium group-hover:text-black text-sm hidden lg:block"
+                  >
+                    595a Cranbrook Road,
+                    <br />
                     Ilford, IG2 6JZ, <br />
                     United Kingdom
                   </motion.p>
                 </div>
-              </a>
-              <a
-                className="group mt-2"
-                target="_blank"
-                rel="noopener"
-                href="tel:02080043327"
-              >
-                <div className="group flex pt-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-5 h-5 me-2 group-hover:text-black"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-                    />
-                  </svg>
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="font-medium group-hover:text-black text-sm"
-                  >
-                    020-8004-3327
-                  </motion.p>
-                </div>
-              </a>
-              <a className="group mt-2" href="mailto:info@cdc.construction">
-                <div className="group flex pt-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-5 h-5 me-2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
-                    />
-                  </svg>
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="font-medium group-hover:text-black text-sm"
-                  >
-                    info@cdc.construction
-                  </motion.p>
-                </div>
-              </a>
+              </Link>
+              <div className="flex sm:gap-0 gap-4 sm:items-start items-center sm:flex-col flex-row">
+                <Link
+                  className="group mt-2"
+                  target="_blank"
+                  rel="noopener"
+                  href="tel:02080043327"
+                >
+                  <div className="group flex pt-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5 me-2 group-hover:text-black"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                      />
+                    </svg>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      className="font-medium group-hover:text-black text-sm"
+                    >
+                      020-8004-3327
+                    </motion.p>
+                  </div>
+                </Link>
+                <Link
+                  className="group sm:mt-2 mt-0"
+                  href="mailto:info@cdc.construction"
+                >
+                  <div className="group flex pt-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5 me-2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
+                      />
+                    </svg>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      className="font-medium group-hover:text-black text-sm"
+                    >
+                      info@cdc.construction
+                    </motion.p>
+                  </div>
+                </Link>
+              </div>
             </div>
             {/* <!-- End Col --> */}
 
@@ -259,10 +276,10 @@ const Footer = () => {
                   weekly.
                 </p>
                 <form
-                  className="sm:max-w-md flex mt-6"
+                  className="sm:max-w-md flex sm:flex-row flex-col  mt-6"
                   onSubmit={handleNewLetter}
                 >
-                  <label for="email-address" className="sr-only">
+                  <label htmlFor="email-address" className="sr-only">
                     Email address
                   </label>
                   <input
@@ -271,7 +288,7 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="We spot for your email"
-                    autocomplete="email"
+                    autoComplete="email"
                     className=" xl:w-full sm:leading-6 sm:text-sm sm:w-64 border border-neutral-200 shadow-sm text-neutral-900 py-1.5 px-3 bg-white rounded-md appearance-none min-w-0 w-full"
                   />
                   <div className="sm:shrink-0 sm:mt-0 sm:ml-4 mt-4">
@@ -355,7 +372,7 @@ const Footer = () => {
                     className="inline-flex gap-x-2 text-neutral-700"
                     href="/Cookies"
                   >
-                    Cookie Policy
+                    Cookie
                   </Link>
                 </div>
               </div>
@@ -367,7 +384,12 @@ const Footer = () => {
                     href="#"
                     aria-label="Brand"
                   >
-                    CDC
+                    <Image
+                      width={40}
+                      height={40}
+                      src={"/images/Logo_New.svg"}
+                      alt="Creative Design & Construction"
+                    />
                   </a>
                   <p className="mt-1 text-xs sm:text-sm text-neutral-900">
                     © 2024 CDC.
@@ -375,70 +397,7 @@ const Footer = () => {
                 </div>
 
                 {/* <!-- Social Brands --> */}
-                <div className="space-x-4">
-                  <Link
-                    className="inline-block text-neutral-600"
-                    href="https://www.facebook.com/cdcconstructionltd"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/social/facebook.svg"
-                      width={24}
-                      height={24}
-                      alt="Facebook"
-                    />
-                  </Link>
-                  <Link
-                    className="inline-block text-neutral-600"
-                    href="https://www.instagram.com/cdc.constructionuk/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/social/instagram.svg"
-                      width={24}
-                      height={24}
-                      alt="Facebook"
-                    />
-                  </Link>
-                  <Link
-                    className="inline-block text-neutral-600"
-                    href="https://www.youtube.com/channel/UCnHvmTVf2_iu4sXY9pzW7XA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/social/youtube.svg"
-                      width={24}
-                      height={24}
-                      alt="Facebook"
-                    />
-                    {/* <svg
-                      className="flex-shrink-0 size-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z" />
-                    </svg> */}
-                  </Link>
-                  <Link
-                    className="inline-block text-neutral-600"
-                    href="https://www.linkedin.com/company/creative-design-construction-limited/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/social/linkedin.svg"
-                      width={24}
-                      height={24}
-                      alt="Facebook"
-                    />
-                  </Link>
-                </div>
+                <Social />
                 {/* <!-- End Social Brands --> */}
               </div>
               {/* <!-- End Col --> */}

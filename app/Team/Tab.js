@@ -1,7 +1,7 @@
 // components/TabbedCategories.js
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import TeamSection from "./TeamSection";
 
 const Tab = ({ teamdata }) => {
@@ -18,7 +18,7 @@ const Tab = ({ teamdata }) => {
           <div className="flex w-full xl:items-center flex-col">
             <div data-slot="base" className="inline-flex" aria-label="Options">
               <div
-                className="flex p-1 transition delay-150 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-transparent border-2 border-[#242A3D] rounded-[12px] "
+                className="flex p-2 transition delay-150 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-transparent border-2 border-neutral-500 rounded-[12px] "
                 aria-orientation="horizontal"
               >
                 <motion.span
@@ -27,10 +27,11 @@ const Tab = ({ teamdata }) => {
                   className="h-full w-1/2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600"
                 />
                 <button
-                  className={`px-4 py-2 rounded-[10px] ${
+                  whileTap={{ scale: 0.9 }}
+                  className={`px-4 py-2 rounded-[10px] text-sm ${
                     activeCategory === ""
-                      ? "bg-blue-500 text-white"
-                      : "bg-gray-300 text-gray-800 opacity-70"
+                      ? "bg-gradient-to-b from-neutral-800 via-neutral-900/90 to-neutral-950 text-white font-semibold"
+                      : "bg-gray-300 text-gray-800"
                   }`}
                   onClick={() => setActiveCategory("")}
                 >
@@ -43,6 +44,7 @@ const Tab = ({ teamdata }) => {
                       viewBox="0 0 24 24"
                       width="24"
                       fill="none"
+                      className="h-5 w-5 shrink-0"
                     >
                       <path
                         d="M2.58078 19.0112L2.56078 19.0312C2.29078 18.4413 2.12078 17.7713 2.05078 17.0312C2.12078 17.7613 2.31078 18.4212 2.58078 19.0112Z"
@@ -61,20 +63,18 @@ const Tab = ({ teamdata }) => {
                   </div>
                 </button>
                 {uniqueAuthors.map((item, index) => (
-                  <button
+                  <motion.button
                     key={index}
+                    whileTap={{ scale: 0.9 }}
                     onClick={() =>
                       setActiveCategory(item.company.teamCategories)
                     }
-                    data-slot="tab"
-                    data-key="photos"
-                    id="react-aria9613397964-:rcm:-tab-photos"
                     aria-selected="true"
                     role="tab"
-                    className={`px-4 py-2 rounded-[10px] ${
+                    className={`px-4 py-2 rounded-[10px] text-sm font-normal ${
                       activeCategory === item.company.teamCategories
-                        ? "bg-blue-500 text-white"
-                        : "bg-gray-200 text-gray-800 opacity-70"
+                        ? "bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-950 text-white font-semibold"
+                        : "bg-slate-200 text-gray-950 "
                     }`}
                     type="button"
                   >
@@ -83,10 +83,16 @@ const Tab = ({ teamdata }) => {
                       data-slot="tabContent"
                     >
                       <div className="flex items-center space-x-2">
-                        <span>{item.company.teamCategories}</span>
+                        <motion.span
+                          // while hover animate text side
+                          initial={{ opacity: 0.6 }}
+                          whileInView={{ opacity: 1 }}
+                        >
+                          {item.company.teamCategories}
+                        </motion.span>
                       </div>
                     </div>
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </div>

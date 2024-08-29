@@ -72,6 +72,7 @@ const HeroStatic = ({ company, title, desc, tag, img }) => {
                 staggerChildren: 0.075,
                 type: "spring",
                 delayChildren: 0.25,
+                repeatType: "reverse", // repeat the animation
               }}
               aria-hidden
               variants={{
@@ -108,7 +109,21 @@ const HeroStatic = ({ company, title, desc, tag, img }) => {
           >
             {desc}
           </p>
-          <motion.button whileTap={{ scale: 0.9 }}>
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            variants={{
+              visible: { y: 0, opacity: 1 },
+              hidden: { y: 100, opacity: 0 },
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20, // adjust this value to change the feel of the animation
+              y: { duration: 1 },
+            }}
+            initial="hidden"
+            animate={useinView ? "visible" : "hidden"} // animate only when in view
+          >
             <div className="flex items-center justify-center w-max-2xl">
               <Link
                 href="/ContactUs"

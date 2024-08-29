@@ -21,7 +21,7 @@ const ProjectDetail = ({ data }) => {
     typeof window === "undefined"
       ? Buffer.from(str).toString("base64")
       : window.btoa(str);
-  const url = "https:/cdcgrouplimited.com/nodejs/uploads/projects/";
+  const url = "https://cdcgrouplimited.com/nodejs/uploads/projects/";
   for (let i = 1; i <= data.images; i++) {
     images.push(
       <Image
@@ -29,7 +29,7 @@ const ProjectDetail = ({ data }) => {
         width={800}
         height={600}
         src={`${url}${data.images_link}/${i}.jpg`}
-        alt="project"
+        alt={`${url}${data.images_link}/${i}.jpg`}
         key={i}
         // placeholder="blur" // Optional blur-up while loading image
         // blurDataURL={`${url}${data.images_link}/${i}.jpg`}

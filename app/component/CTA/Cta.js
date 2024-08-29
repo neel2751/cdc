@@ -28,9 +28,9 @@ const Cta = () => {
             </div>
           </div> */}
             <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
-              <h1 className="text-3xl/tight sm:text-4xl/tight md:text-[32px]/tight font-bold text-white">
+              <h6 className="text-3xl/tight sm:text-4xl/tight md:text-[32px]/tight font-bold text-white">
                 Transform your vision into reality with our help.
-              </h1>
+              </h6>
               <p className="font-medium text-gray-300">
                 Ready to turn your vision into solid ground? We're more than
                 builders, we're partners. Let's collaborate, innovate, and craft

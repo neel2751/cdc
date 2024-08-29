@@ -4,44 +4,12 @@ import cdc from "../../../public/images/Logo_New.svg";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Projects, hoverImageContext } from "./submenu";
-import {
-  Facbook,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Youtube,
-} from "../../../public/images/social/icons";
 import Img from "../Img/Img";
 import { usePathname } from "next/navigation"; // import useRouter
+import Social from "../Social/Social";
 
 const Navbar = () => {
   //active link change text colour
-  const SocialLinks = [
-    {
-      id: 1,
-      icon: <Facbook />,
-      name: "Facebook",
-      link: "https://www.facebook.com/cdcconstructionltd",
-    },
-    {
-      id: 2,
-      icon: <Instagram />,
-      name: "Instagram",
-      link: "https://www.instagram.com/cdc.constructionuk",
-    },
-    {
-      id: 3,
-      icon: <Linkedin />,
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/company/creative-design-construction-limited",
-    },
-    {
-      id: 4,
-      icon: <Youtube />,
-      name: "Youtube",
-      link: "https://www.youtube.com/channel/UCnHvmTVf2_iu4sXY9pzW7XA",
-    },
-  ];
   const { jsxDataA, jsxDataB, name, desc, img, link } = hoverImageContext();
   const [isOpen, setIsOpen] = useState(false);
   const [isProject, setIsProject] = useState(false);
@@ -129,21 +97,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-x-2.5 -mx-2 text-[#242A3D] children:p-2 children:border children:border-x-gray-200 dark:children:border-gray-800 children:bg-gray-100 dark:children:bg-gray-900 children:rounded-md">
               {/* Socail Medai Link */}
-              {SocialLinks.map((links) => (
-                <a
-                  key={links.id}
-                  aria-label={`CDC ${links.name}`}
-                  target="_blank"
-                  rel="noreferer"
-                  href={links.link}
-                  className="h-6 w-6 transition ease-linear text-[#004cb1] hover:text-pink-700"
-                >
-                  {links.icon}
-                  {/* <
-                  className={"transition ease-linear hover:text-pink-700"}
-                /> */}
-                </a>
-              ))}
+              <Social />
               {/* <a
               aria-label="CDC Instagram "
               target="_blank"
@@ -326,7 +280,7 @@ const Navbar = () => {
                         : "hidden"
                     } xl:-mt-1 xl:absolute lg:absolute z-10 bg-white md:shadow-2xl rounded-lg py-2 md:p-2  before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5`}
                   >
-                    <Projects />
+                    <Projects path={pathname} />
                     {/* <div className="my-2 border-t border-gray-100 dark:border-gray-800"></div> */}
                   </div>
                 </div>

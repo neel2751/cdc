@@ -71,14 +71,12 @@ const TeamPage = () => {
                       onClick={() =>
                         setActiveCategory(item.company.teamCategories)
                       }
-                      data-slot="tab"
-                      data-key="photos"
                       id="react-aria9613397964-:rcm:-tab-photos"
                       aria-selected="true"
                       role="tab"
                       className={`${
                         activeCategory === item.company.teamCategories
-                          ? "bg-blue-500 text-white"
+                          ? " bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-950 text-white"
                           : "bg-gray-200 text-gray-800"
                       }z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small`}
                       type="button"

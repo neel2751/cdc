@@ -8,10 +8,10 @@ const TeamSection = ({ teamdata, category }) => {
     article.company.teamCategories.includes(category)
   );
 
-  console.clear(); // clear console
-  filteredTeamData.map(({ company }) => {
-    console.log(company.teamCategories);
-  });
+  // console.clear(); // clear console
+  // filteredTeamData.map(({ company }) => {
+  //   console.log(company.teamCategories);
+  // });
 
   const [modalOpen, setModalOpen] = useState(false);
   const [name, setName] = useState("");
@@ -72,14 +72,14 @@ const TeamSection = ({ teamdata, category }) => {
               key={item.id}
               ref={trigger}
               // onClick={() => openModel(item)}
-              className="items-center bg-gray-50 rounded-lg hover:cursor-pointer shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+              className="items-center bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-950 rounded-lg hover:cursor-pointer shadow sm:flex group overflow-clip"
             >
               {item.image ? (
-                <div className="aspect-w-16 aspect-h-8">
+                <div className="aspect-w-16 aspect-h-8 overflow-hidden">
                   <Image
                     width={600}
                     height={600}
-                    className="hover:grayscale-0 transition rounded-lg object-cover aspect-square sm:rounded-none sm:rounded-l-lg"
+                    className="hover:grayscale-0 transition duration-300 ease-in-out rounded-lg object-cover sm:rounded-none sm:rounded-l-lg group-hover:scale-110 "
                     src={item.image}
                     alt={`${item.name}'s picture.`}
                     // placeholder="blur"
@@ -88,7 +88,7 @@ const TeamSection = ({ teamdata, category }) => {
                   />
                 </div>
               ) : (
-                <div className="bg-white h-[272px]  flex justify-center transition items-center rounded-lg object-cover p-2 sm:rounded-none sm:rounded-l-lg ">
+                <div className="bg-white h-[272px] flex justify-center transition items-center rounded-lg object-cover p-2 sm:rounded-none sm:rounded-l-lg ">
                   <Image
                     width={600}
                     height={600}
@@ -99,10 +99,10 @@ const TeamSection = ({ teamdata, category }) => {
                 </div>
               )}
               <div className="p-5">
-                <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold tracking-tight text-white">
                   {item.firstName} {item.lastName}
                 </h3>
-                <span className="text-gray-500 dark:text-gray-400">
+                <span className="text-neutral-300">
                   {item.company.department}
                   <br />
                 </span>

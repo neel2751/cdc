@@ -16,7 +16,6 @@ const TeamMember = ({ data, onUpdate }) => {
     )
       return;
     const response = await teamStatus(id);
-
     if (response.success) {
       window.alert(`Service Item Updated Successfully!`);
       onUpdate();
@@ -27,39 +26,30 @@ const TeamMember = ({ data, onUpdate }) => {
     <>
       <tr>
         <td class="h-px w-px whitespace-nowrap">
-          <div class="ps-6 py-3">
-            <label for="hs-at-with-checkboxes-1" class="flex">
-              <input
-                type="checkbox"
-                class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                id="hs-at-with-checkboxes-1"
-              />
-              <span class="sr-only">Checkbox</span>
-            </label>
-          </div>
-        </td>
-        <td class="h-px w-px whitespace-nowrap">
-          <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+          <div class="ps-6 lg:ps-3 xl:ps-6 pe-6 py-3">
             <div class="flex items-center gap-x-3">
               {data?.mainImage?.mainImageUrl ? (
-                <img
+                <Image
+                  height={50}
+                  width={50}
                   src={data?.mainImage?.mainImageUrl}
                   alt="teamMember"
-                  className="h-[2.375rem] w-[2.375rem] object-contain rounded-full"
+                  className="h-[2.375rem] w-[2.375rem] object-cover rounded-full"
                 />
               ) : (
-                <span class="inline-flex items-center justify-center h-[2.375rem] w-[2.375rem] rounded-full bg-gray-300 dark:bg-gray-700">
-                  <span class="font-medium text-gray-800 leading-none dark:text-gray-200">
+                <span class="inline-flex items-center justify-center h-[2.375rem] w-[2.375rem] rounded-full bg-gray-300 ">
+                  <span class="font-medium text-gray-800 leading-none ">
                     {data?.name.split(" ")[0]}
                   </span>
                 </span>
               )}
               <div class="grow">
-                <span class="block text-sm font-semibold text-gray-800 dark:text-gray-200">
+                <span class="block text-sm font-semibold text-gray-800 ">
                   {data?.name}
                 </span>
                 <span class="block text-sm text-gray-500">
-                  {data?.email || "info@cdc.construction"}
+                  {/* {data?.email || "info@cdc.construction"} */}
+                  {data?.company?.role}
                 </span>
               </div>
             </div>
@@ -67,11 +57,12 @@ const TeamMember = ({ data, onUpdate }) => {
         </td>
         <td class="h-px w-72 whitespace-nowrap">
           <div class="px-6 py-3">
-            <span class="block text-sm font-semibold text-gray-800 dark:text-gray-200">
-              {data?.company?.role}
+            <span class="block text-sm font-semibold text-gray-800 ">
+              {/* {data?.company?.role} */}
+              {data?.company?.department}
             </span>
             <span class="block text-sm text-gray-500">
-              {data?.company?.department}
+              {/* {data?.company?.department} */}
             </span>
           </div>
         </td>
@@ -81,7 +72,7 @@ const TeamMember = ({ data, onUpdate }) => {
         >
           <div class="px-6 py-3">
             {data.isActive ? (
-              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full  ">
                 <svg
                   class="w-2.5 h-2.5"
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +86,7 @@ const TeamMember = ({ data, onUpdate }) => {
                 Active
               </span>
             ) : (
-              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
+              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full  ">
                 <svg
                   class="w-2.5 h-2.5"
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +121,7 @@ const TeamMember = ({ data, onUpdate }) => {
         <td class="h-px w-px whitespace-nowrap">
           <div class="px-6 py-1.5">
             <a
-              class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium "
               href="#"
             >
               Edit
@@ -156,46 +147,31 @@ const AllTeam = () => {
   }, []);
   return (
     // <!-- Table Section -->
-    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="max-w-[85rem] p-4  sm:p-6 lg:p-8 mx-auto">
       {/* <!-- Card --> */}
       <div class="flex flex-col">
         <div class="-m-1.5 overflow-x-auto">
           <div class="p-1.5 min-w-full inline-block align-middle">
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-slate-900 dark:border-gray-700">
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden  ">
               {/* <!-- Header --> */}
-              <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
+              <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 ">
                 <div>
-                  <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                    Teams
-                  </h2>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Add Team, edit and more.
-                  </p>
+                  <h2 class="text-xl font-semibold text-gray-800 ">Teams</h2>
+                  <p class="text-sm text-gray-600 ">Add Team, edit and more.</p>
                 </div>
               </div>
               {/* <!-- End Header --> */}
 
               {/* <!-- Table --> */}
-              <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                <thead class="bg-gray-50 dark:bg-slate-800">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50 ">
                   <tr>
-                    <th scope="col" class="ps-6 py-3 text-start">
-                      <label for="hs-at-with-checkboxes-main" class="flex">
-                        <input
-                          type="checkbox"
-                          class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                          id="hs-at-with-checkboxes-main"
-                        />
-                        <span class="sr-only">Checkbox</span>
-                      </label>
-                    </th>
-
                     <th
                       scope="col"
-                      class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
+                      class="ps-6 lg:ps-3 xl:ps-6 pe-6 py-3 text-start"
                     >
                       <div class="flex items-center gap-x-2">
-                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Name
                         </span>
                       </div>
@@ -203,7 +179,7 @@ const AllTeam = () => {
 
                     <th scope="col" class="px-6 py-3 text-start">
                       <div class="flex items-center gap-x-2">
-                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Position
                         </span>
                       </div>
@@ -211,7 +187,7 @@ const AllTeam = () => {
 
                     <th scope="col" class="px-6 py-3 text-start">
                       <div class="flex items-center gap-x-2">
-                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Status
                         </span>
                       </div>
@@ -219,7 +195,7 @@ const AllTeam = () => {
 
                     <th scope="col" class="px-6 py-3 text-start">
                       <div class="flex items-center gap-x-2">
-                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Portfolio
                         </span>
                       </div>
@@ -227,7 +203,7 @@ const AllTeam = () => {
 
                     <th scope="col" class="px-6 py-3 text-start">
                       <div class="flex items-center gap-x-2">
-                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                        <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                           Created
                         </span>
                       </div>
@@ -237,7 +213,7 @@ const AllTeam = () => {
                   </tr>
                 </thead>
 
-                <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                <tbody class="divide-y divide-gray-200">
                   {/* Add map function to all team member */}
                   {teamData &&
                     teamData.map((team) => (
@@ -252,10 +228,10 @@ const AllTeam = () => {
               {/* <!-- End Table --> */}
 
               {/* <!-- Footer --> */}
-              <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700">
+              <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 ">
                 <div>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                  <p class="text-sm text-gray-600 ">
+                    <span class="font-semibold text-gray-800 ">
                       {teamData?.length}
                     </span>{" "}
                     results
@@ -266,7 +242,7 @@ const AllTeam = () => {
                   <div class="inline-flex gap-x-2">
                     <button
                       type="button"
-                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
                     >
                       <svg
                         class="flex-shrink-0 w-4 h-4"
@@ -287,7 +263,7 @@ const AllTeam = () => {
 
                     <button
                       type="button"
-                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
                     >
                       Next
                       <svg

@@ -1,9 +1,20 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { signIn } from "next-auth/react";
+import React, { useState, useEffect, Suspense } from "react";
+import { signIn, useSession } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
+import AuthProviders from "@/app/auth/Providers";
 
 export default function Home() {
+  return (
+    <AuthProviders>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoginUI />
+      </Suspense>
+    </AuthProviders>
+  );
+}
+
+const LoginUI = () => {
   const initialFormData = {
     email: "",
     password: "",
@@ -11,8 +22,7 @@ export default function Home() {
   const [data, setData] = useState(initialFormData);
   const [errorMsg, setErrorMsg] = useState({});
   const [loading, setLoading] = useState(false);
-  const [msg, setMsg] = useState(false);
-  const [website, setWebsite] = useState("");
+  const [msg, setMsg] = useState();
   const [isFormValid, setIsFormValid] = useState(false);
 
   const handleChange = (e) => {
@@ -21,13 +31,24 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const originalWebsiteURL = window.location.origin;
-    setWebsite(originalWebsiteURL);
+    // const originalWebsiteURL = window.location.origin;
+    // setWebsite(originalWebsiteURL);
 
     if (Object.keys(data).some((key) => data[key])) {
       validateForm();
     }
   }, [data]);
+
+  const searchParams = useSearchParams();
+  const callback = searchParams.get("callbackUrl");
+  const callBackcheck = callback
+    ? callback
+    : process.env.NEXTAUTH_URL || "/Admin/Dashboard";
+
+  const { status } = useSession();
+  if (status === "authenticated") {
+    window.location.href = callBackcheck;
+  }
 
   //   Check the Validation
   const validateForm = () => {
@@ -48,39 +69,37 @@ export default function Home() {
     setIsFormValid(!Object.keys(newErrorMsg).length);
   };
 
-  setTimeout(() => {
-    setMsg(false);
-  }, 10000);
+  // setTimeout(() => {
+  //   setMsg(false);
+  // }, 10000);
 
   const handleSubmit = async (e) => {
+    setMsg();
     e.preventDefault();
     validateForm();
     if (isFormValid) {
+      setLoading(true);
       const email = data.email;
       const password = data.password;
       try {
-        console.log("this is the main url", website);
-        const callbackUrl = `${website}/Admin`;
-        // const callbackUrl = process.env.NEXTAUTH_URL;
         const res = await signIn("credentials", {
           email,
           password,
           redirect: false,
-          callbackUrl,
+          // callbackUrl,
         });
-
-        if (res.error) {
-          console.log("Invalid Credentials");
-          return;
+        if (res?.error) {
+          setMsg(res?.error || "Something went wrong");
+        } else {
+          window.location.href = res.url || callBackcheck || "/";
         }
-        // console.log("this is response after login done", res.url);
-
-        // router.replace("dashboard");
       } catch (error) {
-        console.log(error);
+        setMsg("Something went wrong");
+      } finally {
+        setLoading(false);
       }
     } else {
-      console.warn("Please fill this form");
+      setMsg("Please fill out all fields."); // display error message
     }
   };
   return (
@@ -195,10 +214,16 @@ export default function Home() {
                         </p>
                       )}
                     </div>
+                    {msg && (
+                      <div className="bg-red-100 rounded-md w-full p-1.5 text-center text-red-600 text-sm">
+                        {msg}
+                      </div>
+                    )}
                     {/* <!-- End Form Group --> */}
                     <button
                       onClick={handleSubmit}
                       type="submit"
+                      disabled={loading ? "true" : ""}
                       className={`w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none 
                     loading ? "opacity-50 ointer-events-none" : ""`}
                     >
@@ -229,4 +254,4 @@ export default function Home() {
       </div>
     </>
   );
-}
+};

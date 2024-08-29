@@ -11,7 +11,7 @@ const LogoItem = ({ logoImg, name }) => {
         width={200}
         height={160}
         alt={"company name"}
-        className="h-7 sm:h-20 w-auto ease-linear duration-300 group-hover:!grayscale-0 group-hover:scale-105"
+        className="h-20 w-auto ease-linear duration-300 group-hover:!grayscale-0 group-hover:scale-105"
       />
     </div>
   );

@@ -108,3 +108,24 @@ body {
     #f43f5e 100%
   );
 }
+
+.glow-text {
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; /* Loop the animation */
+  animation-direction: alternate; /* Reverse the animation on alternate cycles */
+  animation-timing-function: linear; /* The animation will change linearly */
+}
+
+@keyframes glow {
+  /* The animation to glow */
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  } /* Start with a box shadow */
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  } /* Increase the box shadow */
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  } /* Decrease the box shadow */
+} /* End the animation */

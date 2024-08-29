@@ -92,46 +92,90 @@ const hoverImageContext = () => {
   return context;
 };
 
-const Projects = () => {
+const Projects = ({ path }) => {
   return (
     <>
       {PROJECT.map((item) => (
-        <a
-          key={item.id}
-          className="inline-flex gap-x-5 w-full p-4 text-gray-600 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-          href={item.link}
-        >
-          <svg
-            className="flex-shrink-0 w-5 h-5 mt-1"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        <>
+          {item.id === 2 && <hr className="py-1" />}
+          <Link
+            key={item.id}
+            className={`glow-text inline-flex gap-x-5 w-full p-4 text-gray-600 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 ${
+              path && path.split("/", 3).join("/") === item.link
+                ? "bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-950 text-white"
+                : "bg-white"
+            }`}
+            href={item.link}
           >
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg>
-          <div className="grow">
-            <span className="block font-semibold mb-1 text-gray-800">
-              {item.name}
-              {item.category ? (
-                <span className="inline ms-1 text-xs bg-blue-600 text-white py-1 px-2 rounded-full">
-                  EXPERT
-                </span>
-              ) : (
-                <span></span>
-              )}
-            </span>
-            {item.description}
-          </div>
-        </a>
+            {/* we have to add diffrent icon for  each project */}
+            {path && path.split("/", 3).join("/") === item.link ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-7 w-7"
+              >
+                <path d="M10 22v-6.57" />
+                <path d="M12 11h.01" />
+                <path d="M12 7h.01" />
+                <path d="M14 15.43V22" />
+                <path d="M15 16a5 5 0 0 0-6 0" />
+                <path d="M16 11h.01" />
+                <path d="M16 7h.01" />
+                <path d="M8 11h.01" />
+                <path d="M8 7h.01" />
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-7 w-7"
+              >
+                <path d="M13.22 2.416a2 2 0 0 0-2.511.057l-7 5.999A2 2 0 0 0 3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.354" />
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                <path d="M15 6h6" />
+                <path d="M18 3v6" />
+              </svg>
+            )}
+
+            <div className="grow">
+              <span
+                className={`block font-semibold mb-1 ${
+                  path && path.split("/", 3).join("/") === item.link
+                    ? "text-white"
+                    : "text-gray-800"
+                }`}
+              >
+                {item.name}
+                {path &&
+                path.split("/", 3).join("/") === item.link &&
+                item.category ? (
+                  <span className="inline ms-1 text-xs bg-blue-600 text-white py-0.5 px-1.5 rounded-full">
+                    {item.category}
+                  </span>
+                ) : (
+                  <span></span>
+                )}
+              </span>
+              <span className="text-sm font-medium">{item.description}</span>
+            </div>
+          </Link>
+          {item.id === 1 && <span className="mt-2 block" />}
+        </>
       ))}
     </>
   );

@@ -222,13 +222,16 @@ const AllService = () => {
         </div>
       </section>
 
-      <div
-        class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto aos-init aos-animate"
-        data-aos="fade-up"
-        data-aos-duration="500"
-      >
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto">
         {TEAMDATA.slice(0, 6).map((data) => (
-          <div class="max-lg:w-full overflow-hidden rounded-xl w-80">
+          <div
+            class="max-lg:w-full overflow-hidden rounded-xl w-80 aos-animate aos-init"
+            // data-aos-animation="flip-left"
+            data-aos-easing="ease"
+            data-aos="flip-left" // Add this line
+            data-aos-duration="0.7"
+            data-aos-delay="0.5"
+          >
             <div class="flex items-end relative group">
               <div class="flex justify-center items-end overflow-hidden relative bg-lumber">
                 <img
@@ -255,7 +258,7 @@ const AllService = () => {
       </div>
 
       <section class="">
-        <div class="mx-auto max-w-6xl">
+        <div class="sm:mx-auto max-w-6xl mx-8">
           <h1
             class="font-fraunces font-bold tracking-tight md:text-5xl sm:text-4xl text-center mx-auto aos-init aos-animate"
             data-aos="fade-up"
@@ -263,7 +266,7 @@ const AllService = () => {
           >
             Why CDC is the best for you
           </h1>
-          <div class="flex justify-between lg:gap-10 sm:mt-10 mt-16 lg:grid lg:grid-cols-4 sm:grid-cols-1">
+          <div class="justify-between gap-10 sm:mt-10 mt-16 grid lg:grid-cols-4 sm:grid-cols-1">
             <div data-aos="fade-up">
               <div class="flex items-center gap-4 sm:gap-07">
                 <img
@@ -289,7 +292,7 @@ const AllService = () => {
                   class="w-150"
                 />
               </div>
-              <div class="text-sm font-normal leading-7 sm:mt-5 mt-6">
+              <div class="font-normal text-black leading-7 text-lg max-sm:mt-5 mt-6 max-w-xs">
                 Our team comprises individuals who are passionate.
               </div>
             </div>
@@ -322,7 +325,7 @@ const AllService = () => {
                   class="w-150"
                 />
               </div>
-              <div class="font-inter font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-lg:max-w-95% max-w-228">
+              <div class="font-inter font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-w-xs">
                 Every project is tailored to your specific needs, that's
                 uniquely yours.
               </div>
@@ -356,7 +359,7 @@ const AllService = () => {
                   class="w-150"
                 />
               </div>
-              <div class="font-inter font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-lg:max-w-95% max-w-228">
+              <div class="font-inter font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-w-xs">
                 We're committed to delivering measurable results
               </div>
             </div>
@@ -389,7 +392,7 @@ const AllService = () => {
                   class="w-150"
                 />
               </div>
-              <div class="font-inter font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-lg:max-w-95% max-w-228">
+              <div class="font-normal text-black-strom leading-7 text-lg max-sm:mt-5 mt-6 max-w-[228px]">
                 We stay up-to-date with the latest technologies to provide
                 solutions.
               </div>
@@ -451,7 +454,23 @@ const AllService = () => {
             <span class="text-rose-400"> Quality You Can Trust</span>
             <h2 class="text-3xl tracking-tight mt-6 font-medium lg:text-4xl text-white">
               Don't Settle for Average.
-              <span class="md:block text-zinc-400">Build with Excellence.</span>
+              <span class="md:block text-zinc-400">
+                Build with{" "}
+                <motion.span
+                  animate={{
+                    backgroundPositionX: "100%",
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop",
+                  }}
+                  className="ml-2 bg-[linear-gradient(to_right,#012f6a,#004cb1,#0053e3,#0063ff,#007dff,#DD7DDF,#e11d48,#f43f5e,#9f1239,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text "
+                >
+                  Excellence.
+                </motion.span>
+              </span>
             </h2>
             <p class="mt-5 text-white max-w-lg mx-auto">
               We are a team of experienced professionals who are committed to
@@ -511,10 +530,10 @@ const AllService = () => {
           </div>
         </div>
       </section>
-      <div className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="flex min-h-screen flex-col items-center justify-between sm:p-24 p-8">
         <div className="w-full relative">
           <div
-            className="relative w-full max-w-7xl h-[40rem] aspect-[70/45] m-auto overflow-hidden select-none rounded-3xl ring-1 ring-gray-900/10"
+            className="relative w-full max-w-7xl sm:h-[40rem] aspect-[70/45] m-auto overflow-hidden select-none rounded-3xl ring-1 ring-gray-900/10"
             onMouseMove={handleMove}
           >
             <Image
@@ -522,6 +541,7 @@ const AllService = () => {
               fill
               priority
               src="/images/projects/comm/Upton/Upton1.webp"
+              className="object-cover"
             />
             <div
               className="absolute top-0 left-0 right-0 w-full max-w-7xl aspect-[70/45] m-auto overflow-hidden select-none"
@@ -532,6 +552,7 @@ const AllService = () => {
                 fill
                 priority
                 src="/images/projects/comm/Upton/Upton3.webp"
+                className="object-co"
               />
             </div>
             {/* Slider */}
@@ -539,13 +560,74 @@ const AllService = () => {
               className="absolute top-0 bottom-0 w-1 bg-rose-600 cursor-ew-resize"
               style={{ left: `calc(${sliderPostion}% - 1px)` }}
             >
-              <div className="bg-rose-600 absolute rounded-full h-10 w-10 -left-4 flex items-center justify-center text-white top-[calc(50%-5px)] cursor-ew-resize text-sm font-semibold tracking-wide">
+              <div className="bg-rose-600 absolute rounded-full h-10 w-10 -left-4 sm:top-[calc(50%-5px)] flex items-center justify-center text-white top-[calc(50%-20px)] cursor-ew-resize text-sm font-semibold tracking-wide">
                 CDC
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <section className="relative">
+        <div className="xl:pr-16 lg:pr-4 lg:w-1/2 lg:h-full lg:absolute overflow-hidden sm:aspect-w-5 aspect-w-3 aspect-h-2">
+          <img
+            alt="test"
+            src="https://images.unsplash.com/photo-1722349672354-6d3b4504b197?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className="object-cover lg:w-full lg:h-full object-center h-full w-full rounded-tr-md rounded-br-md"
+          />
+        </div>
+        <div className="lg:pt-32 lg:px-8 lg:gap-x-8 grid-cols-2 lg:max-w-7xl grid sm:pb-32 sm:px-6 pt-16 pb-24 max-w-2xl mx-auto relative">
+          <div className="lg:col-start-2">
+            <h2 className="text-neutral-500 font-medium">
+              Leatherbound Daily Journal
+            </h2>
+            <p className="text-neutral-900 tracking-tight font-bold text-4xl mt-4">
+              All in the Details
+            </p>
+            <p className="text-neutral-600 mt-4">
+              The Leatherbound Daily Journal is a beautifully crafted journal
+              designed to help you stay organized and focused. With its
+              high-quality leather cover and 192 pages of premium paper, this
+              journal is perfect for anyone
+            </p>
+            <dl className="sm:grid-cols-2 text-sm gap-y-10 gap-x-8 grid-cols-1 grid mt-10">
+              <div>
+                <dt className="text-neutral-800 font-medium">Durable</dt>
+                <dd className="text-neutral-600 mt-2">
+                  The leather cover and machined steel disc binding stand up to
+                  daily use for years to come.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-neutral-800 font-medium">Refillable</dt>
+                <dd className="text-neutral-600 mt-2">
+                  Buy it once and refill as often as you need. Subscribe and
+                  save on routine refills.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-neutral-800 font-medium">
+                  Thoughtfully designed
+                </dt>
+                <dd className="text-neutral-600 mt-2">
+                  The comfortable disc binding allows you to quickly rearrange
+                  pages or combine lined, graph, and blank refills.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-neutral-800 font-medium">Locally made</dt>
+                <dd className="text-neutral-600 mt-2">
+                  Responsibly and sustainably made real close to wherever you
+                  are, somehow. years to come.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section className="realtive">
+        <div className="lg:px-10"></div>
+      </section>
     </>
   );
 };

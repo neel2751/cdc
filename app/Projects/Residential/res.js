@@ -3,31 +3,53 @@ import PaginationHelper from "@/app/Helper/paginationHelper";
 import { PORTFOLIO } from "@/app/data/data";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation"; // usePathname, useSearchParams, useRouter
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation"; // usePathname, useSearchParams, useRouter
 
 const res = () => {
   const searchParams = useSearchParams();
-  const [open, setOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(searchParams.get("page") || 1); // set the page number in localstorage
-  const [proData, setProData] = useState("");
   const router = useRouter();
-
-  const onPageChange = (page) => {
-    setCurrentPage(page); // set the page number in localstorage
-    router.push(`/Projects/Residential?page=${page}`, { scroll: false }); // redirect to the same page with the new page number
-  };
-  // if open one data to show to user
-  const handleModel = (project) => {
-    setOpen(!open);
-    setProData(project);
-  };
+  const pathname = usePathname();
 
   const pageSize = 9;
+  const filterData = PORTFOLIO.filter((item) => item.project === "Residential"); // filter the data
+  const lastPage = Math.ceil(filterData.length / pageSize); // calculate the last page
 
-  const lastPage = Math.ceil(PORTFOLIO.length / pageSize);
+  // we have to update the page number in state
+  const [currentPage, setCurrentPage] = useState(searchParams.get("page") || 1); // set the page number in localstorage
+  useEffect(() => {
+    // if( searchParams.get("page") !== currentPage){
+    //   router.push(`${pathname}?page=${searchParams.get("page")}`); // update the page number in the url
+    //   }
+    // if the page number is not valid
+    if (searchParams.get("page") > lastPage) {
+      setCurrentPage(lastPage); // update the page number in state
+      router.push(`${pathname}?page=${lastPage}`); // redirect to the first page
+    }
+    if (searchParams.get("page") < 1) {
+      setCurrentPage(1); // update the page number in state
+      router.push(`${pathname}`); // redirect to the first page
+    }
+    // if there is no page  number in the url
+    if (!searchParams.get("page")) {
+      // if there is no page number in the url
+      setCurrentPage(1); // update the page number in state
+      router.push(`${pathname}?page=1`); // redirect to the first page
+    }
+  }, [searchParams, pageSize, currentPage, lastPage]);
 
-  const currentData = PORTFOLIO.slice(
+  const onPageChange = (page) => {
+    if (page > lastPage) {
+      // if the page number is greater than the last page
+      setCurrentPage(lastPage); // update the page number in state
+      router.push(`${pathname}?page=${lastPage}`); // redirect to the same page with the new page number
+    } else {
+      setCurrentPage(page); // set the page number in localstorage
+      router.push(`${pathname}?page=${page}`, { scroll: true }); // redirect to the same page with the new page number
+    }
+  };
+
+  const currentData = filterData.slice(
     (currentPage - 1) * pageSize,
     currentPage === lastPage ? PORTFOLIO.length : currentPage * pageSize
   );
@@ -40,9 +62,9 @@ const res = () => {
         {/* <!-- Card --> */}
         {currentData.map((data) => (
           <Link
-            href={`/Projects/${data.link}`}
+            href={`/Projects/Residential/${data.link}`}
             key={data.id}
-            className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:border-gray-700 dark:shadow-slate-700/[.7] hover:shadow-lg hover:border-[#007dff]"
+            className="group flex flex-col h-full bg-white border overflow-hidden border-gray-200 shadow-sm rounded-xl dark:border-gray-700 dark:shadow-slate-700/[.7] hover:shadow-lg hover:border-[#007dff]"
           >
             <Image
               width={800}
@@ -54,7 +76,8 @@ const res = () => {
                 "/" +
                 data.image
               }
-              className="h-52 flex flex-col object-cover justify-center items-center bg-blue-600 rounded-t-xl"
+              alt={data.title} // alt text for image
+              className="h-52 flex flex-col object-cover justify-center items-center bg-blue-600 rounded-t-xl overflow-clip group-hover:scale-105 transform-gpu transition duration-300 ease-in-out"
             />
             <div className="p-4 md:p-6">
               <span className="block mb-1 text-xs font-semibold uppercase text-blue-600 group-hover:text-neutral-800">
@@ -91,14 +114,16 @@ const res = () => {
         ))}
         {/* <!-- End Card --> */}
       </div>
-      <div className="mt-4">
-        <PaginationHelper
-          items={PORTFOLIO.length} // 100
-          currentPage={currentPage} // 1
-          pageSize={pageSize} // 10
-          onPageChange={onPageChange}
-        />
-      </div>
+      {filterData.length > pageSize && (
+        <div className="mt-4">
+          <PaginationHelper
+            items={filterData.length} // 100
+            currentPage={currentPage} // 1
+            pageSize={pageSize} // 10
+            onPageChange={onPageChange}
+          />
+        </div>
+      )}
       {/* <!-- End Grid --> */}
     </div>
     // <!-- End Card Blog -->

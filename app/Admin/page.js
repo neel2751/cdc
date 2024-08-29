@@ -21,32 +21,20 @@
 // }
 
 "use client";
-import { SessionProvider, useSession } from "next-auth/react";
-import Chcek from "./(authPage)/Chcek/page";
+import AuthProviders from "../auth/Providers";
 import Dashboard from "./Dashboard/page";
-import { Suspense } from "react";
-
-// import Dashboard from "./Dashboard/page";
-
 export default function Home() {
   return <Wrap />;
 }
 
 function Wrap() {
   return (
-    <SessionProvider>
+    <AuthProviders>
       <Provide />
-    </SessionProvider>
+    </AuthProviders>
   );
 }
 
 function Provide() {
-  const { status } = useSession();
-  // if (status === "loading") {
-  //   return <div>Loading...</div>;
-  // }
-  if (status === "unauthenticated") {
-    return <Chcek />;
-  }
   return <Dashboard />;
 }

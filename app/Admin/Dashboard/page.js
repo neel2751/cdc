@@ -1,4 +1,5 @@
 "use client";
+import Content from "../Components/Content";
 // import Dash from "./Dash";
 import DashAside from "../Components/DashAside/DashAside";
 import HeaderStatic from "../Components/Helper/HeaderStatic";
@@ -19,27 +20,10 @@ export default function Home() {
   return (
     <>
       <DashNav />
-      <DashAside />
-      <HeaderStatic>
-        {/* <DashNew /> */}
-        {/* <Dash /> */}
-        <MainHeader>
-          {/* <AdminServices /> */}
-          {/* <AllService /> */}
-          {/* <LogoUpload /> */}
-          <Teampage />
-          {/* <-- working on this file as well... first we have to figure it out of the social media account} */}
-          {/* <DashHome /> */}
-        </MainHeader>
-        {/* <MainHeader
-          class={"p-10"}
-          title={"All Tags"}
-          desc={"All tags here to manage"}
-        >
-          <Sections />
-          <Tagtable />
-        </MainHeader> */}
-      </HeaderStatic>
+      <Content>
+        <Teampage />
+        {/* <Team /> */}
+      </Content>
     </>
   );
 }

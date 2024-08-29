@@ -606,19 +606,47 @@ export const PROJECT = [
   {
     id: 1,
     name: "Residential",
-    description: "We offer Design service to customize your new property",
+    description: "Grounded in quality, finished with perfection",
     image: "/images/services/icon/first.svg",
+    category: "Specialist",
     link: "/Projects/Residential",
   },
   {
     id: 2,
     name: "Commercial",
-    description: "We offer Design service to customize your new property",
+    description: "Designing and constructing functional spaces",
     image: "/images/services/icon/first.svg",
-    category: "A",
-    // link: "/Projects/Commercial",
-    link: "/Projects/Residential",
+    category: "Expert",
+    link: "/Projects/Commercial",
+    // link: "/Projects/Residential",
   },
+  // {
+  //   id: 3,
+  //   name: "Residential",
+  //   description: "Grounded in quality, finished with perfection",
+  //   image: "/images/services/icon/first.svg",
+  //   category: "Specialist",
+  //   link: "Residential",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Commercial",
+  //   description: "Designing and constructing functional spaces",
+  //   image: "/images/services/icon/first.svg",
+  //   category: "Expert",
+  //   link: "Commercial",
+  //   // link: "/Projects/Residential",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Hospitality",
+  //   description: "Designing and constructing hospitality spaces",
+  //   image: "/images/services/icon/first.svg",
+  //   // In Residential Category Specialist in Commercial  Category Expert in  Hospitality Category Adept
+  //   category: "Adept",
+  //   link: "Hospitality",
+  //   // link: "/Projects/Residential",
+  // },
 ];
 
 export const METRIC = [
@@ -935,23 +963,39 @@ export const OLDFEATURES = [
 
 export const PORTFOLIO = [
   //Commercial
-  // #1 Northampton Woodland House
+
+  // #New  Centro Office Space, Guildford 36
+  {
+    id: 36,
+    title: "Centro Office Space, Guildford",
+    description: "",
+    project: "Commercial",
+    link: "centro-office-space-guildford",
+    image: "1.jpg",
+    // image: "/images/projects/comm/Notre/1.webp",
+    alt: "Centro Office Space, Guildford",
+    home: true,
+    images_link: "Comm/Centro",
+    images: 20, // number of images Actual IMAGES 20
+    more: "",
+  },
+  // #1 Northampton Woodland House 17
   {
     id: 17,
     title: "Woodland House, Northampton",
     description:
       "Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.",
     project: "Commercial",
-    link: "northampton-woodland-house-",
+    link: "northampton-woodland-house",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Comm/Woodland_house",
-    images: 10, // number of images Actual IMAGES 19
+    images: 16, // number of images Actual IMAGES 16
     more: "Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.Project Size: 7000 Sqft Project Duration: 8 Weeks University Campus (1,300 Students and Staff) Fit-out work by adding facilities such as WC, Refurbishment, Extension, and re-modeling.",
   },
-  // #2 Bridge  House Stratford
+  // #2 Bridge  House Stratford 18
   {
     id: 18,
     title: "Bridge House, Startford",
@@ -963,10 +1007,10 @@ export const PORTFOLIO = [
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Comm/Bridge_house",
-    images: 18, // number of images Actual IMAGES 36
+    images: 25, // number of images Actual IMAGES 25
     more: "",
   },
-  // #3 The Old School House
+  // #3 The Old School House 19
   {
     id: 19,
     title: "Harbour Exchange Square 5th Floor Canary Wharf",
@@ -981,7 +1025,7 @@ export const PORTFOLIO = [
     images: 8, // number of images Actual IMAGES 8
     more: "",
   },
-  // #4 York House Birmingham
+  // #4 York House Birmingham 20
   {
     id: 20,
     title: "York House, Birmingham",
@@ -991,12 +1035,12 @@ export const PORTFOLIO = [
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
-    home: true,
+    home: false,
     images_link: "Comm/York_house",
     images: 8, // number of images Actual IMAGES 8
     more: "",
   },
-  // #5 Apsley House
+  // #5 Apsley House 21
   {
     id: 21,
     title: "Apsley House, Birmingham",
@@ -1011,7 +1055,7 @@ export const PORTFOLIO = [
     images: 7, // number of images Actual IMAGES 7
     more: "",
   },
-  // #6 56 Tabard Street
+  // #6 56 Tabard Street 22
   {
     id: 22,
     title: "Tabard Street, Borough London",
@@ -1023,7 +1067,7 @@ export const PORTFOLIO = [
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Comm/Tabard_street",
-    images: 10, // number of images Actual IMAGES 15
+    images: 16, // number of images Actual IMAGES 16
     more: "",
   },
 
@@ -1034,7 +1078,7 @@ export const PORTFOLIO = [
     title: "Galsworthy, Ilford",
     description: "",
     project: "Residential",
-    link: "galsworthy",
+    link: "galsworthy-ilford",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
@@ -1049,7 +1093,7 @@ export const PORTFOLIO = [
     title: "NorthHill Drive, Romford",
     description: "",
     project: "Residential",
-    link: "northHill-drive",
+    link: "northHill-drive-romford",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
@@ -1063,12 +1107,12 @@ export const PORTFOLIO = [
     id: 25,
     title: "Upton Lane, Forest Gate",
     description: "",
-    project: "Commerical",
-    link: "upton-lane",
+    project: "Commercial",
+    link: "upton-lane-forest-gate",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
-    home: true,
+    home: false,
     images_link: "Res/Upton_lane",
     images: 5, // number of images Actual IMAGES 5
     more: "",
@@ -1094,13 +1138,13 @@ export const PORTFOLIO = [
     title: "Roading Lane,Ilford",
     description: "",
     project: "Residential",
-    link: "roading-lane",
+    link: "roading-lane-ilford",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Res/Roading_lane",
-    images: 11, // number of images Actual IMAGES 11
+    images: 14, // number of images Actual IMAGES 14
     more: "",
   },
   // #6 8 Brambly Cresecnt 28
@@ -1109,13 +1153,13 @@ export const PORTFOLIO = [
     title: "Brambly Cresecnt, Gants Hill",
     description: "",
     project: "Residential",
-    link: "brambly-cresecnt",
+    link: "brambly-cresecnt-gants-hill",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Res/Brambley",
-    images: 9, // number of images Actual IMAGES 9
+    images: 11, // number of images Actual IMAGES 11
     more: "",
   },
   // #7 Dartford 29
@@ -1124,13 +1168,13 @@ export const PORTFOLIO = [
     title: "Norman Close, Dratford",
     description: "",
     project: "Residential",
-    link: "dratford",
+    link: "norman-close-dratford",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
     home: true,
     images_link: "Res/Dratford",
-    images: 9, // number of images Actual IMAGES 9
+    images: 8, // number of images Actual IMAGES 8
     more: "",
   },
   // #8 East Ham 30
@@ -1143,7 +1187,7 @@ export const PORTFOLIO = [
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
-    home: true,
+    home: false,
     images_link: "Res/East_ham",
     images: 5, // number of images Actual IMAGES 5
     more: "",
@@ -1154,7 +1198,7 @@ export const PORTFOLIO = [
     title: "Simon Lane, Chingford",
     description: "",
     project: "Residential",
-    link: "simon-lane",
+    link: "simon-lane-chingford",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
@@ -1175,7 +1219,7 @@ export const PORTFOLIO = [
     alt: "notre-dame-house front image",
     home: false,
     images_link: "Res/9Hainault",
-    images: 7, // number of images Actual IMAGES 7
+    images: 5, // number of images Actual IMAGES 5
     more: "",
   },
   // #11 7 Hainault Grove 33
@@ -1190,7 +1234,7 @@ export const PORTFOLIO = [
     alt: "notre-dame-house front image",
     home: false,
     images_link: "Res/7Hainault",
-    images: 7, // number of images Actual IMAGES 7
+    images: 5, // number of images Actual IMAGES 5
     more: "",
   },
   // #12 154 Outhouse 34
@@ -1199,13 +1243,13 @@ export const PORTFOLIO = [
     title: "154 Eastern Avenue, Outhouse, Redbridge",
     description: "",
     project: "Residential",
-    link: "154-outhouse",
+    link: "154-eastern-avenue-outhouse-redbridge",
     image: "1.jpg",
     // image: "/images/projects/comm/Notre/1.webp",
     alt: "notre-dame-house front image",
     home: false,
     images_link: "Res/154Outhouse",
-    images: 6, // number of images Actual IMAGES 6
+    images: 5, // number of images Actual IMAGES 5
     more: "",
   },
   // #13 152 Outhouse 35
@@ -1214,13 +1258,13 @@ export const PORTFOLIO = [
     title: "152 Eastern Avenue, Outhouse,Redbridge",
     description: "",
     project: "Residential",
-    link: "152-outhouse",
+    link: "152-eastern-avenue-outhouse-redbridge",
     // image: "1.jpg",
     image: "1.jpg",
     alt: "notre-dame-house front image",
     home: false,
     images_link: "Res/152Outhouse",
-    images: 10, // number of images Actual IMAGES 11
+    images: 6, // number of images Actual IMAGES 6
     more: "",
   },
 ];
@@ -1865,7 +1909,7 @@ export const TEAMDATA = [
       "As the Head of Design & BIM (Building Information Modeling) at Creative Design & Construction Limited, Mobinur Rahman assumes a crucial role in shaping the architectural vision of the company. Leveraging his extensive experience in architectural design and consultation, Mr. Rahman leads the design team in creating innovative and functional spaces for construction projects. His expertise extends to integrating BIM technology and enhancing efficiency in project planning and execution. As one of the key figures in the company, Mobinur Rahman actively contributes to maintaining high standards of design excellence, ensuring that projects align with client expectations and industry regulations. His leadership plays a vital role in positioning Creative Design & Construction Limited as a leader in architectural innovation and design efficiency.",
     image: "https://cdcdevelopment.co.uk/images/team/Mobin.jpg",
     company: {
-      department: "Head of Design",
+      department: "Head of Building Information Modelling & Design",
       // title: "Head of Design & BIM",
       teamCategories: "Architectural",
     },
@@ -1878,7 +1922,7 @@ export const TEAMDATA = [
       "As the Director of Operations at Creative Design & Construction Limited, Andrew Madhu oversees and manages all aspects of the company's day-to-day operational activities. Mr. Andrew plays a crucial role in ensuring the efficient execution of construction projects, overseeing timelines, and coordinating with various teams to meet project milestones. He is responsible for implementing and optimizing operational processes to enhance productivity, cost-effectiveness, and overall project delivery. Andrew Madhu collaborates closely with the executive team to develop and execute strategic plans that align with the company's goals and objectives. With a focus on quality control and client satisfaction, Andrew Madhu works to uphold the company's reputation for excellence in creative design and construction services.",
     image: "https://cdcdevelopment.co.uk/images/team/Andrew.jpg",
     company: {
-      department: "Director Operation",
+      department: "Director of Operations & Business Development",
       // title: "Operations",
       teamCategories: "Leadership",
     },
@@ -1892,7 +1936,7 @@ export const TEAMDATA = [
     image: "https://cdcdevelopment.co.uk/images/team/Boby.jpg",
 
     company: {
-      department: "Head of Finance",
+      department: "Director of Finance & Accounts",
       // title: "( FCCA)",
       teamCategories: "Leadership",
     },
@@ -1906,7 +1950,7 @@ export const TEAMDATA = [
       "Masud Karim, as Senior Project Manager at Creative Design & Construction Limited, oversees the end-to-end execution of design and construction projects. He leads a multidisciplinary team, ensuring seamless coordination between architects, designers, engineers, and contractors. Masud is responsible for project planning, budgeting, and resource allocation, ensuring timely completion within set parameters. He liaises with clients to understand their vision, providing expert guidance and ensuring project deliverables exceed expectations. With his strategic insight and leadership, Masud ensures that Creative Design & Construction Limited continues to deliver innovative and high-quality solutions to its clients.",
     image: "https://cdcdevelopment.co.uk/images/team/Masud.jpg",
     company: {
-      department: "Head of Quality Control",
+      department: "Director of Quality Assurance",
       // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
@@ -1919,7 +1963,7 @@ export const TEAMDATA = [
       "Areef Akhtar Khan, serving as an Architectural Designer at Creative Design & Construction Limited, is responsible for translating conceptual designs into detailed architectural plans and drawings, ensuring alignment with project specifications and client requirements. His role involves collaborating with clients, project managers, and other stakeholders to understand design preferences and incorporate innovative ideas into the architectural framework. Areef Akhtar Khan plays a crucial role in maintaining design integrity throughout the construction process, providing valuable input to address any challenges that may arise and ensuring the final output meets aesthetic and functional standards. He actively participates in design reviews, offering creative solutions and revisions as needed to enhance the overall quality and feasibility of architectural projects undertaken by the company. 	Areef Akhtar Khan contributes to the company's reputation for excellence in design by staying updated on industry trends, incorporating sustainable practices, and continuously refining his skills to deliver cutting-edge and aesthetically pleasing architectural solutions.",
     image: "https://cdcdevelopment.co.uk/images/team/Areef.jpg",
     company: {
-      department: "Architectural Designer",
+      department: "Lead Architectural Designer, Residential",
       // title: "Engineer",
       teamCategories: "Architectural",
     },
@@ -1956,7 +2000,7 @@ export const TEAMDATA = [
       "Mohammed Suhair, serving as an Architectural Designer at Creative Design & Construction Limited, holds a specialized role in advancing the company's design initiatives. With expertise in both 3D design and interior design, Suhair brings a multifaceted skill set to the table. His primary responsibilities include crafting detailed and innovative 3D models that enhance project visualization and client communication. Additionally, Suhair is instrumental in integrating interior design seamlessly into architectural plans, ensuring a cohesive and aesthetically pleasing outcome. His nuanced understanding of spatial aesthetics and functionality adds a distinct touch to projects, contributing significantly to the overall success and uniqueness of the firm's architectural solutions.",
     image: "https://cdcdevelopment.co.uk/images/team/Suhair.jpg",
     company: {
-      department: "Architectural Designer",
+      department: "Lead Architectural Designer, Commercial",
       // title: "Civil Engineer",
       teamCategories: "Architectural",
     },
@@ -1969,20 +2013,7 @@ export const TEAMDATA = [
       "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
     image: "https://cdcdevelopment.co.uk/images/team/Snehal.jpg",
     company: {
-      department: "Architectural Designer",
-      // title: "Civil Engineer",
-      teamCategories: "Architectural",
-    },
-  },
-  {
-    id: 60,
-    firstName: "Md Tareq",
-    lastName: "Hossain",
-    description:
-      "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
-    image: "https://cdcdevelopment.co.uk/images/team/Tareq.jpg",
-    company: {
-      department: "Interior Designer",
+      department: "Architectural Designer, 3D Rendering",
       // title: "Civil Engineer",
       teamCategories: "Architectural",
     },
@@ -2028,6 +2059,32 @@ export const TEAMDATA = [
       teamCategories: "Architectural",
     },
   },
+  {
+    id: 60,
+    firstName: "Md Tareq",
+    lastName: "Hasan",
+    description:
+      "Snehal Mhokar, serving as an Architectural Designer at Creative Design & Construction Limited, specializes in 3D and interior design, adding a unique dimension to the company's projects. Leveraging her expertise, she crafts immersive and visually stunning 3D models that aid in client presentations and project visualization. Mhokar plays a crucial role in integrating interior design seamlessly with architectural plans, ensuring a harmonious and cohesive result. Her meticulous attention to detail enhances the aesthetic appeal and functionality of spaces, contributing to the overall success of each project. With a keen eye for trends and a passion for innovative design, Snehal Mhokar consistently elevates the company's creative output.",
+    image: "https://cdcdevelopment.co.uk/images/team/Tareq.jpg",
+    company: {
+      department: "Interior Design Manager",
+      // title: "Civil Engineer",
+      teamCategories: "Interior",
+    },
+  },
+  {
+    id: 48,
+    firstName: "Faria",
+    lastName: "Hritu",
+    description:
+      "As a Project Manager at Creative Design & Construction Limited, Parvathi Dadireddy assumes a critical role in overseeing the successful implementation of construction projects. With exceptional leadership skills and a keen eye for detail, Parvathi collaborates with multidisciplinary teams to ensure projects are completed on time and within budget. She conducts thorough project assessments, identifies potential risks, and develops mitigation strategies to maintain project timelines and quality standards. Parvathi serves as a primary point of contact for clients, addressing inquiries, providing updates, and ensuring their satisfaction throughout the project lifecycle. Through her strategic planning and proactive approach, Parvathi contributes to the company's continued success and reputation as a trusted provider of construction services.",
+    image: "https://cdcdevelopment.co.uk/images/team/Faria.jpg",
+    company: {
+      department: "Interior Design Assistant",
+      // title: "Civil Engineer",
+      teamCategories: "Interior",
+    },
+  },
 
   // {
   //   id: 44,
@@ -2070,47 +2127,6 @@ export const TEAMDATA = [
   // },
 
   //Project Management Team
-
-  {
-    id: 11,
-    firstName: "Venkatesh",
-    lastName: "Chintalapudi",
-    description:
-      "Venkatesh Chintalapudi, a seasoned Project Manager at Creative Design & Construction Limited, specializes in commercial fit-out projects. With his extensive expertise in this domain, Venkatesh leads the planning, execution, and delivery of complex commercial interior projects with finesse. He adeptly manages all aspects of fit-out projects, from initial conceptualization to final handover, ensuring alignment with client specifications and industry standards. Venkatesh collaborates closely with architects, designers, and subcontractors to optimize space utilization and create functional yet visually captivating commercial environments. Leveraging his deep understanding of commercial design trends and regulations, he consistently delivers innovative and tailored solutions that exceed client expectations. Venkatesh's leadership and proficiency ensure the successful completion of commercial fit-out projects, driving Creative Design & Construction Limited's reputation as a trusted provider of exceptional interior solutions.",
-    image: "https://cdcdevelopment.co.uk/images/team/Venketash.jpg",
-    company: {
-      department: "Civil Enginner",
-      // title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
-  {
-    id: 12,
-    firstName: "Srinivasa",
-    lastName: "Yerapatineni",
-    description:
-      "Srinivasa Yerapatineni assumes the pivotal role of Project Manager at Creative Design & Construction Limited, bringing forth extensive expertise in residential projects. Leading with precision and dedication, Srinivasa orchestrates the seamless execution of residential construction endeavours from inception to completion. His profound understanding of residential design principles and market trends enables him to craft bespoke living spaces that resonate with clients' lifestyles and aspirations. Srinivasa collaborates closely with architects, interior designers, and subcontractors to ensure that every aspect of the residential project aligns with quality standards and timelines. With a keen eye for detail and a commitment to excellence, he consistently delivers superior results, earning the trust and satisfaction of homeowners. Srinivasa's adept project management skills and residential project proficiency elevate Creative Design & Construction Limited's portfolio, solidifying its reputation as a premier provider of custom residential solutions.",
-    image: "",
-    company: {
-      department: "Civil Enginner",
-      // title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
-  {
-    id: 13,
-    firstName: "Narendra",
-    lastName: "Nath",
-    description:
-      "Narendra Nath, as a Project Manager at Creative Design & Construction Limited, holds a pivotal role in driving the successful execution of diverse construction projects. With his multifaceted skill set and strategic vision, Narendra oversees all phases of project development, from initial planning to final delivery. He adeptly manages project timelines, budgets, and resources, ensuring efficient and cost-effective project outcomes. Narendra fosters strong relationships with clients, subcontractors, and stakeholders, prioritizing effective communication and collaboration throughout the project lifecycle. Leveraging his comprehensive understanding of construction methodologies and industry best practices, Narendra consistently delivers projects of the highest quality, contributing to the continued success and growth of Creative Design & Construction Limited.",
-    image: "https://cdcdevelopment.co.uk/images/team/Narendra.jpg",
-    company: {
-      department: "Civil Enginner",
-      // title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
-
   {
     id: 15,
     firstName: "Shakil",
@@ -2119,7 +2135,7 @@ export const TEAMDATA = [
       "As a Project Manager at Creative Design & Construction Limited, Dewan Shakil Ahmed plays a pivotal role in orchestrating the seamless execution of construction projects. With a keen eye for detail and strong organizational skills, Dewan oversees project planning, scheduling, and resource allocation to ensure timely completion within budgetary constraints. He collaborates closely with cross-functional teams, including architects, engineers, and subcontractors, fostering effective communication and coordination throughout the project lifecycle. Dewan monitors project progress, conducts regular site inspections, and addresses any issues or challenges that arise to maintain project momentum and quality standards. Through his leadership and dedication, Dewan contributes to the company's reputation for delivering excellence in construction projects.",
     image: "https://cdcdevelopment.co.uk/images/team/Shakil.jpg",
     company: {
-      department: "Civil Enginner",
+      department: "Procurement Manager",
       // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
@@ -2133,7 +2149,47 @@ export const TEAMDATA = [
     image: "https://cdcdevelopment.co.uk/images/team/Ali.jpg",
 
     company: {
-      department: "Civil Enginner",
+      department: "Program & Building Control Manager",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+  {
+    id: 11,
+    firstName: "Venkatesh",
+    lastName: "Chintalapudi",
+    description:
+      "Venkatesh Chintalapudi, a seasoned Project Manager at Creative Design & Construction Limited, specializes in commercial fit-out projects. With his extensive expertise in this domain, Venkatesh leads the planning, execution, and delivery of complex commercial interior projects with finesse. He adeptly manages all aspects of fit-out projects, from initial conceptualization to final handover, ensuring alignment with client specifications and industry standards. Venkatesh collaborates closely with architects, designers, and subcontractors to optimize space utilization and create functional yet visually captivating commercial environments. Leveraging his deep understanding of commercial design trends and regulations, he consistently delivers innovative and tailored solutions that exceed client expectations. Venkatesh's leadership and proficiency ensure the successful completion of commercial fit-out projects, driving Creative Design & Construction Limited's reputation as a trusted provider of exceptional interior solutions.",
+    image: "https://cdcdevelopment.co.uk/images/team/Venketash.jpg",
+    company: {
+      department: "Senior Site Engineer, Commercial",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+  {
+    id: 12,
+    firstName: "Sairam",
+    lastName: "Yerapatineni",
+    description:
+      "Srinivasa Yerapatineni assumes the pivotal role of Project Manager at Creative Design & Construction Limited, bringing forth extensive expertise in residential projects. Leading with precision and dedication, Srinivasa orchestrates the seamless execution of residential construction endeavours from inception to completion. His profound understanding of residential design principles and market trends enables him to craft bespoke living spaces that resonate with clients' lifestyles and aspirations. Srinivasa collaborates closely with architects, interior designers, and subcontractors to ensure that every aspect of the residential project aligns with quality standards and timelines. With a keen eye for detail and a commitment to excellence, he consistently delivers superior results, earning the trust and satisfaction of homeowners. Srinivasa's adept project management skills and residential project proficiency elevate Creative Design & Construction Limited's portfolio, solidifying its reputation as a premier provider of custom residential solutions.",
+    image: "https://cdcdevelopment.co.uk/images/team/Sairam.jpg",
+    company: {
+      department: "Senior Site Engineer, Residential",
+      // title: "Civil Engineer",
+      teamCategories: "Project Management",
+    },
+  },
+
+  {
+    id: 149,
+    firstName: "Hridoy",
+    lastName: "Das",
+    description:
+      "Anamul Haque assumes the crucial role of Project Manager at Creative Design & Construction Limited, leveraging his profound knowledge of civil engineering to spearhead the successful execution of construction projects. With a strong foundation in civil engineering principles and practices, Anamul oversees project planning, design, and implementation with meticulous attention to detail. He collaborates closely with architects, structural engineers, and construction teams to ensure that projects are completed to the highest standards of quality and safety. Anamul's expertise allows him to effectively manage project resources, schedules, and budgets, optimizing efficiency and minimizing risks. Through his leadership and technical acumen, Anamul contributes to the continued success and reputation of Creative Design & Construction Limited as a premier provider of innovative construction solutions.",
+    image: "https://cdcdevelopment.co.uk/images/team/Hridoy.jpg",
+    company: {
+      department: "Site Engineer",
       // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
@@ -2146,7 +2202,7 @@ export const TEAMDATA = [
       "Anamul Haque assumes the crucial role of Project Manager at Creative Design & Construction Limited, leveraging his profound knowledge of civil engineering to spearhead the successful execution of construction projects. With a strong foundation in civil engineering principles and practices, Anamul oversees project planning, design, and implementation with meticulous attention to detail. He collaborates closely with architects, structural engineers, and construction teams to ensure that projects are completed to the highest standards of quality and safety. Anamul's expertise allows him to effectively manage project resources, schedules, and budgets, optimizing efficiency and minimizing risks. Through his leadership and technical acumen, Anamul contributes to the continued success and reputation of Creative Design & Construction Limited as a premier provider of innovative construction solutions.",
     image: "https://cdcdevelopment.co.uk/images/team/Anamul.jpg",
     company: {
-      department: "Civil Enginner",
+      department: "Site Engineer",
       // title: "Civil Engineer",
       teamCategories: "Project Management",
     },
@@ -2158,19 +2214,6 @@ export const TEAMDATA = [
     description:
       "As a Project Manager at Creative Design & Construction Limited, Parvathi Dadireddy assumes a critical role in overseeing the successful implementation of construction projects. With exceptional leadership skills and a keen eye for detail, Parvathi collaborates with multidisciplinary teams to ensure projects are completed on time and within budget. She conducts thorough project assessments, identifies potential risks, and develops mitigation strategies to maintain project timelines and quality standards. Parvathi serves as a primary point of contact for clients, addressing inquiries, providing updates, and ensuring their satisfaction throughout the project lifecycle. Through her strategic planning and proactive approach, Parvathi contributes to the company's continued success and reputation as a trusted provider of construction services.",
     image: "https://cdcdevelopment.co.uk/images/team/Parvathi.jpg",
-    company: {
-      department: "Civil Engineer",
-      // title: "Civil Engineer",
-      teamCategories: "Project Management",
-    },
-  },
-  {
-    id: 48,
-    firstName: "Faria",
-    lastName: "Hritu",
-    description:
-      "As a Project Manager at Creative Design & Construction Limited, Parvathi Dadireddy assumes a critical role in overseeing the successful implementation of construction projects. With exceptional leadership skills and a keen eye for detail, Parvathi collaborates with multidisciplinary teams to ensure projects are completed on time and within budget. She conducts thorough project assessments, identifies potential risks, and develops mitigation strategies to maintain project timelines and quality standards. Parvathi serves as a primary point of contact for clients, addressing inquiries, providing updates, and ensuring their satisfaction throughout the project lifecycle. Through her strategic planning and proactive approach, Parvathi contributes to the company's continued success and reputation as a trusted provider of construction services.",
-    image: "https://cdcdevelopment.co.uk/images/team/Faria.jpg",
     company: {
       department: "Site Engineer",
       // title: "Civil Engineer",
@@ -2187,21 +2230,7 @@ export const TEAMDATA = [
       "Shamsul Alam serves as the Office Administrator at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth and efficient operation of the office. His responsibilities include managing administrative tasks such as maintaining records, scheduling appointments, and coordinating office supplies and equipment. Shamsul acts as a point of contact for internal and external communications, handling inquiries and correspondence professionally and promptly. He assists in organizing meetings, preparing agendas, and recording minutes to facilitate effective communication among team members. With his organizational skills and attention to detail, Shamsul contributes to creating a productive and supportive work environment for all employees at Creative Design & Construction Limited.",
     image: "https://cdcdevelopment.co.uk/images/team/Shamsul.jpg",
     company: {
-      department: "Director of Admin & Requirements",
-      // title: "Engineer",
-      teamCategories: "Office Admin",
-    },
-  },
-  {
-    id: 21,
-    firstName: "Salma",
-    lastName: "Begum",
-    description:
-      "Salma Begum serves as the Account Manager at Creative Design & Construction Limited, responsible for overseeing financial matters and client accounts. Her role involves managing client invoices, payments, and financial transactions with accuracy and efficiency. Salma works closely with clients to address any billing inquiries or concerns, ensuring timely resolution and maintaining positive relationships. Additionally, she collaborates with internal teams to monitor project budgets, track expenses, and provide financial reporting as needed. Through her diligent financial management and client-focused approach, Salma contributes to the company's financial health and client satisfaction at Creative Design & Construction Limited.",
-    image: "https://cdcdevelopment.co.uk/images/team/Salma.jpg",
-
-    company: {
-      department: "Account Manager",
+      department: "Director of HR & CIS",
       // title: "Engineer",
       teamCategories: "Office Admin",
     },
@@ -2220,6 +2249,20 @@ export const TEAMDATA = [
     },
   },
   {
+    id: 21,
+    firstName: "Salma",
+    lastName: "Begum",
+    description:
+      "Salma Begum serves as the Account Manager at Creative Design & Construction Limited, responsible for overseeing financial matters and client accounts. Her role involves managing client invoices, payments, and financial transactions with accuracy and efficiency. Salma works closely with clients to address any billing inquiries or concerns, ensuring timely resolution and maintaining positive relationships. Additionally, she collaborates with internal teams to monitor project budgets, track expenses, and provide financial reporting as needed. Through her diligent financial management and client-focused approach, Salma contributes to the company's financial health and client satisfaction at Creative Design & Construction Limited.",
+    image: "https://cdcdevelopment.co.uk/images/team/Salma.jpg",
+
+    company: {
+      department: "Account Assistant",
+      // title: "Engineer",
+      teamCategories: "Office Admin",
+    },
+  },
+  {
     id: 24,
     firstName: "Mehedi",
     lastName: "Iqbal Evan",
@@ -2227,7 +2270,7 @@ export const TEAMDATA = [
       "Mehedi Iqbal Evan holds the position of Digital Marketing Specialist at Creative Design & Construction Limited, responsible for driving the company's online presence and marketing efforts. His role involves developing and implementing digital marketing strategies across various platforms to increase brand awareness and generate leads. Mehedi conducts market research and analyzes data to identify trends and opportunities for optimizing digital campaigns and maximizing ROI. He manages the company's website, social media channels, and email marketing campaigns, creating engaging content and monitoring performance metrics to ensure effectiveness. Through his expertise in digital marketing techniques and analytics, Mehedi contributes to enhancing the visibility and reputation of Creative Design & Construction Limited in the digital landscape.",
     image: "https://cdcdevelopment.co.uk/images/team/Evan.jpg",
     company: {
-      department: "Markting Administator",
+      department: "Digital Brand Manager",
       // title: "Marketing",
       teamCategories: "Business & Marketing",
     },
@@ -2240,24 +2283,37 @@ export const TEAMDATA = [
       "Mehedi Iqbal Evan holds the position of Digital Marketing Specialist at Creative Design & Construction Limited, responsible for driving the company's online presence and marketing efforts. His role involves developing and implementing digital marketing strategies across various platforms to increase brand awareness and generate leads. Mehedi conducts market research and analyzes data to identify trends and opportunities for optimizing digital campaigns and maximizing ROI. He manages the company's website, social media channels, and email marketing campaigns, creating engaging content and monitoring performance metrics to ensure effectiveness. Through his expertise in digital marketing techniques and analytics, Mehedi contributes to enhancing the visibility and reputation of Creative Design & Construction Limited in the digital landscape.",
     image: "https://cdcdevelopment.co.uk/images/team/Moshuir.jpg",
     company: {
-      department: "Marketing Manager",
+      department: "Agent Management & Business Development",
       // title: "Marketing",
       teamCategories: "Business & Marketing",
     },
   },
   {
-    id: 51,
-    firstName: "Shoeb",
-    lastName: "Sheikh",
+    id: 13,
+    firstName: "Narendra",
+    lastName: "Nath",
     description:
-      "Neel Patel serves as a member of the IT Department at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth operation of the company's technology infrastructure. His responsibilities include managing and maintaining the organization's hardware, software, and network systems to support daily operations effectively. Neel provides technical support to employees, troubleshooting IT issues, and resolving technical problems promptly to minimize downtime. Additionally, he assists in the implementation of new technologies and upgrades, ensuring they align with the company's goals and security requirements. Through his expertise and proactive approach, Neel helps to enhance efficiency, productivity, and innovation within Creative Design & Construction Limited's IT environment.",
-    image: "https://cdcdevelopment.co.uk/images/team/Shoeb.jpg",
+      "Narendra Nath, as a Project Manager at Creative Design & Construction Limited, holds a pivotal role in driving the successful execution of diverse construction projects. With his multifaceted skill set and strategic vision, Narendra oversees all phases of project development, from initial planning to final delivery. He adeptly manages project timelines, budgets, and resources, ensuring efficient and cost-effective project outcomes. Narendra fosters strong relationships with clients, subcontractors, and stakeholders, prioritizing effective communication and collaboration throughout the project lifecycle. Leveraging his comprehensive understanding of construction methodologies and industry best practices, Narendra consistently delivers projects of the highest quality, contributing to the continued success and growth of Creative Design & Construction Limited.",
+    image: "https://cdcdevelopment.co.uk/images/team/Narendra.jpg",
     company: {
-      department: "Marketing Executive",
-      // title: "Web Developer",
-      teamCategories: "Business & Marketing",
+      department: "Analyst of Branding & Business",
+      // title: "Civil Engineer",
+      teamCategories: "Marketing",
     },
   },
+  // {
+  //   id: 51,
+  //   firstName: "Shoeb",
+  //   lastName: "Sheikh",
+  //   description:
+  //     "Neel Patel serves as a member of the IT Department at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth operation of the company's technology infrastructure. His responsibilities include managing and maintaining the organization's hardware, software, and network systems to support daily operations effectively. Neel provides technical support to employees, troubleshooting IT issues, and resolving technical problems promptly to minimize downtime. Additionally, he assists in the implementation of new technologies and upgrades, ensuring they align with the company's goals and security requirements. Through his expertise and proactive approach, Neel helps to enhance efficiency, productivity, and innovation within Creative Design & Construction Limited's IT environment.",
+  //   image: "https://cdcdevelopment.co.uk/images/team/Shoeb.jpg",
+  //   company: {
+  //     department: "Marketing Analyst",
+  //     // title: "Web Developer",
+  //     teamCategories: "Business & Marketing",
+  //   },
+  // },
   {
     id: 25,
     firstName: "Neel",
@@ -2266,7 +2322,7 @@ export const TEAMDATA = [
       "Neel Patel serves as a member of the IT Department at Creative Design & Construction Limited, playing a crucial role in ensuring the smooth operation of the company's technology infrastructure. His responsibilities include managing and maintaining the organization's hardware, software, and network systems to support daily operations effectively. Neel provides technical support to employees, troubleshooting IT issues, and resolving technical problems promptly to minimize downtime. Additionally, he assists in the implementation of new technologies and upgrades, ensuring they align with the company's goals and security requirements. Through his expertise and proactive approach, Neel helps to enhance efficiency, productivity, and innovation within Creative Design & Construction Limited's IT environment.",
     image: "https://cdcdevelopment.co.uk/images/team/Neel.jpg",
     company: {
-      department: "Software Engineer",
+      department: "Web Designer & Software Engineer",
       // title: "Web Developer",
       teamCategories: "Business & Marketing",
     },
@@ -2281,75 +2337,78 @@ export const TEAMDATA = [
       "Azhar Mohammad, serving as the Electrical Engineer at Creative Design & Construction Limited, leads the electrical team with his extensive experience and expertise. In his role, Azhar is responsible for overseeing all aspects of electrical design, installation, and maintenance across construction projects. He ensures compliance with electrical codes, standards, and regulations, while also integrating innovative and sustainable electrical solutions. Azhar collaborates closely with project managers, architects, and subcontractors to coordinate electrical systems with overall project requirements and timelines. Through his leadership and technical proficiency, Azhar plays a crucial role in delivering safe, efficient, and high-quality electrical solutions that meet the needs of clients and uphold the company's reputation for excellence.",
     image: "https://cdcdevelopment.co.uk/images/team/Azhar.jpg",
     company: {
-      department: "Electrical Engineer",
+      department: "Lead Electrician",
       // title: "Engineer",
       teamCategories: "Electrical",
     },
   },
-  {
-    id: 30,
-    firstName: "Hossain",
-    lastName: "Mohammad",
-    description:
-      "As an Electrical Engineer at Creative Design & Construction Limited, Hossain Mohammad brings a wealth of experience and expertise to the electric team. His role involves overseeing the design, installation, and maintenance of electrical systems in construction projects. With his extensive background, Hossain ensures that electrical solutions meet industry standards, regulations, and client requirements. He collaborates closely with other team members to optimize electrical designs for efficiency, safety, and cost-effectiveness. Hossain's leadership within the electric team contributes to the successful delivery of projects and upholds the company's commitment to quality and innovation.",
-    image: "",
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Electrical",
-    },
-  },
-  {
-    id: 18,
-    firstName: "Ibrahim Sultan",
-    lastName: "KHAN",
-    description:
-      "As an Electrical Engineer at Creative Design & Construction Limited, Ibrahim Sultan Khan brings a dynamic blend of youthfulness and experience to the electric team. Despite being one of the youngest members, Ibrahim's intelligence and aptitude contribute significantly to the team's success. His role involves actively participating in the design, implementation, and troubleshooting of electrical systems within construction projects. Ibrahim leverages his fresh perspective and innovative thinking to propose creative solutions and streamline project workflows. Through his dedication and willingness to learn, Ibrahim adds value to the electric team and plays a vital role in delivering high-quality electrical solutions that meet client expectations.",
-    image: "",
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Electrical",
-    },
-  },
-  {
-    id: 19,
-    firstName: "Anowaarul Islam",
-    lastName: "Sultan",
-    description:
-      "Anowarul Islam Sultan serves as an Electrical Engineer at Creative Design & Construction Limited, bringing with him a wealth of experience and intelligence to the electric team. With his extensive background in electrical engineering, Anowarul plays a pivotal role in designing, implementing, and maintaining electrical systems for various construction projects. He leverages his expertise to ensure that electrical solutions are efficient, reliable, and compliant with industry standards and regulations. Anowarul collaborates closely with colleagues and stakeholders to address complex technical challenges and optimize project outcomes. His leadership and problem-solving skills contribute to the successful execution of projects, upholding the company's reputation for excellence in electrical engineering.",
-    image: "",
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Electrical",
-    },
-  },
-  {
-    id: 16,
-    firstName: "Zahirul",
-    lastName: "Islam",
-    description:
-      "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
-    image: "",
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Electrical",
-    },
-  },
-  {
-    id: 44,
-    firstName: "Tamim Ahmed",
-    lastName: "Aurpon ",
-    description:
-      "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
-    image: "https://cdcdevelopment.co.uk/images/team/Aurpon.jpg",
-    company: {
-      department: "Electrical Engineer",
-      // title: "Engineer",
-      teamCategories: "Electrical",
-    },
-  },
+
+  // {
+  //   id: 30,
+  //   firstName: "Hossain",
+  //   lastName: "Mohammad",
+  //   description:
+  //     "As an Electrical Engineer at Creative Design & Construction Limited, Hossain Mohammad brings a wealth of experience and expertise to the electric team. His role involves overseeing the design, installation, and maintenance of electrical systems in construction projects. With his extensive background, Hossain ensures that electrical solutions meet industry standards, regulations, and client requirements. He collaborates closely with other team members to optimize electrical designs for efficiency, safety, and cost-effectiveness. Hossain's leadership within the electric team contributes to the successful delivery of projects and upholds the company's commitment to quality and innovation.",
+  //   image: "",
+  //   company: {
+  //     department: "Electrician",
+  //     // title: "Engineer",
+  //     teamCategories: "Electrical",
+  //   },
+  // },
+
+  // {
+  //   id: 19,
+  //   firstName: "MD Anowaarul",
+  //   lastName: "Islam",
+  //   description:
+  //     "Anowarul Islam Sultan serves as an Electrical Engineer at Creative Design & Construction Limited, bringing with him a wealth of experience and intelligence to the electric team. With his extensive background in electrical engineering, Anowarul plays a pivotal role in designing, implementing, and maintaining electrical systems for various construction projects. He leverages his expertise to ensure that electrical solutions are efficient, reliable, and compliant with industry standards and regulations. Anowarul collaborates closely with colleagues and stakeholders to address complex technical challenges and optimize project outcomes. His leadership and problem-solving skills contribute to the successful execution of projects, upholding the company's reputation for excellence in electrical engineering.",
+  //   image: "https://cdcdevelopment.co.uk/images/team/Anowaarul.jpg",
+  //   company: {
+  //     department: "Electrician",
+  //     // title: "Engineer",
+  //     teamCategories: "Electrical",
+  //   },
+  // },
+  // {
+  //   id: 18,
+  //   firstName: "Ibrahim Sultan",
+  //   lastName: "KHAN",
+  //   description:
+  //     "As an Electrical Engineer at Creative Design & Construction Limited, Ibrahim Sultan Khan brings a dynamic blend of youthfulness and experience to the electric team. Despite being one of the youngest members, Ibrahim's intelligence and aptitude contribute significantly to the team's success. His role involves actively participating in the design, implementation, and troubleshooting of electrical systems within construction projects. Ibrahim leverages his fresh perspective and innovative thinking to propose creative solutions and streamline project workflows. Through his dedication and willingness to learn, Ibrahim adds value to the electric team and plays a vital role in delivering high-quality electrical solutions that meet client expectations.",
+  //   image: "https://cdcdevelopment.co.uk/images/team/Ibrahim.jpg",
+  //   company: {
+  //     department: "Electrician",
+  //     // title: "Engineer",
+  //     teamCategories: "Electrical",
+  //   },
+  // },
+  // {
+  //   id: 44,
+  //   firstName: "Tamim Ahmed",
+  //   lastName: "Aurpon ",
+  //   description:
+  //     "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
+  //   image: "https://cdcdevelopment.co.uk/images/team/Aurpon.jpg",
+  //   company: {
+  //     department: "Electrician",
+  //     // title: "Engineer",
+  //     teamCategories: "Electrical",
+  //   },
+  // },
+  // {
+  //   id: 16,
+  //   firstName: "Zahirul",
+  //   lastName: "Islam",
+  //   description:
+  //     "Zahirul Islam serves as an Electrical Engineer at Creative Design & Construction Limited, playing a pivotal role in ensuring the effective implementation of electrical systems within construction projects. His responsibilities include designing, analyzing, and overseeing the installation of electrical systems to meet project requirements and safety standards. Zahirul collaborates closely with other engineers, architects, and contractors to integrate electrical solutions seamlessly into overall project designs. He conducts thorough inspections and tests to ensure the reliability and efficiency of electrical installations throughout the project lifecycle. Zahirul's expertise and attention to detail contribute to the successful completion of projects while upholding the company's commitment to delivering high-quality construction solutions.",
+  //   image: "",
+  //   company: {
+  //     department: "Electrical Engineer",
+  //     // title: "Engineer",
+  //     teamCategories: "Electrical",
+  //   },
+  // },
+
   //23 total
 ];

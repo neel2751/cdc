@@ -2,15 +2,27 @@
 import React, { useState } from "react";
 import Team from "./Team";
 import AllTeam from "./AllTeam";
+import axios from "axios";
 
 const Teampage = () => {
   const [activeTab, setActiveTab] = useState("TeamData");
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
+  const testApi = async () => {
+    try {
+      const response = await axios.get(
+        "https://cdcgrouplimited.com/nodejs/GetTeams"
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
-      <div class="p-4 border-b border-blue-300 flex items-center justify-center overflow-x-auto overflow-y-hidden bg-white whitespace-nowrap">
+      <div class="p-4 flex items-center justify-center overflow-x-auto overflow-y-hidden bg-white whitespace-nowrap">
         <div className="border border-blue-300 rounded-full p-2 transition delay-700 ease-in-out">
           <button
             onClick={() => handleTabChange("TeamData")}
@@ -70,6 +82,12 @@ const Teampage = () => {
             <span class="mx-1 text-sm sm:text-base font-bold">Add Member</span>
           </button>
         </div>
+      </div>
+      <div
+        onClick={testApi}
+        className="my-10 p-2.5 bg-green-800 text-white rounded-md w-min whitespace-nowrap text-center mx-auto"
+      >
+        Fetch TeamData
       </div>
       <div className="bg-white">
         {activeTab === "TeamData" && <AllTeam />}
